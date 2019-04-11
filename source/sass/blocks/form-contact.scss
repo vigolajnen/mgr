@@ -1,0 +1,56 @@
+.form-contact {
+  &__list {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+
+  &__item {
+    margin-bottom: 20px;
+  }
+
+  &__field {
+    width: 100%;
+    padding: 17px 20px;
+    font-family: $fontExo;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+
+    color: #38383d;
+    border-radius: 5px;
+    border: none;
+    resize: none;
+    border: 1px solid transparent;
+    background: #ffffff;
+
+    @include ff("font-size",
+    (375px: 14px,
+      1440px: 16px));
+
+    &--message {
+      min-height: 180px;
+    }
+
+    &:hover,
+    &:focus {
+      border: 1px solid rgba(56, 56, 61, 0.66);
+    }
+  }
+
+  &__button {
+    padding: 20px 40px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+    transition: 0.5s;
+
+    @include respond-below(sm) {
+      display: block;
+      margin: 0 auto;
+    }
+
+    &:hover {
+      box-shadow: none;
+    }
+  }
+}

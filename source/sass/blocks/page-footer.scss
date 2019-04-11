@@ -1,0 +1,16 @@
+$color-bg: #0e224f;
+
+.page-footer {
+  background-color: $color-white;
+}
+
+.page-footer__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 20px;
+
+}
+

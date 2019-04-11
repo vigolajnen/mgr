@@ -1,0 +1,22 @@
+
+.title {
+  display: inline-block;
+
+  margin: 0;
+
+  font-family: $fontCrowdFunded;
+  font-size: 50px;
+  font-weight: 400;
+  line-height: normal;
+  text-align: center;
+
+  @include ff('font-size', (375px: 24px, 1280px: 50px));
+
+  color: $color-title;
+
+  text-transform: uppercase;
+
+  @media (min-width: $desktop-width-x) {
+    line-height: 118.68px;
+  }
+}

@@ -1,0 +1,31 @@
+<div class="popup-overlay">
+  <section class="popup popup-order">
+    <div class="popup-order__wrapper">
+      <button class="button popup-close" aria-label="Закрыть окно"></button>
+      <h3 class="popup-order__title">Закажите обратный звонок</h3>
+      <form class="popup-order__form" action="https://echo.htmlacademy.ru" method="post">
+        <ul class="popup-order__list">
+          <li class="popup-order__item">
+            <label class="visually-hidden" for="name">Ваше имя</label>
+            <input class="popup-order__input" id="name" type="text" name="name" placeholder="Ваше имя" required>
+          </li>
+          <li class="popup-order__item">
+              <label class="visually-hidden" for="surname">Фамилия</label>
+              <input class="popup-order__input" id="surname" type="text" name="surname" placeholder="Фамилия" required>
+            </li>
+          <li class="popup-order__item">
+            <label class="visually-hidden" for="phone">Контактный телефон*</label>
+            <input class="popup-order__input" id="phone" name="phone" type="tel" placeholder="Контактный телефон*"
+              required>
+          </li>
+        </ul>
+        <div class="popup-order__bottom">
+          <!-- <p class="policy-text">Отправляя заявку, я подтверждаю,что ознакомлен и согласен с <a href="#">Политикой
+              конфиденциальности</a> данного сайта</p> -->
+          <button class="button button--blue-dark button-order popup-order__button" type="submit">Отправить</button>
+          <div class="popup-order__text">Мы Вам перезвоним</div>
+        </div>
+      </form>
+    </div>
+  </section>
+</div>

@@ -1,0 +1,22 @@
+.popup {}
+
+.popup-overlay {
+  display: none;
+  z-index: 10;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  top: 0;
+  right: 0;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.popup-overlay>* {
+  -webkit-transform: translateZ(0px);
+}
+
+.popup-show {
+  display: block;
+}

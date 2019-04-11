@@ -1,0 +1,33 @@
+.wrapper {
+  padding: 0 5%;
+  max-width: 1280px;
+  width: 100%;
+  margin: 0 auto;
+
+
+  @include respond-above(md) {
+    max-width: 85%;
+    max-width: 1180px;
+  }
+
+  @include respond-above(lg) {
+    padding: 0;
+  }
+
+
+  &--top {
+    margin: 40px auto 0;
+
+    @media (min-width: $tablet-width) {
+      margin-top: 150px;
+    }
+  }
+
+  &--top-2 {
+    margin: 40px auto 0;
+
+    @media (min-width: $tablet-width) {
+      margin-top: 120px;
+    }
+  }
+}

@@ -1,0 +1,138 @@
+@font-face {
+  font-family: $fontCrowdFunded;
+  font-display: auto;
+  src: url("fonts/CrowdFunded.woff2") format("woff2"),
+    url("fonts/CrowdFunded.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: $fontGoogleSans;
+  font-display: auto;
+  src: url("fonts/GoogleSans-Regular.woff2") format("woff2"),
+    url("fonts/GoogleSans-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: $fontGoogleSans-Italic;
+  font-display: auto;
+  src: url("fonts/GoogleSans-Italic.woff2") format("woff2"),
+    url("fonts/GoogleSans-Italic.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: $fontGoogleSans-Medium;
+  font-display: auto;
+  src: url("fonts/GoogleSans-Medium.woff2") format("woff2"),
+    url("fonts/GoogleSans-Medium.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: $fontGoogleSans-MediumItalic;
+  font-display: auto;
+  src: url("fonts/GoogleSans-MediumItalic.woff2") format("woff2"),
+    url("fonts/GoogleSans-MediumItalic.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: $fontGoogleSans-Bold;
+  font-display: auto;
+  src: url("fonts/GoogleSans-Bold.woff2") format("woff2"),
+    url("fonts/GoogleSans-Bold.woff") format("woff");
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: $fontGoogleSans-BoldItalic;
+  font-display: auto;
+  src: url("fonts/GoogleSans-BoldItalic.woff2") format("woff2"),
+    url("fonts/GoogleSans-BoldItalic.woff") format("woff");
+  font-weight: 900;
+  font-style: normal;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  outline: none;
+}
+
+body {
+  position: relative;
+  min-width: 300px;
+  margin: 0;
+  padding: 0;
+  font-family: $fontGoogleSans;
+  
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  color: $text-color;
+
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.picture {
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+  outline: none;
+
+  
+}
+
+
+@keyframes animation__bottomFadeOut {
+  0% {
+    transform: translateY(70px)
+  }
+
+  to {
+    transform: translateY(0)
+  }
+}
+
+@keyframes animation__bottomFadeIn {
+  0% {
+    transform: translateY(0);
+  }
+
+  to {
+    transform: translateY(70px);
+  }
+}
+
+.fadeInUpSmall {
+  animation-name: fadeInUpSmall;
+}
+
+@keyframes fadeInUpSmall {
+  from {
+    opacity: 0;
+
+    transform: translate3d(-50%, 6px, 0)
+  }
+
+  to {
+    opacity: 1;
+
+    transform: translate3d(-50%, 0, 0)
+  }
+}
+

@@ -1,0 +1,18 @@
+.promo {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+
+  margin-bottom: 50px;
+
+  text-align: left;
+
+  background-color: $color-white;
+}
+
+.promo .page-header {
+  z-index: 3;
+}
