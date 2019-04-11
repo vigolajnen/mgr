@@ -16,3 +16,17 @@
 .promo .page-header {
   z-index: 3;
 }
+
+.promo__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.promo__nav {
+  width: 30%;
+}
+
+.promo__info {
+  width: 60%;
+}
