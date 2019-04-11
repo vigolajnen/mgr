@@ -6,8 +6,6 @@
   justify-content: center;
   align-items: center;
 
-  margin-bottom: 50px;
-
   text-align: left;
 
   background-color: $color-white;
@@ -24,9 +22,23 @@
 }
 
 .promo__nav {
-  width: 30%;
+  width: 25%;
 }
 
 .promo__info {
-  width: 60%;
+  width: 75%;
+}
+
+.promo__inner {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.promo__pic {
+  width: 50%;
+}
+
+.promo__text {
+  width: 50%;
 }
