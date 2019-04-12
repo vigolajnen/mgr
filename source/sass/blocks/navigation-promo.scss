@@ -3,8 +3,10 @@
 
   &__list {
     @include listReset();
-    background-color: #f7faff;
+    
     padding: 10px 30px;
+
+    background-color: #f7faff;
   }
   &__link {
     position: relative;
@@ -15,8 +17,14 @@
     font-family: $fontGoogleSans;
 
     font-weight: 400;
-    
-    @include ff('font-size', (375px: 14px, 1280px: 17px));
+
+    @include ff(
+      "font-size",
+      (
+        375px: 14px,
+        1280px: 17px
+      )
+    );
 
     text-decoration: none;
 
@@ -33,12 +41,7 @@
       background-position: 0;
     }
   }
-
-  &__item {
-    
-  }
 }
-
 
 .navigation-promo__link--icon-1,
 .navigation-promo__link--icon-2,
