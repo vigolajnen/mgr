@@ -1,0 +1,90 @@
+.stock {
+  & .wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 55px;
+    padding-bottom: 55px;
+  }
+
+  &__inner {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding: 33px 40px 60px 60px;
+
+    background-image: url("../img/stock/stock-bg.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  &__info {
+    width: 60%;
+  }
+  &__timer {
+    width: 40%;
+  }
+
+  &__title {
+    color: #ffffcc;
+    font-family: $fontCrowdFunded;
+    font-weight: 400;
+    line-height: normal;
+
+    @include ff(
+      "font-size",
+      (
+        375px: 30px,
+        1280px: 37px,
+        1540px: 47px
+      )
+    );
+
+    text-transform: uppercase;
+  }
+  &__present {
+    position: relative;
+    padding-left: 280px;
+    color: $color-white;
+    font-family: $fontCrowdFunded;
+    line-height: normal;
+    font-weight: 400;
+    @include ff(
+      "font-size",
+      (
+        375px: 40px,
+        1280px: 40px,
+        1540px: 80px
+      )
+    );
+
+    text-transform: uppercase;
+
+    &::before {
+      position: absolute;
+      content: "";
+      top: 0;
+      left: 0;
+
+      @include sprite($icon-gifts);
+    }
+  }
+
+  &__timer-text {
+    color: $color-white;
+    font-family: $fontGoogleSans;
+    font-weight: 700;
+    line-height: normal;
+
+    @include ff(
+      "font-size",
+      (
+        375px: 14px,
+        1280px: 17px
+      )
+    );
+  }
+}
