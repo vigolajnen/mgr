@@ -1,12 +1,17 @@
 .phone {
   text-decoration: none;
+  color: $text-color;
+  font-family: $fontGoogleSans;
+  font-weight: 700;
   line-height: normal;
 
-  line-height: normal;
-  font-size: 16px;
-
-  color: #ffffff;
-  @include ff('font-size', (375px: 10px, 1440px: 16px));
+    @include ff(
+      "font-size",
+      (
+        375px: 20px,
+        1280px: 25px
+      )
+    );
 
   &__code {
     color: #999999;

@@ -12,6 +12,7 @@
 @import "base.scss";
 @import "utils.scss";
 @import "mixins.scss";
+
 @import "sprite-png.scss";
 
 @import "blocks/sprite.scss";
@@ -37,8 +38,8 @@
 @import "blocks/product.scss";
 
 @import "blocks/navigation-promo.scss";
-
-
+@import "blocks/nav-footer.scss";
+@import "blocks/social.scss";
 
 // @import "blocks/form-order.scss";
 // @import "blocks/list-nomark.scss";
@@ -46,5 +47,6 @@
 // @import "blocks/popup.scss";
 // @import "blocks/popup-order.scss";
 
+@import "blocks/email.scss";
 @import "blocks/phone.scss";
 @import "blocks/fixed.scss";

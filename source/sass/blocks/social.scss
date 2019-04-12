@@ -1,82 +1,101 @@
 .social {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
-  text-align: center;
+  &__title {
+    margin-bottom: 20px;
 
-  @media (min-width: $tablet-width) {
-    margin: 80px 27%;
+    color: $text-color;
+    font-family: $fontGoogleSans;
+    font-weight: 700;
+    line-height: normal;
 
-
+    @include ff(
+      "font-size",
+      (
+        375px: 14px,
+        1280px: 17px
+      )
+    );
   }
+  &__list {
+    @include listReset();
 
-  &__link {
-    // display: block;
     display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 
-    text-decoration: none;
-    padding: 10px;
-    background-color: #eefaff;
-
+    margin-bottom: 30px;
+  }
+  &__item {
+    width: 40px;
+    height: 40px;
+    margin-right: 17px;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+  &__link {
+    display: block;
     width: 100%;
     height: 100%;
-    position: relative;
-
-    @media (max-width: $mobile-width-only) {
-      color: #000;
-      font-style: normal;
-      font-weight: 500;
-      line-height: 17px;
-      font-size: 11px;
-      padding: 0;
-      background-color: transparent;
-    }
+    text-decoration: none;
   }
+}
 
-  &__icon {
-    fill: #1293cd;
+.social__link--vk,
+.social__link--inst,
+.social__link--fb,
+.social__link--wp,
+.social__link--phone,
+.social__link--telegram {
+  position: relative;
 
+  &::before {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-
-    @media (max-width: $mobile-width-only) {
-      height: 20px;
-      width: 25px;
-    }
+    content: "";
+    top: 0;
+    left: 0;
+    display: block;
+    width: 40px;
+    height: 40px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background: transparent;
   }
 }
 
-.social__list {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  padding: 0;
-  margin: 0;
-  list-style-type: none;
+.social__link--vk::before {
+  @include sprite($icon-vk);
+}
+.social__link--inst::before {
+  @include sprite($icon-ins);
+}
+.social__link--fb::before {
+  @include sprite($icon-fb);
+}
+.social__link--wp::before {
+  @include sprite($icon-vb);
+}
+.social__link--phone::before {
+  @include sprite($icon-wa);
+}
+.social__link--telegram::before {
+  @include sprite($icon-tel);
 }
 
-.social__item {
-  margin-right: 20px;
-
-  background: #EEFAFF;
-  width: 36px;
-  height: 36px;
-
-  &:last-child {
-    margin-right: 0;
-  }
-
-  @media (min-width: $tablet-width) {
-    width: 50px;
-    height: 50px;
-  }
+.social__link--vk:hover::before {
+  @include sprite($icon-vk_a);
 }
-
-@media (min-width: $tablet-width) {
-  .social {
-    padding: 0;
-  }
+.social__link--inst:hover::before {
+  @include sprite($icon-ins_a);
+}
+.social__link--fb:hover::before {
+  @include sprite($icon-fb_a);
+}
+.social__link--wp:hover::before {
+  @include sprite($icon-vb_a);
+}
+.social__link--phone:hover::before {
+  @include sprite($icon-wa_a);
+}
+.social__link--telegram:hover::before {
+  @include sprite($icon-tel_a);
 }
