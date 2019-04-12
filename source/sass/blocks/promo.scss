@@ -4,11 +4,73 @@
   flex-direction: column;
   flex-wrap: wrap;
   justify-content: center;
-  align-items: center;
+  align-items: flex-end;
 
   text-align: left;
 
   background-color: $color-white;
+
+  &__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-end;
+  }
+
+  &__title {
+    margin-bottom: 40px;
+
+    color: #1a1a1a;
+    font-family: $fontCrowdFunded;
+
+    font-weight: 400;
+    line-height: normal;
+    //line-height: 175px;
+
+    @include ff(
+      "font-size",
+      (
+        375px: 34px,
+        1280px: 44px,
+        1540px: 54px
+      )
+    );
+  }
+
+  &__sale-text {
+    padding-left: 142px;
+    margin-bottom: 60px;
+
+    min-height: 122px;
+
+    color: #1a1a1a;
+    font-family: $fontGoogleSans;
+
+    font-weight: 400;
+    //line-height: 33.33px;
+
+    @include ff(
+      "font-size",
+      (
+        375px: 18px,
+        1280px: 22px,
+        1540px: 25px
+      )
+    );
+
+    &--icon {
+      position: relative;
+      &::before {
+        position: absolute;
+        content: "";
+        top: 0;
+        left: 0;
+        display: block;
+
+        @include sprite($icon-sale);
+      }
+    }
+  }
 }
 
 .promo .page-header {
@@ -41,4 +103,10 @@
 
 .promo__text {
   width: 50%;
+  height: 100%;
+
+  background-image: url("../../img/promo/promo-info-bg.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+
 }

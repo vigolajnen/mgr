@@ -1,5 +1,6 @@
 .navigation-promo {
-  
+  margin-bottom: 45px;
+
   &__list {
     @include listReset();
     background-color: #f7faff;
@@ -8,7 +9,7 @@
   &__link {
     position: relative;
     display: block;
-    padding: 20px 0 20px 30px;
+    padding: 20px 0 20px 45px;
 
     color: $text-color;
     font-family: $fontGoogleSans;
@@ -19,7 +20,7 @@
 
     text-decoration: none;
 
-    &::before {
+    &::after {
       content: "";
       position: absolute;
       bottom: 1px;
@@ -36,4 +37,52 @@
   &__item {
     
   }
+}
+
+
+.navigation-promo__link--icon-1,
+.navigation-promo__link--icon-2,
+.navigation-promo__link--icon-3,
+.navigation-promo__link--icon-4,
+.navigation-promo__link--icon-5,
+.navigation-promo__link--icon-6,
+.navigation-promo__link--icon-7,
+.navigation-promo__link--icon-8 {
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    display: block;
+    background-color: transparent;
+    background-repeat: no-repeat;
+  }
+}
+
+.navigation-promo__link--icon-1::before {
+  @include sprite($icon-menu_1);
+}
+.navigation-promo__link--icon-2::before {
+  @include sprite($icon-menu_8);
+}
+.navigation-promo__link--icon-3::before {
+  @include sprite($icon-menu_7);
+}
+.navigation-promo__link--icon-4::before {
+  @include sprite($icon-menu_6);
+}
+.navigation-promo__link--icon-5::before {
+  @include sprite($icon-menu_5);
+}
+.navigation-promo__link--icon-6::before {
+  @include sprite($icon-menu_4);
+}
+.navigation-promo__link--icon-7::before {
+  @include sprite($icon-menu_3);
+}
+.navigation-promo__link--icon-8::before {
+  @include sprite($icon-menu_2);
 }

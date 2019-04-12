@@ -52,7 +52,7 @@
   }
 
   &__title {
-    margin-bottom: 85px;               
+    margin-bottom: 85px;
   }
 
   &__item {
@@ -72,11 +72,16 @@
         left: 0;
         z-index: 1;
         display: block;
-        background-repeat: repeat;
-    
-        @include sprite($icon-wave);
+        background-repeat: repeat-x;
+
+        //@include sprite($icon-wave);
+
+        width: 100%;
+        height: 10px;
+
+        background-image: url("../../img/icons/icon-wave.png");
+        background-size: 20%;
       }
     }
-    
   }
 }
