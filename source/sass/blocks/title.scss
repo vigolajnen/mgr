@@ -1,5 +1,6 @@
 
 .title {
+  position: relative;
   display: inline-block;
 
   margin: 0;
@@ -16,7 +17,17 @@
 
   text-transform: uppercase;
 
-  @media (min-width: $desktop-width-x) {
-    line-height: 118.68px;
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: -16px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+    display: block;
+    background-repeat: repeat;
+
+    @include sprite($icon-wave);
   }
+
 }

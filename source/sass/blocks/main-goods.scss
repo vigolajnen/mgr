@@ -1,9 +1,12 @@
+
+
+
 .main-goods {
   background-image: url("../img/goods/goods-bg.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 50%;
-  background-color: #f7f2ed;
+  background-color: $bg-color;
 
   & .wrapper {
     display: flex;
