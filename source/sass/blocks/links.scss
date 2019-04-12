@@ -7,7 +7,7 @@
   text-decoration: none;
 
   &--blue {
-    color: #005BA6;
+    color: #005ba6;
   }
 }
 
@@ -20,11 +20,11 @@
   text-transform: uppercase;
   text-decoration: none;
 
-  color: #FFFFFF;
+  color: #ffffff;
 
   &::before {
     position: absolute;
-    content: '';
+    content: "";
     top: 50%;
     left: 0;
     transform: translateY(-50%);
@@ -32,5 +32,36 @@
     height: 1px;
     background-color: #fff;
     opacity: 0.8;
+  }
+}
+
+.link-button {
+  padding: 20px 25px;
+
+  color: $color-white;
+  font-family: $fontCrowdFunded;
+
+  font-weight: 40;
+
+  @include ff(
+    "font-size",
+    (
+      375px: 24px,
+      1280px: 29px
+    )
+  );
+
+  border-radius: 40px;
+
+  text-decoration: none;
+
+  &--orange {
+    background-color: #f3931a;
+  }
+  &--blue {
+    background-color: #008dca;
+  }
+  &--green {
+    background-color: #6db629;
   }
 }

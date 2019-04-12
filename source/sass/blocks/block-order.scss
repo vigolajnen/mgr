@@ -1,0 +1,126 @@
+.block-order {
+  & .wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    padding-top: 55px;
+    padding-bottom: 55px;
+  }
+  &__title {
+    margin-bottom: 75px;
+  }
+  &__list {
+    @include listReset();
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 50%;
+    height: auto;
+    margin-bottom: 40px;
+    padding-top: 185px;
+    text-align: center;
+
+    @include respond-above(sm) {
+      width: calc(100% / 3 - 40px);
+    }
+
+    @include respond-above(md) {
+      width: calc(100% / 5 - 40px);
+    }
+  }
+
+  &__name {
+    margin-bottom: 20px;
+    color: $text-color;
+    font-family: $fontGoogleSans;
+
+    font-weight: 700;
+    line-height: normal;
+
+    @include ff(
+      "font-size",
+      (
+        375px: 18px,
+        1280px: 21px
+      )
+    );
+  }
+  &__text {
+    color: $text-color;
+    font-family: $fontGoogleSans;
+
+    font-weight: 400;
+    line-height: normal;
+
+    @include ff(
+      "font-size",
+      (
+        375px: 14px,
+        1280px: 17px
+      )
+    );
+  }
+}
+
+.block-order__item--icon-1,
+.block-order__item--icon-2,
+.block-order__item--icon-3,
+.block-order__item--icon-4,
+.block-order__item--icon-5 {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    display: block;
+  }
+}
+
+.block-order__item--icon-1 {
+  //@include sprite($icon-step-1);
+
+  @include sprite-image($icon-step-1);
+  @include sprite-position($icon-step-1);
+  @include sprite-width($icon-step-1);
+}
+.block-order__item--icon-2 {
+  //@include sprite($icon-step-2);
+
+  @include sprite-image($icon-step-2);
+  @include sprite-position($icon-step-2);
+  @include sprite-width($icon-step-2);
+}
+.block-order__item--icon-3 {
+  //@include sprite($icon-step-3);
+
+  @include sprite-image($icon-step-3);
+  @include sprite-position($icon-step-3);
+  @include sprite-width($icon-step-3);
+}
+.block-order__item--icon-4 {
+  //@include sprite($icon-step-4);
+
+  @include sprite-image($icon-step-4);
+  @include sprite-position($icon-step-4);
+  @include sprite-width($icon-step-4);
+}
+.block-order__item--icon-5 {
+  //@include sprite($icon-step-5);
+
+  @include sprite-image($icon-step-5);
+  @include sprite-position($icon-step-5);
+  @include sprite-width($icon-step-5);
+}
