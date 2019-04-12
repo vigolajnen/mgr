@@ -1,0 +1,85 @@
+.advantages {
+  & .wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  &__title {
+    margin-bottom: 75px;
+  }
+  &__list {
+    @include listReset();
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    width: 100%;
+  }
+  &__item {
+    width: 50%;
+
+    padding-top: 195px;
+    margin-bottom: 45px;
+
+    @include respond-above(md) {
+      width: calc(100% / 3 - 30px);
+    }
+  }
+  &__text {
+    margin: 0;
+    color: $text-color;
+    font-family: $fontGoogleSans;
+    font-weight: 700;
+    line-height: normal;
+
+    @include ff(
+      "font-size",
+      (
+        375px: 18px,
+        1280px: 21px
+      )
+    );
+
+    text-align: center;
+  }
+}
+
+.advantages__item--icon-1,
+.advantages__item--icon-2,
+.advantages__item--icon-3,
+.advantages__item--icon-4,
+.advantages__item--icon-5,
+.advantages__item--icon-6 {
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    display: block;
+    background: transparent;
+  }
+}
+
+.advantages__item--icon-1::before {
+  @include sprite($icon-why_5);
+}
+.advantages__item--icon-2::before {
+  @include sprite($icon-why_3);
+}
+.advantages__item--icon-3::before {
+  @include sprite($icon-why_4);
+}
+.advantages__item--icon-4::before {
+  @include sprite($icon-why_6);
+}
+.advantages__item--icon-5::before {
+  @include sprite($icon-why_1);
+}
+.advantages__item--icon-6::before {
+  @include sprite($icon-why_2);
+}
