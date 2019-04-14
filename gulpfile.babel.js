@@ -148,32 +148,33 @@ gulp.task("vendor", function () {
       "source/js/libs/picturefill.min.js",
       "source/js/libs/svg4everybody.min.js",
       "source/js/libs/jquery.viewportchecker.min.js",
+      "source/js/libs/swiper.min.js",
     ])
     .pipe(concat("vendor.min.js"))
     .pipe(gulp.dest("build/js"));
 });
 
-gulp.task("scripts", function () {
-  return gulp.src(
-      [
-        "node_modules/babel-polyfill/dist/polyfill.js",
+// gulp.task("scripts", function () {
+//   return gulp.src(
+//       [
+//         "node_modules/babel-polyfill/dist/polyfill.js",
 
-        "source/js/mobile.js",
-        "source/js/header.js ",
-        "source/js/popup.js",
-        "source/js/map.js",
-        "source/js/form.js"
-      ])
+//         "source/js/mobile.js",
+//         "source/js/header.js ",
+//         "source/js/popup.js",
+//         "source/js/map.js",
+//         "source/js/form.js"
+//       ])
 
-    .pipe(concat("main.min.js"))
-    .pipe(uglify({
-      mangle: false
-    }))
-    .pipe(babel({
-      presets: ["es2015"]
-    }))
-    .pipe(gulp.dest("build/js"));
-});
+//     .pipe(concat("main.min.js"))
+//     .pipe(uglify({
+//       mangle: false
+//     }))
+//     .pipe(babel({
+//       presets: ["es2015"]
+//     }))
+//     .pipe(gulp.dest("build/js"));
+// });
 
 gulp.task("jsmin", function () {
   gulp.src([
@@ -192,14 +193,14 @@ gulp.task("jsmin", function () {
 });
 
 
-gulp.task("jsmin-map", function () {
-  gulp.src(["source/js/map.js"])
-    .pipe(concat("map.min.js"))
-    .pipe(uglify({
-      mangle: false
-    }))
-    .pipe(gulp.dest("build/js"));
-});
+// gulp.task("jsmin-map", function () {
+//   gulp.src(["source/js/map.js"])
+//     .pipe(concat("map.min.js"))
+//     .pipe(uglify({
+//       mangle: false
+//     }))
+//     .pipe(gulp.dest("build/js"));
+// });
 
 gulp.task("serve", function () {
   server.init({
@@ -211,7 +212,7 @@ gulp.task("serve", function () {
   });
 
   gulp.watch("source/sass/**/*.{scss,sass}", ["style"]);
-  gulp.watch("source/js/**/*.js", ["jsmin", "jsmin-map"]);
+  gulp.watch("source/js/**/*.js", ["jsmin"]);
   gulp.watch("source/**/*.html", ["html"]).on("change", server.reload);
 });
 
@@ -226,7 +227,6 @@ gulp.task("build", function (done) {
     "html",
     "vendor",
     "jsmin",
-    "jsmin-map",
     done
   );
 });

@@ -84,11 +84,21 @@
 }
 
 .promo__nav {
-  width: 25%;
+  order: 1;
+  width: 100%;
+
+  @include respond-above(md) {
+    order: 0;
+    width: 25%;
+  }
 }
 
 .promo__info {
-  width: 75%;
+  width: 100%;
+
+  @include respond-above(md) {
+    width: 75%;
+  }
 }
 
 .promo__inner {
