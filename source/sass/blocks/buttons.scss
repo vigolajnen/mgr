@@ -25,8 +25,9 @@
 
   color: $color-white;
   background: $color-blue;
-  
+
   border-radius: 40px;
+  box-shadow: 0 8px 0px -1px #e6e8ed;
 
   @include ff("font-size",
   (375px: 16px,

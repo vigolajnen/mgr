@@ -33,7 +33,7 @@
     z-index: 1;
     display: block;
     width: 100%;
-    height: 20px;
+    height: 25px;
     background-repeat: repeat-x;
 
     background-image: url("../img/header/header-border.png");
@@ -44,7 +44,18 @@
       flex-grow: 1;
 
       @include respond-above(sm769) {
+        padding: 0 20px;
+        order: 1;
+        margin-top: 10px;
+      }
+
+      @include respond-above(md1100) {
+        order: 0;
+      }
+
+      @include respond-above(lg) {
         padding: 0 50px;
+        margin-top: 0;
       }
     }
 
@@ -52,6 +63,10 @@
       display: none;
       @include respond-above(sm769) {
         display: flex;
+      }
+
+      @include respond-above(lg) {
+        width: auto;
       }
     }
 
