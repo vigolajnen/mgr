@@ -1,0 +1,56 @@
+.promo-inner {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 40px;
+  margin-bottom: 40px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 20px;
+    background-repeat: repeat-x;
+    background-size: 5%;
+    background-image: url("../img/projects/projects-title-border-2.png");
+  }
+
+  &__nav {
+    display: none;
+
+    @include respond-above(md) {
+      width: 25%;
+      display: block;
+    }
+  }
+  &__info {
+    width: 100%;
+    @include respond-above(md) {
+      width: 70%;
+    }
+  }
+
+  &__title {
+    margin-bottom: 30px;
+  }
+
+  &__warning {
+    margin: 0;
+    margin-bottom: 25px;
+
+    @include ff('font-size', (375px: 20px, 1280px: 25px));
+    font-weight: 600;
+    color: #000000;
+
+  }
+}
+
+.promo-inner__info {
+  & p {
+    margin: 0;
+    margin-bottom: 30px;
+    color: $text-color;
+  }
+}

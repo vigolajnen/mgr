@@ -1,0 +1,33 @@
+.breadcrumbs {
+  display: none;
+
+  @include respond-above(md) {
+    display: flex;
+    margin-bottom: 30px;
+  }
+
+  &__link {
+    position: relative;
+    text-decoration: none;
+
+    color: #000000;
+    font-family: $fontGoogleSans;
+    font-size: 15px;
+    font-weight: 400;
+
+    &:not(:last-child) {
+      padding-right: 10px;
+    }
+
+    &:not(:last-child)::before {
+      content: "/";
+      position: absolute;
+      top: 0;
+      right: 2px;
+    }
+
+    &:last-child {
+      color: #808080;
+    }
+  }
+}

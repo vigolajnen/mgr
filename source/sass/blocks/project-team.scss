@@ -1,0 +1,90 @@
+.project-team {
+  & .wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 40px;
+  }
+  &__title {
+    margin-bottom: 85px;
+  }
+  &__list {
+    @include listReset();
+
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+
+    @include respond-above(md) {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+  }
+  &__item {
+    margin-bottom: 35px;
+
+    @include respond-above(md) {
+      width: calc(50% - 16px);
+    }
+  }
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    @include respond-above(sm) {
+      flex-direction: row;
+      text-align: left;
+    }
+  }
+
+  &__pic {
+    margin-bottom: 20px;
+    @include respond-above(sm) {
+      padding-right: 30px;
+      margin-bottom: 0;
+    }
+
+    @include respond-above(md) {
+      padding-right: 45px;
+    }
+  }
+
+  &__position {
+    color: #000000;
+    font-family: $fontGoogleSans;
+    font-size: 25px;
+    font-weight: 700;
+
+    @include ff(
+      "font-size",
+      (
+        375px: 20px,
+        768px: 25px
+      )
+    );
+
+    &--blue {
+      color: #008dca;
+    }
+  }
+
+  &__text {
+    color: $text-color;
+    font-family: $fontGoogleSans;
+
+    font-weight: 400;
+    @include ff(
+      "font-size",
+      (
+        375px: 18px,
+        768px: 21px,
+        1920px: 17px
+      )
+    );
+  }
+}
