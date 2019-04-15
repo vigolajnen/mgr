@@ -1,11 +1,17 @@
 
 .page-footer {
+  display: none;
   padding-top: 55px;
   padding-bottom: 65px;
   background-color: $color-white;
-  &__wrapper {
-    display: none;
 
+  @include respond-above(sm) {
+    display: flex;
+  flex-direction: column;
+  }
+
+  &__wrapper {
+    
     @include respond-above(sm) {
       display: flex;
       flex-wrap: wrap;

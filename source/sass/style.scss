@@ -3,8 +3,8 @@
 // @import "libs/magnific-popup.scss";
 // @import "libs/jquery.jscrollpane.scss";
 // @import "libs/animate.scss";
-// @import "libs/slick-theme.scss";
-// @import "libs/slick.scss";
+@import "libs/slick-theme.scss";
+@import "libs/slick.scss";
 // @import "libs/jquery-ui.scss";
 
 
@@ -72,3 +72,5 @@
 @import "blocks/cabinet-user.scss";
 
 @import "blocks/search-form.scss";
+
+@import "blocks/navigation-mob.scss";
