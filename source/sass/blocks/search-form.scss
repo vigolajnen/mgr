@@ -1,0 +1,177 @@
+.search-form {
+  display: flex;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  padding: 5px;
+
+  @include respond-above(sm769) {
+    margin-top: 0;
+    margin-bottom: 10px;
+    padding: 0;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+
+    &:first-child {
+      flex-grow: 1;
+    }
+  }
+
+  &__button {
+    position: relative;
+    height: 100%;
+    width: 42px;
+    background: #008dca;
+
+    border-radius: 0 40px 40px 0;
+    overflow: hidden;
+
+    @include respond-above(sm769) {
+      width: 52px;
+    }
+
+    &::before {
+      position: absolute;
+      content: "";
+      top: 50%;
+      left: -5px;
+
+      transform: translateY(-50%);
+
+      @include sprite($icon-button-search);
+
+      @include respond-above(sm769) {
+        left: 0;
+      }
+
+    }
+  }
+}
+
+.search-form__val {
+  padding: 5px;
+
+  height: 100%;
+
+  color: #b3bbc9;
+  font-family: $fontGoogleSans;
+  font-size: 15px;
+  font-weight: 400;
+  // line-height: 33.33px;
+
+  @include ff(
+    "font-size",
+    (
+      375px: 12px,
+      1280px: 15px
+    )
+  );
+
+  border-radius: 40px 0 0 40px;
+  border: 1px solid #b3bbc9;
+
+
+  @include respond-above(sm) {
+    padding: 10px 22px;
+  }
+
+  &::placeholder {
+    color: #b3bbc9;
+  }
+}
+
+.search-form__select {
+  position: relative;
+}
+
+
+.search-form .select__gap {
+  position: relative;
+  padding: 5px 20px;
+  margin-left: -1px;
+
+  color: #1a1a1a;
+  font-family: $fontGoogleSans;
+  font-size: 15px;
+  font-weight: 700;
+  // line-height: 33.33px;
+
+  @include ff(
+    "font-size",
+    (
+      375px: 12px,
+      1280px: 15px
+    )
+  );
+
+  border: 1px solid #b3bbc9;
+  background: #ffffff;
+
+
+  @include respond-above(xs) {
+    padding: 5px 25px 5px 15px;
+  }
+
+  @include respond-above(sm) {
+    padding: 5px 30px 5px 20px;
+  }
+
+  @include respond-above(md) {
+    padding: 10px 50px 10px 22px;
+  }
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 50%;
+    right: 13px;
+
+    @include sprite($icon-arrow-close);
+
+    transform: rotate(180deg) translateY(50%);
+
+  }
+}
+
+
+.search-form .select {
+  position: relative;
+}
+.search-form .select__list {
+  position: absolute;
+  top: 36px;
+  left: 0;
+  z-index: 5;
+
+  max-width: 179px;
+  width: 100%;
+
+  @include listReset();
+
+  padding: 10px 0;
+  margin-top: -1px;
+  margin-left: -1px;
+  
+  background: #ffffff;
+  border: 1px solid #b3bbc9;
+}
+
+.search-form .select__item {
+  padding: 10px 10px;
+
+  color: #1a1a1a;
+  font-family: $fontGoogleSans;
+  font-size: 15px;
+  font-weight: 400;
+  // line-height: 33.33px;
+
+  @include ff(
+    "font-size",
+    (
+      375px: 12px,
+      1280px: 15px
+    )
+  );
+}

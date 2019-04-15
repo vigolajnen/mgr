@@ -68,6 +68,8 @@
 
     display: flex;
 
+    flex-wrap: wrap;
+
     justify-content: flex-start;
 
     @include respond-above(md ) {

@@ -40,6 +40,27 @@
   }
 
   &__item {
+    &:nth-child(2) {
+      flex-grow: 1;
+
+      @include respond-above(sm769) {
+        padding: 0 50px;
+      }
+    }
+
+    &:nth-child(1) {
+      display: none;
+      @include respond-above(sm769) {
+        display: flex;
+      }
+    }
+
+    &:nth-child(3) {
+      display: none;
+      @include respond-above(sm769) {
+        display: flex;
+      }
+    }
     & .logo {
       padding-top: 10px;
     }
@@ -58,7 +79,6 @@
 
     @media (min-width: $desktop-width-xxl) {
       margin-right: 20px;
-
     }
 
     @media (min-width: 1700px) {
@@ -71,7 +91,6 @@
     flex-wrap: wrap;
     justify-content: space-between;
   }
-
 }
 
 .page-header .wrapper {
@@ -89,8 +108,6 @@
 
 .page-header__left {
   width: 100%;
-
-
 
   @include respond-above(xxs) {
     width: 35%;
@@ -123,7 +140,6 @@
   height: 80px;
   padding: 0;
 
-
   @media (max-width: 600px) {
     display: none;
   }
@@ -138,16 +154,22 @@
 
   @include respond-above(md) {
     width: 30%;
-
   }
 
   @include respond-above(lg) {
     width: 35%;
-
   }
 
   @include respond-below(xs) {
     display: none;
+  }
+}
+
+.page-header__nav {
+  display: none;
+  @include respond-above(sm769) {
+    display: flex;
+    margin-bottom: 10px;
   }
 }
 
@@ -177,7 +199,6 @@
 }
 
 .page-header__nav .logo {
-
   @media (min-width: $mobile-width-only) {
     display: none;
     margin-right: 44px;
@@ -193,10 +214,27 @@
   }
 }
 
-
-
 .page-header__user {
   & svg {
     fill: #ffffff;
+  }
+}
+
+.page-header__caption {
+  display: none;
+  @include respond-above(sm769) {
+    display: block;
+    margin: 0;
+
+    color: #808080;
+    font-family: $fontGoogleSans;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 33.33px;
+  }
+
+  &--black {
+    color: #1a1a1a;
+    font-weight: 600;
   }
 }

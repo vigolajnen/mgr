@@ -28,8 +28,30 @@
         </ul>
       </nav>
       <!-- выбор категории -->
-      <form action=""></form>
-      <p class="page-header__caption"><b>Например,</b> 100 лидов лендинг 10 постов 30 отзывов</p>
+      <form class="search-form" action="">
+        <div class="search-form__item">
+          <label for="search" class="visually-hidden">Поиск</label>
+          <input class="search-form__val" type="text" name="search" id="search" placeholder="Начните вводить текст...">
+        </div>
+        <div class="search-form__item" id="select-4">
+          <select class="search-form__select custom-select js-size select select-4" aria-placeholder="Все категории">
+            <option value="Все категории">Все категории</option>
+            <option value="Дизайн и Арт">Дизайн и Арт</option>
+            <option value="Разработка сайтов">Разработка сайтов</option>
+            <option value="Программирование">Программирование</option>
+            <option value="Реклама и продвижение">Реклама и продвижение</option>
+            <option value="Полиграфия">Полиграфия</option>
+            <option value="Мобильные приложения">Мобильные приложения</option>
+            <option value="Автоматизация бизнеса">Автоматизация бизнеса</option>
+            <option value="Производство видео">Производство видео</option>
+
+          </select>
+        </div>
+        <div class="search-form__item">
+          <button class="search-form__button button" type="search" aria-label="Поиск"></button>
+        </div>
+      </form>
+      <p class="page-header__caption"><span class="page-header__caption--black">Например,</span> 100 лидов лендинг 10 постов 30 отзывов</p>
 
     </div>
     <div class="page-header__item">
