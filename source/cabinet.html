@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ru" class="no-js">
+
+<head>
+  <meta charset="utf-8">
+  <title>ЕИМ</title>
+  @@include('_include/_head-meta.html')
+  <link rel="preload" href="fonts/CrowdFunded.woff2" as="font">
+  <link rel="preload" href="fonts/GoogleSans.woff2" as="font">
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+  <div class="paranja"></div>
+  @@include('_include/_page-header.1.html')
+
+  <div class="wrapper">
+    <div class="promo-inner promo-inner--wave">
+      <nav class="promo-inner__nav navigation-promo">
+        <ul class="navigation-promo__list">
+          <li class="navigation-promo__item">
+            <a class="navigation-promo__link navigation-promo__link--icon-1" href="#">
+              <span class="navigation-promo__name">Общая информация</span>
+            </a>
+          </li>
+          <li class="navigation-promo__item">
+            <a class="navigation-promo__link navigation-promo__link--icon-2" href="#">
+              <span class="navigation-promo__name">Мои заказы</span>
+            </a>
+          </li>
+          <li class="navigation-promo__item">
+            <a class="navigation-promo__link navigation-promo__link--icon-3" href="#">
+              <span class="navigation-promo__name">Мои подарки</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <section class="promo-inner__info">
+        <div class="breadcrumbs">
+          <a class="breadcrumbs__link" href="index.html">Главная</a>
+          <a class="breadcrumbs__link">Личный кабинет</a>
+          <a class="breadcrumbs__link">Мои заказы</a>
+        </div>
+        <h1 class="promo-inner__title title-inner">Личный кабинет</h1>
+        <h2 class="">Мои заказы</h2>
+        <div class="tabs vp-invisible">
+          <div class="tabs__wrapper">
+            <ul id="tabs-links" class="tabs__list">
+              <li class="tabs__item">
+                <a class="tabs__link" href="#order-all">Все заказы</a>
+              </li>
+              <li class="tabs__item">
+                <a class="tabs__link" href="#order-arh">Архив заказов</a>
+              </li>
+            </ul>
+            <div id="tabs-container" class="tabs__container">
+              <div id="order-all" class="tabs__content">
+                <table class="order-table">
+                  <thead>
+                    <tr>
+                      <td>№ заказа</td>
+                      <td>Услуга</td>
+                      <td>Цена</td>
+                      <td>Статус</td>
+                      <td>Оплата</td>
+                      <td>Акты</td>
+                      <td>Отзывы</td>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="order-table__val">СНН567890</td>
+                      <td class="order-table__val">
+                        <a class="order-table__link" href="#">Лендинг за 48 часов.
+                        Шаблон «Лес 1»</a>
+                      </td>
+                      <td class="order-table__val">110 000 Р</td>
+                      <td class="order-table__val">В работе</td>
+                      <td class="order-table__val">Оплачен</td>
+                      <td class="order-table__val">
+                        <a class="order-table__link" href="#">Запросить</a>
+                      </td>
+                      <td class="order-table__val">
+                        <a class="order-table__link" href="#">Оставить отзыв</a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="order-table__val">СНН567890</td>
+                      <td class="order-table__val">
+                        <a class="order-table__link" href="#">Лендинг за 48 часов.
+                          Шаблон «Лес 1»</a>
+                      </td>
+                      <td class="order-table__val">110 000 Р</td>
+                      <td class="order-table__val order-table__val--no-pay">Не оплачен</td>
+                      <td class="order-table__val">
+                        <a class="order-table__link" href="#">Скачать счет</a></td>
+                      <td class="order-table__val">
+                        Получены
+                      </td>
+                      <td class="order-table__val">
+                        <a class="order-table__link" href="#">Смотреть отзыв</a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="order-table__val">СНН567890</td>
+                      <td class="order-table__val">
+                        <a class="order-table__link" href="#">Лендинг за 48 часов.
+                          Шаблон «Лес 1»</a>
+                      </td>
+                      <td class="order-table__val">110 000 Р</td>
+                      <td class="order-table__val order-table__val--no-pay">Не оплачен</td>
+                      <td class="order-table__val">
+                        <a class="order-table__link" href="#">Скачать счет</a></td>
+                      <td class="order-table__val">
+                        Получены
+                      </td>
+                      <td class="order-table__val">
+                        <a class="order-table__link" href="#">Смотреть отзыв</a>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div id="order-arh" class="tabs__content">
+                Архив заказов
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  @@include('_include/_page-footer.html')
+
+  @@include('_include/_mobile.html')
+
+  @@include('_include/_script.html')
+
+</body>
+
+</html>
