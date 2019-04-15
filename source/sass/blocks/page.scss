@@ -1,0 +1,12 @@
+.page {
+  margin-bottom: 200px;
+  @include respond-above(sm) {
+    margin-bottom: 0;
+  }
+  &__title {
+    margin-bottom: 20px;
+  }
+  &__text {
+    margin-bottom: 80px;
+  }
+}

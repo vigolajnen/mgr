@@ -61,6 +61,13 @@
         display: flex;
       }
     }
+
+    &--hidden {
+      display: none;
+      @include respond-above(sm769) {
+        display: block;
+      }
+    }
     & .logo {
       padding-top: 10px;
     }
@@ -90,6 +97,22 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+  }
+
+  &__mob {
+    display: flex;
+    align-items: center;
+    @include respond-above(sm769) {
+      display: none;
+    }
+  }
+}
+
+.page-header__mob .page__title {
+  margin-left: 20px;
+
+  @include respond-above(xs) {
+    margin-left: 50px;
   }
 }
 

@@ -1,0 +1,7 @@
+.page-inner {
+  & .page-title {
+    @include respond-above(sm769) {
+      display: none;
+    }
+  }
+}
