@@ -1,12 +1,12 @@
 // шрифты
-$fontCrowdFunded: "CrowdFunded", "Arial", sans-serif;
+$fontCrowdFunded: "CrowdFunded-Regular", "Arial", serif;
 $fontGoogleSans: "Google Sans", "Arial", sans-serif;
 
 @font-face {
   font-family: $fontCrowdFunded;
   font-display: auto;
-  src: url("../fonts/CrowdFunded.woff2") format("woff2"),
-    url("../fonts/CrowdFunded.woff") format("woff");
+  src: url("../fonts/CrowdFunded-Regular.woff2") format("woff2"),
+    url("../fonts/CrowdFunded-Regular.woff") format("woff");
   font-weight: 900;
   font-style: normal;
 }
@@ -53,8 +53,6 @@ img {
   height: auto;
   object-fit: cover;
   outline: none;
-
-  
 }
 
 
