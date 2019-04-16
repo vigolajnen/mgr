@@ -1,0 +1,86 @@
+.presents {
+  &__title {
+    margin-bottom: 40px;
+  }
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  &__header {
+    display: none;
+
+    @include respond-above(sm769) {
+      position: relative;
+      display: flex;
+      justify-content: space-between;
+
+      margin-bottom: 30px;
+
+      &::before {
+        content: "";
+        position: absolute;
+        bottom: -22px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 1;
+        display: block;
+        width: 100%;
+        height: 10px;
+        background-repeat: repeat-x;
+        background-size: 30px;
+
+        background-image: url("../img/projects/projects-title-border-2.png");
+      }
+    }
+  }
+  &__body {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  &__item {
+    @include respond-below(sm769) {
+      position: relative;
+      margin-bottom: 40px;
+      padding-bottom: 20px;
+
+      &:not(:last-child)::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 1;
+        display: block;
+        width: 100%;
+        height: 10px;
+        background-repeat: repeat-x;
+        background-size: 30px;
+
+        background-image: url("../img/projects/projects-title-border-2.png");
+      }
+    }
+  }
+  &__name {
+    color: $text-color;
+    font-weight: 400;
+    line-height: normal;
+    @include ff(
+      "font-size",
+      (
+        375px: 20px,
+        750px: 25px,
+        1280px: 15px
+      )
+    );
+
+    @include respond-above(sm769) {
+      width: 70%;
+      &:last-child {
+        width: 33%;
+      }
+    }
+  }
+}

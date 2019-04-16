@@ -1,29 +1,29 @@
 var selectAll = [
   {
     id: 1,
-    text: '50'
+    text: "Выберите модуль"
   },
   {
     id: 2,
-    text: 'по цене'
+    text: "Выберите сайт для установки"
   },
   {
     id: 3,
-    text: 'Сакнт-Петербург'
+    text: "Сакнт-Петербург"
   },
   {
     id: 4,
-    text: 'Все категории'
+    text: "Все категории"
   },
   {
     id: 5,
-    text: 'по цене'
+    text: "по цене"
   },
   {
     id: 6,
-    text: 'Сакнт-Петербург'
+    text: "Сакнт-Петербург"
   }
-]
+];
 
 
 for (var i = 0; i < selectAll.length; i++) {
@@ -35,7 +35,7 @@ for (var i = 0; i < selectAll.length; i++) {
       selectOptionLength = selectOption.length,
       selectedOption = selectOption.filter(':selected'),
       dur = 500;
-  
+
     $this.hide();
     // Wrap all in select box
     $this.wrap('<div class="select"></div>');
@@ -44,14 +44,14 @@ for (var i = 0; i < selectAll.length; i++) {
       class: 'select__gap',
       text:  select.text
     }).insertAfter($this);
-  
+
     var selectGap = $this.next('.select__gap'),
       caret = selectGap.find('.caret');
     // Add ul list
     $('<ul>', {
       class: 'select__list'
     }).insertAfter(selectGap);
-  
+
     var selectList = selectGap.next('.select__list');
     // Add li - option items
     for (var i = 0; i < selectOptionLength; i++) {
@@ -66,28 +66,28 @@ for (var i = 0; i < selectAll.length; i++) {
     }
     // Find all items
     var selectItem = selectList.find('li');
-  
+
     selectList.slideUp(0);
     selectGap.on('click', function () {
       if (!$(this).hasClass('on')) {
         $(this).addClass('on');
         selectList.slideDown(dur);
-  
+
         selectItem.on('click', function () {
           var chooseItem = $(this).data('value');
-  
+
           $('select').val(chooseItem).attr('selected', 'selected');
           selectGap.text($(this).find('span').text());
-  
+
           selectList.slideUp(dur);
           selectGap.removeClass('on');
         });
-  
+
       } else {
         $(this).removeClass('on');
         selectList.slideUp(dur);
       }
     });
-  
+
   });
 }

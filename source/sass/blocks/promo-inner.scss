@@ -5,16 +5,19 @@
   padding-bottom: 40px;
   margin-bottom: 40px;
 
-  &::before {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 20px;
-    background-repeat: repeat-x;
-    background-size: 5%;
-    background-image: url("../img/projects/projects-title-border-2.png");
+  &--wave {
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 20px;
+      background-repeat: repeat-x;
+      background-size: 5%;
+      background-image: url("../img/projects/projects-title-border-2.png");
+    }
   }
 
   &__nav {
@@ -40,10 +43,15 @@
     margin: 0;
     margin-bottom: 25px;
 
-    @include ff('font-size', (375px: 20px, 1280px: 25px));
+    @include ff(
+      "font-size",
+      (
+        375px: 20px,
+        1280px: 25px
+      )
+    );
     font-weight: 600;
     color: #000000;
-
   }
 }
 

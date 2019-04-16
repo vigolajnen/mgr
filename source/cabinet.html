@@ -15,7 +15,7 @@
   @@include('_include/_page-header.1.html')
 
   <div class="wrapper">
-    <div class="promo-inner promo-inner--wave">
+    <div class="promo-inner">
       <nav class="promo-inner__nav navigation-promo">
         <ul class="navigation-promo__list">
           <li class="navigation-promo__item">
@@ -23,7 +23,7 @@
               <span class="navigation-promo__name">Общая информация</span>
             </a>
           </li>
-          <li class="navigation-promo__item">
+          <li class="navigation-promo__item navigation-promo__item--active">
             <a class="navigation-promo__link navigation-promo__link--icon-2" href="#">
               <span class="navigation-promo__name">Мои заказы</span>
             </a>
@@ -56,15 +56,15 @@
             <div id="tabs-container" class="tabs__container">
               <div id="order-all" class="tabs__content">
                 <table class="order-table">
-                  <thead>
+                  <thead class="order-table__head">
                     <tr>
-                      <td>№ заказа</td>
-                      <td>Услуга</td>
-                      <td>Цена</td>
-                      <td>Статус</td>
-                      <td>Оплата</td>
-                      <td>Акты</td>
-                      <td>Отзывы</td>
+                      <td class="order-table__title">№ заказа</td>
+                      <td class="order-table__title">Услуга</td>
+                      <td class="order-table__title">Цена</td>
+                      <td class="order-table__title">Статус</td>
+                      <td class="order-table__title">Оплата</td>
+                      <td class="order-table__title">Акты</td>
+                      <td class="order-table__title">Отзывы</td>
                     </tr>
                   </thead>
                   <tbody>

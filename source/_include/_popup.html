@@ -2,28 +2,45 @@
   <section class="popup popup-order">
     <div class="popup-order__wrapper">
       <button class="button popup-close" aria-label="Закрыть окно"></button>
-      <h3 class="popup-order__title">Закажите обратный звонок</h3>
+      <h3 class="popup-order__title">Бесплатная установка модуля на сайт</h3>
       <form class="popup-order__form" action="https://echo.htmlacademy.ru" method="post">
         <ul class="popup-order__list">
           <li class="popup-order__item">
-            <label class="visually-hidden" for="name">Ваше имя</label>
-            <input class="popup-order__input" id="name" type="text" name="name" placeholder="Ваше имя" required>
+            <label class="visually-hidden" for="select-1">Выберите модуль</label>
+            <div class="search-form__item" id="select-1">
+              <select class="search-form__select custom-select js-size select select-1">
+                <option value="Все категории">Выберите модуль</option>
+                <option value="Дизайн и Арт">Дизайн и Арт</option>
+                <option value="Разработка сайтов">Разработка сайтов</option>
+                <option value="Программирование">Программирование</option>
+                <option value="Реклама и продвижение">Реклама и продвижение</option>
+                <option value="Полиграфия">Полиграфия</option>
+                <option value="Мобильные приложения">Мобильные приложения</option>
+                <option value="Автоматизация бизнеса">Автоматизация бизнеса</option>
+                <option value="Производство видео">Производство видео</option>
+              </select>
+            </div>
           </li>
           <li class="popup-order__item">
-              <label class="visually-hidden" for="surname">Фамилия</label>
-              <input class="popup-order__input" id="surname" type="text" name="surname" placeholder="Фамилия" required>
-            </li>
-          <li class="popup-order__item">
-            <label class="visually-hidden" for="phone">Контактный телефон*</label>
-            <input class="popup-order__input" id="phone" name="phone" type="tel" placeholder="Контактный телефон*"
-              required>
+            <label class="visually-hidden" for="select-2">Выберите сайт для установки</label>
+            <div class="search-form__item" id="select-2">
+              <select class="search-form__select custom-select js-size select select-2">
+                <option value="Все категории">Выберите сайт для установки</option>
+                <option value="Дизайн и Арт">Дизайн и Арт</option>
+                <option value="Разработка сайтов">Разработка сайтов</option>
+                <option value="Программирование">Программирование</option>
+                <option value="Реклама и продвижение">Реклама и продвижение</option>
+                <option value="Полиграфия">Полиграфия</option>
+                <option value="Мобильные приложения">Мобильные приложения</option>
+                <option value="Автоматизация бизнеса">Автоматизация бизнеса</option>
+                <option value="Производство видео">Производство видео</option>
+              </select>
+            </div>
           </li>
         </ul>
         <div class="popup-order__bottom">
-          <!-- <p class="policy-text">Отправляя заявку, я подтверждаю,что ознакомлен и согласен с <a href="#">Политикой
-              конфиденциальности</a> данного сайта</p> -->
-          <button class="button button--blue-dark button-order popup-order__button" type="submit">Отправить</button>
-          <div class="popup-order__text">Мы Вам перезвоним</div>
+          <button class="button button--blue popup-order__button" type="submit">Получить</button>
+          <button class="button button-order popup-order__button" type="reset">Отмена</button>
         </div>
       </form>
     </div>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ru" class="no-js">
+
+<head>
+  <meta charset="utf-8">
+  <title>ЕИМ</title>
+  @@include('_include/_head-meta.html')
+  <link rel="preload" href="fonts/CrowdFunded.woff2" as="font">
+  <link rel="preload" href="fonts/GoogleSans.woff2" as="font">
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+  <div class="paranja"></div>
+  @@include('_include/_page-header.1.html')
+
+  <div class="wrapper">
+    <div class="promo-inner">
+      <nav class="promo-inner__nav navigation-promo">
+        <ul class="navigation-promo__list">
+          <li class="navigation-promo__item">
+            <a class="navigation-promo__link navigation-promo__link--icon-1" href="#">
+              <span class="navigation-promo__name">Общая информация</span>
+            </a>
+          </li>
+          <li class="navigation-promo__item navigation-promo__item--active">
+            <a class="navigation-promo__link navigation-promo__link--icon-2" href="#">
+              <span class="navigation-promo__name">Мои заказы</span>
+            </a>
+          </li>
+          <li class="navigation-promo__item">
+            <a class="navigation-promo__link navigation-promo__link--icon-3" href="#">
+              <span class="navigation-promo__name">Мои подарки</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <section class="promo-inner__info">
+        <div class="breadcrumbs">
+          <a class="breadcrumbs__link" href="index.html">Главная</a>
+          <a class="breadcrumbs__link">Личный кабинет</a>
+          <a class="breadcrumbs__link">Мои подарки</a>
+        </div>
+        <h1 class="promo-inner__title title-inner">Личный кабинет</h1>
+        <h2 class="">Мои подарки</h2>
+        @@include('_include/_presents.html')
+      </section>
+    </div>
+  </div>
+
+  @@include('_include/_page-footer.html')
+
+  @@include('_include/_mobile.html')
+
+  @@include('_include/_popup.html')
+
+  @@include('_include/_script.html')
+
+</body>
+
+</html>

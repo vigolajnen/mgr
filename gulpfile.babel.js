@@ -177,19 +177,23 @@ gulp.task("vendor", function () {
 // });
 
 gulp.task("jsmin", function () {
-  gulp.src([
+  gulp
+    .src([
       "source/js/mobile.js",
       "source/js/header.js ",
       "source/js/scroll.js ",
       "source/js/slider.js ",
       "source/js/popup.js",
       "source/js/select.js",
-      "source/js/viewportChecker.js",
+      "source/js/tabs.js",
+      "source/js/viewportChecker.js"
     ])
     .pipe(concat("main.min.js"))
-    .pipe(uglify({
-      mangle: false
-    }))
+    .pipe(
+      uglify({
+        mangle: false
+      })
+    )
     .pipe(gulp.dest("build/js"));
 });
 

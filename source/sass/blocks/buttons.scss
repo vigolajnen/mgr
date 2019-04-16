@@ -33,3 +33,24 @@
   (375px: 16px,
     1280px: 29px));
 }
+
+
+.button--green {
+  padding: 10px 20px;
+  font-family: $fontCrowdFunded;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  text-align: center;
+  text-transform: uppercase;
+
+  color: $color-white;
+  background: #6db629;
+
+  border-radius: 40px;
+  box-shadow: 0 8px 0px -1px #e6e8ed;
+
+  @include ff("font-size",
+  (375px: 16px,
+    1280px: 25px));
+}

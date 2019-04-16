@@ -27,7 +27,7 @@
 
 @import "blocks/buttons.scss";
 @import "blocks/links.scss";
-
+@import "blocks/tabs.scss";
 @import "blocks/navigation.scss";
 @import "blocks/logo.scss";
 
@@ -48,8 +48,8 @@
 // @import "blocks/form-order.scss";
 // @import "blocks/list-nomark.scss";
 // @import "blocks/form-contact.scss";
-// @import "blocks/popup.scss";
-// @import "blocks/popup-order.scss";
+@import "blocks/popup.scss";
+@import "blocks/popup-order.scss";
 
 @import "blocks/email.scss";
 @import "blocks/phone.scss";
@@ -84,3 +84,9 @@
 
 @import "blocks/promo-inner.scss";
 @import "blocks/breadcrumbs.scss";
+
+
+@import "blocks/order-table.scss";
+
+@import "blocks/presents.scss";
+@import "blocks/present.scss";

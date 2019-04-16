@@ -1,0 +1,129 @@
+.tabs {
+  max-width: 100%;
+  overflow: hidden;
+
+  &__wrapper {
+    width: 100%;
+    overflow-y: hidden;
+    margin: 0 auto;
+    display: block;
+  }
+
+  &__content {
+    transition: 1s;
+
+    @media (max-width: $tablet-width) {
+      display: flex;
+      flex-direction: column;
+    }
+
+    & .button-link {
+      display: block;
+      margin: 0 auto;
+
+      @media (min-width: $tablet-width) {
+        // width: 200px;
+      }
+    }
+  }
+
+  &__list {
+    display: none;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    min-width: 250px;
+    padding: 0;
+    margin: 0 0 20px 0;
+    list-style: none;
+
+    @media (min-width: $tablet-width) {
+      display: flex;
+    }
+  }
+
+  &__item {
+    padding-right: 30px;
+
+    &:last-child {
+      padding-right: 0;
+    }
+  }
+
+  &__link {
+    display: block;
+    text-decoration: none;
+    color: $text-color;
+    font-family: $fontGoogleSans;
+
+    font-weight: 700;
+    line-height: normal;
+    transition: 0.1s;
+
+    @include ff(
+      "font-size",
+      (
+        375px: 15px,
+        1440px: 17px
+      )
+    );
+
+
+  }
+
+  &__active {
+    padding: 15px 20px;
+    color: #ffffff;
+    background: #919aad;
+    border-radius: 40px;
+  }
+}
+
+.tabs__link--full.tabs__active {
+  &::before {
+    width: 100%;
+  }
+}
+
+.tabs__content-title {
+  display: inline-block;
+  margin-bottom: 40px;
+  text-align: center;
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+}
+
+.tabs__list--scroll {
+  @media (max-width: 750px) {
+    overflow-x: scroll;
+    flex-wrap: nowrap;
+    width: 100%;
+
+    overflow-y: hidden;
+
+    // /* хром, сафари */
+    // &::-webkit-scrollbar {
+    //   width: 0;
+    // }
+
+    // /* ie 10+ */
+    // & {
+    //   -ms-overflow-style: none;
+    // }
+
+    // /* фф (свойство больше не работает, других способов тоже нет)*/
+    // & {
+    //   overflow: -moz-scrollbars-none;
+    // }
+  }
+}
+
+.tabs__item {
+  &--active {
+    @media (max-width: $mobile-width-only) {
+      display: none;
+    }
+  }
+}
