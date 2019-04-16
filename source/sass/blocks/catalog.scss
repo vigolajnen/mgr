@@ -1,0 +1,45 @@
+.catalog {
+  &__title {
+
+  }
+  &__list {
+    @include listReset();
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 50px;
+  }
+
+  &__item {
+    width: 45%;
+
+    @include respond-above(sm) {
+      width: calc(100% / 3 - 26px);
+    }
+
+    @include respond-above(lg) {
+      width: calc(100% / 4 - 53px);
+    }
+  }
+
+  &__link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    text-decoration: none;
+  }
+
+  &__pic {
+    margin-bottom: 25px;
+  }
+
+  &__name {
+    color: $text-color;
+    font-weight: 700;
+    text-align: center;
+
+    @include ff('font-size', (375px: 17px, 1280px: 21px));
+  }
+}
