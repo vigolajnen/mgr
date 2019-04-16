@@ -54,3 +54,30 @@
   (375px: 16px,
     1280px: 25px));
 }
+
+
+.button--icon-del {
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: -15px;
+    left: 0;
+
+    @include sprite($icon-delete);
+  }
+}
+
+.button--icon-edit {
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: -15px;
+    left: 0;
+
+    @include sprite($icon-edit);
+  }
+}

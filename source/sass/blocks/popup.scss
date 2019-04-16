@@ -1,4 +1,40 @@
-.popup {}
+.popup {
+
+  &__wrapper {
+    position: relative;
+    max-width: 400px;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    padding: 15px;
+    background: #ffffff;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+    @media (min-width: 500px) {
+      margin: 5% auto;
+      padding: 30px 30px 20px;
+      height: auto;
+      border-radius: 30px;
+    }
+
+    @media (min-width: $tablet-width) {
+      padding: 30px;
+      margin: 10% auto;
+      height: auto;
+    }
+  }
+
+  &__list {
+    padding: 0;
+    margin: 0 auto;
+    list-style-type: none;
+  }
+
+  &__item {
+    margin-bottom: 24px;
+    width: 100%;
+  }
+}
 
 .popup-overlay {
   display: none;

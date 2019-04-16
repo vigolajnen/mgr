@@ -1,0 +1,18 @@
+.form-review {
+  &__item {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+  &__input {
+    border: none;
+    border-radius: 0;
+  }
+  &__label {
+    padding-right: 10px;
+
+    &--full {
+      width: 100%;
+    }
+  }
+}

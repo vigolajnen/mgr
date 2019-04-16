@@ -53,6 +53,10 @@
     &--no-pay {
       color: #ef5421;
     }
+
+    &--tel {
+      min-width: 140px;
+    }
   }
 
   &__link {
