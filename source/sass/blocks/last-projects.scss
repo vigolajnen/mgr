@@ -53,12 +53,12 @@
 
     display: flex;
     flex-wrap: wrap;
-    justify-content: flex-start;
+    justify-content: space-between;
   }
 
   &__item {
     margin-bottom: 40px;
-    width: 50%;
+    width: calc(50% - 10px);
 
     @include respond-above(sm) {
       width: calc(100% / 3 - 20px);

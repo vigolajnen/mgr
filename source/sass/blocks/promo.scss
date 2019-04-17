@@ -14,10 +14,11 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    align-items: flex-end;
+    align-items: flex-start;
   }
 
   &__title {
+    margin: auto;
     margin-bottom: 40px;
 
     color: #1a1a1a;
@@ -35,6 +36,12 @@
         1540px: 54px
       )
     );
+    text-align: center;
+
+    @include respond-above(md) {
+      text-align: left;
+      margin-left: 0;
+    }
   }
 
   &__sale-text {
@@ -94,10 +101,15 @@
 }
 
 .promo__info {
+  display: none;
+  position: relative;
   width: 100%;
+  min-height: 400px;
 
   @include respond-above(md) {
     width: 75%;
+    min-height: 550px;
+    padding-left: 20px;
   }
 }
 
@@ -108,15 +120,40 @@
 }
 
 .promo__pic {
-  width: 50%;
+  display: none;
+
+  @include respond-above(sm) {
+    display: block;
+    position: absolute;
+    width: 50%;
+    bottom: 0;
+    left: 0;
+  }
 }
 
 .promo__text {
-  width: 50%;
-  height: 100%;
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+  margin: auto;
 
   background-image: url("../../img/promo/promo-info-bg.png");
   background-repeat: no-repeat;
   background-size: contain;
 
+  @include respond-above(sm) {
+    top: 0;
+    width: 50%;
+    height: 100%;
+
+    transform: translate(50%, 50%);
+  }
+
+  @include respond-above(md) {
+    top: 50%;
+    width: 50%;
+    height: 100%;
+
+    transform: translate(50%, 50%);
+  }
 }

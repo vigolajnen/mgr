@@ -12,7 +12,89 @@
 
 <body>
   <div class="paranja"></div>
-  @@include('_include/_page-header.1.html')
+  <div class="preloader"></div>
+  <header class="page-header">
+    <div class="page-header__wrapper wrapper">
+      <div class="page-header__item page-header__item--hidden">
+        <div class="logo">
+          <a class="logo__link" href="index.html">
+            <picture>
+              <!-- <source media="(min-width: 769px)" srcset="img/logo.png"> -->
+              <img class="logo__pic" src="img/logo.png" alt="логотип">
+            </picture>
+          </a>
+        </div>
+      </div>
+      <div class="page-header__item page-header__item--hidden">
+        <nav class="page-header__nav navigation-top">
+          <ul class="navigation-top__list">
+            <li class="navigation-top__item">
+              <a class="navigation-top__link" href="#">Гарантии</a>
+            </li>
+            <li class="navigation-top__item">
+              <a class="navigation-top__link" href="#">Помощь</a>
+            </li>
+            <li class="navigation-top__item">
+              <a class="navigation-top__link" href="#">О проекте</a>
+            </li>
+            <li class="navigation-top__item navigation-top__item--phone">
+              <a class="navigation-top__link" href="tel:+78008887766">+7 800 888 77 66</a>
+            </li>
+          </ul>
+        </nav>
+        <!-- выбор категории -->
+        <form class="search-form" action="">
+          <div class="search-form__item">
+            <label for="search" class="visually-hidden">Поиск</label>
+            <input class="search-form__val" type="text" name="search" id="search"
+              placeholder="Начните вводить текст...">
+          </div>
+          <div class="search-form__item" id="select-4">
+            <select class="search-form__select custom-select js-size select select-4" aria-placeholder="Все категории">
+              <option value="Все категории">Все категории</option>
+              <option value="Дизайн и Арт">Дизайн и Арт</option>
+              <option value="Разработка сайтов">Разработка сайтов</option>
+              <option value="Программирование">Программирование</option>
+              <option value="Реклама и продвижение">Реклама и продвижение</option>
+              <option value="Полиграфия">Полиграфия</option>
+              <option value="Мобильные приложения">Мобильные приложения</option>
+              <option value="Автоматизация бизнеса">Автоматизация бизнеса</option>
+              <option value="Производство видео">Производство видео</option>
+
+            </select>
+          </div>
+          <div class="search-form__item">
+            <button class="search-form__button button" type="search" aria-label="Поиск"></button>
+          </div>
+        </form>
+        <p class="page-header__caption"><span class="page-header__caption--black">Например,</span> 100 лидов лендинг 10
+          постов 30 отзывов</p>
+
+      </div>
+      <div class="page-header__item page-header__item--hidden">
+        <div class="page-header__basket-and-user">
+          <div class="basket">
+            <div class="basket__info">В корзине:
+              <span class="basket__count">0 товаров</span>
+            </div>
+          </div>
+          <div class="cabinet-user">
+            <div class="cabinet-user__inner">
+              <a class="cabinet-user__login" href="#">Войти</a>
+              <a class="cabinet-user__reg" href="#">Регистрация</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="page-header__mob">
+        <a class="link-arrow" href="cabinet.html" aria-label="ссылка назад"></a>
+        <h1 class="page__title">Мои подарки</h1>
+      </div>
+
+    </div>
+
+  </header>
+
 
   <div class="wrapper">
     <div class="promo-inner">

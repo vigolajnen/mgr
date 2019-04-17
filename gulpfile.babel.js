@@ -154,31 +154,10 @@ gulp.task("vendor", function () {
     .pipe(gulp.dest("build/js"));
 });
 
-// gulp.task("scripts", function () {
-//   return gulp.src(
-//       [
-//         "node_modules/babel-polyfill/dist/polyfill.js",
-
-//         "source/js/mobile.js",
-//         "source/js/header.js ",
-//         "source/js/popup.js",
-//         "source/js/map.js",
-//         "source/js/form.js"
-//       ])
-
-//     .pipe(concat("main.min.js"))
-//     .pipe(uglify({
-//       mangle: false
-//     }))
-//     .pipe(babel({
-//       presets: ["es2015"]
-//     }))
-//     .pipe(gulp.dest("build/js"));
-// });
-
 gulp.task("jsmin", function () {
   gulp
     .src([
+      "source/js/preloader.js",
       "source/js/mobile.js",
       "source/js/header.js ",
       "source/js/scroll.js ",
@@ -197,15 +176,6 @@ gulp.task("jsmin", function () {
     .pipe(gulp.dest("build/js"));
 });
 
-
-// gulp.task("jsmin-map", function () {
-//   gulp.src(["source/js/map.js"])
-//     .pipe(concat("map.min.js"))
-//     .pipe(uglify({
-//       mangle: false
-//     }))
-//     .pipe(gulp.dest("build/js"));
-// });
 
 gulp.task("serve", function () {
   server.init({

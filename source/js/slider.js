@@ -48,33 +48,49 @@
 //   }
 // });
 
-// "use strict";
+"use strict";
 
-// // слайдеры на главной
-// $(document).ready(function() {
+// слайдеры на главной
+$(document).ready(function() {
+  if (window.outerWidth < 992) {
+    $("#slider-main-goods").slick({
+      dots: true,
+      arrow: false,
+      centerPadding: "40px",
+      infinite: true,
+      slidesToShow: 3,
+      slidesToScroll: 1,
+      responsive: [
+        {
+          breakpoint: 600,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 1
+          }
+        }
+      ]
+    });
+  }
 
-
-//   if (window.outerWidth < 800) {
-//     $("#slider-main-goods").slick({
-//       dots: true,
-//       arrow: false,
-//       centerPadding: "40px",
-//       infinite: true,
-//       slidesToShow: 4,
-//       slidesToScroll: 1
-//     });
-//   }
-
-//   window.addEventListener("resize", function() {
-//     if (window.outerWidth < 800) {
-//       $("#slider-main-goods").slick({
-//         dots: true,
-//         arrow: false,
-//         centerPadding: "40px",
-//         infinite: true,
-//         slidesToShow: 2,
-//         slidesToScroll: 1
-//       });
-//     }
-//   });
-// });
+  window.addEventListener("resize", function() {
+    if (window.outerWidth < 992) {
+      $("#slider-main-goods").slick({
+        dots: true,
+        arrow: false,
+        centerPadding: "40px",
+        infinite: true,
+        slidesToShow: 2,
+        slidesToScroll: 1,
+        responsive: [
+          {
+            breakpoint: 600,
+            settings: {
+              slidesToShow: 2,
+              slidesToScroll: 1
+            }
+          }
+        ]
+      });
+    }
+  });
+});

@@ -23,7 +23,7 @@
     padding-top: 195px;
     margin-bottom: 45px;
 
-    @include respond-above(md) {
+    @include respond-above(sm) {
       width: calc(100% / 3 - 30px);
     }
   }

@@ -76,3 +76,10 @@
     fill: #1f9bd1;
   }
 }
+
+.navigation-mob__item--active .navigation-mob__link{
+  color: #1f9bd1;
+  & .navigation-mob__icon {
+    fill: #1f9bd1;
+  }
+}
