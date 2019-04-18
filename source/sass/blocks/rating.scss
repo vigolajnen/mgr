@@ -1,0 +1,24 @@
+.rating {
+  @include listReset();
+  display: flex;
+  flex-wrap: wrap;
+
+  &__item {
+    position: relative;
+    width: 24px;
+    height: 24px;
+
+    fill: #e6e6e6;
+
+    cursor: pointer;
+
+    &.rating__item--active,
+    &.rating__item--active ~ *,
+    &:hover,
+    &:hover ~ * {
+      & svg {
+        fill: #f3931a;
+      }
+    }
+  }
+}
