@@ -23,7 +23,6 @@
     padding: 5px 15px 5px 30px;
 
     color: $color-white;
-    font-family: $fontGoogleSans;
 
     font-weight: 700;
     @include ff(
@@ -34,25 +33,28 @@
       )
     );
 
-    background-color: rgba(0, 0 , 0, 0.25);
+    background-color: rgba(0, 0, 0, 0.25);
 
     border-radius: 20px;
 
     &::before {
       content: "";
       position: absolute;
-      top: 0;
-      left: 0;
+      top: 50%;
+      left: 5px;
       display: block;
 
+      transform: translateY(-50%);
+
       // иконка часов
+
+      @include sprite($icon-time);
     }
   }
   &__text {
     padding: 0 20px;
     margin-bottom: 10px;
     color: $text-color;
-    font-family: $fontGoogleSans;
     font-weight: 700;
     line-height: normal;
 
@@ -72,7 +74,7 @@
 }
 
 .project__hover {
-  display: none;  
+  display: none;
   transform: translateY(200%);
   opacity: 0;
 }
@@ -83,19 +85,28 @@
   color: $color-white;
   text-transform: uppercase;
   font-weight: 700;
+  font-family: $font-title;
+
+  @include ff(
+    "font-size",
+    (
+      375px: 20px,
+      1280px: 25px
+    )
+  );
 
   &::before {
     position: absolute;
     content: "";
-    bottom: 0;
+    bottom: -7px;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translateX(-50%) rotate(180deg);
 
     width: 100%;
     height: 6px;
     background-image: url("../img/projects/projects-more-link-border.png");
     background-repeat: repeat-x;
-
+    background-size: 115px;
   }
 }
 

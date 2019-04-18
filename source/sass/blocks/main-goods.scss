@@ -1,42 +1,6 @@
 .main-goods {
   position: relative;
 
-  background-image: url('../img/goods/goods-bg.png');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: 50%;
-  background-color: $bg-color;
-
-  &::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 1;
-    display: block;
-    width: 100%;
-    height: 40px;
-    background-repeat: repeat-x;
-
-    background-image: url('../img/reviews/reviews-top-border.png');
-  }
-
-  &::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    z-index: 1;
-    display: block;
-    width: 100%;
-    height: 40px;
-    background-repeat: repeat-x;
-
-    background-image: url('../img/reviews/reviews-top-border.png');
-
-    transform: rotate(180deg);
-  }
-
   & .wrapper {
     display: flex;
     flex-direction: column;
@@ -48,7 +12,7 @@
     margin: 50px auto;
 
     color: $color-title;
-    font-family: $fontCrowdFunded;
+    font-family: $font-title;
     font-weight: 400;
     text-transform: uppercase;
 

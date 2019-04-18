@@ -1,48 +1,9 @@
-.link {
-  line-height: 9px;
-  font-size: 11px;
-  font-weight: 600;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  text-decoration: none;
-
-  &--blue {
-    color: #005ba6;
-  }
-
-}
-
-.link-more {
-  position: relative;
-  padding-left: 40px;
-  line-height: 9px;
-  font-size: 11px;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  text-decoration: none;
-
-  color: #ffffff;
-
-  &::before {
-    position: absolute;
-    content: "";
-    top: 50%;
-    left: 0;
-    transform: translateY(-50%);
-    width: 26px;
-    height: 1px;
-    background-color: #fff;
-    opacity: 0.8;
-  }
-}
 
 .link-button {
-  padding: 20px 25px;
+  padding: 15px 25px 20px;
 
   color: $color-white;
-  font-family: $fontCrowdFunded;
-
-  font-weight: 40;
+  font-family: $font-title;
 
   @include ff(
     "font-size",
@@ -55,16 +16,29 @@
   background-color: #008dca;
 
   border-radius: 40px;
-  box-shadow: 0 8px 0px -1px #e6e8ed;
+  box-shadow: 0 8px 0px -1px #ccd7e8;  // e6e8ed  ccd7e8
 
   text-decoration: none;
 
+  transition: 1s;
+
+
   &--orange {
     background-color: #f3931a;
+    box-shadow: 0 8px 0px -1px #e6dcd1;
   }
 
   &--green {
     background-color: #6db629;
+    box-shadow: 0 8px 0px -1px #e4edd3;
+  }
+
+  &--blue-light-bsh {
+    box-shadow: 0 8px 0px -1px #e6e8ed;
+  }
+
+  &:focus, &:hover {
+    box-shadow: 0 8px 0px -1px transparent;
   }
 }
 

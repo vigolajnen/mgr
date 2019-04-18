@@ -30,7 +30,7 @@
 
   &__title {
     color: #ffffcc;
-    font-family: $fontCrowdFunded;
+    font-family: $font-title;
     font-weight: 400;
     line-height: normal;
 
@@ -49,7 +49,7 @@
     position: relative;
     padding-left: 280px;
     color: $color-white;
-    font-family: $fontCrowdFunded;
+    font-family: $font-title;
     line-height: normal;
     font-weight: 400;
     @include ff(
@@ -75,7 +75,6 @@
 
   &__timer-text {
     color: $color-white;
-    font-family: $fontGoogleSans;
     font-weight: 700;
     line-height: normal;
 

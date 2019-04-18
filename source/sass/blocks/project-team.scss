@@ -56,7 +56,6 @@
 
   &__position {
     color: #000000;
-    font-family: $fontGoogleSans;
     font-size: 25px;
     font-weight: 700;
 
@@ -75,7 +74,6 @@
 
   &__text {
     color: $text-color;
-    font-family: $fontGoogleSans;
 
     font-weight: 400;
     @include ff(
