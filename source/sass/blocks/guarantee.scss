@@ -1,0 +1,19 @@
+.guarantee {
+  padding-bottom: 50px;
+  & .wrapper {
+    text-align: center;
+  }
+  &__inner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+  & .title {
+    margin: auto;
+  }
+  &__item {
+    display: flex;
+    flex-direction: column;
+  }
+}

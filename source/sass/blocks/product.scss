@@ -3,17 +3,23 @@
   //min-height: 450px;
   margin-bottom: 35px;
   padding: 10px;
-  background-image: url("../img/product/product-bg.png");
+
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 50%;
 
+  &--bg {
+    background-image: url("../img/product/product-bg.png");
+  }
+
+  &--bg-2 {
+    background-image: url("../img/product/product-bg-2.png");
+  }
 
   &__wrapper {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: #ffffff;
   }
   &__pic {
     position: relative;

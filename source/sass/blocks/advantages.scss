@@ -1,13 +1,14 @@
 .advantages {
   padding-top: 40px;
   padding-bottom: 20px;
+
   & .wrapper {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 
-
+    overflow: hidden;
   }
   &__title {
     margin-bottom: 75px;
@@ -49,6 +50,9 @@
     );
 
     text-align: center;
+  }
+  &__icon {
+    fill: #666666;
   }
 }
 

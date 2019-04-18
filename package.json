@@ -73,6 +73,7 @@
     "gulp-ext-replace": "^0.3.0",
     "gulp-file-include": "^2.0.1",
     "gulp-replace": "^1.0.0",
+    "gulp-svgo": "^2.1.1",
     "gulp.spritesmith": "^6.9.0",
     "imagemin-webp": "^5.0.0",
     "nouislider": "^12.1.0",

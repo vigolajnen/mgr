@@ -21,6 +21,7 @@ var minify = require("gulp-csso");
 var server = require("browser-sync").create();
 var rename = require("gulp-rename");
 var svgstore = require("gulp-svgstore");
+var svgo = require("gulp-svgo");
 var webp = require("gulp-webp");
 var del = require("del");
 var run = require("run-sequence");
@@ -88,12 +89,23 @@ gulp.task("images", function () {
 
 
 gulp.task("sprite", function () {
-  return gulp.src("source/img/icons/icon-*.svg")
-    .pipe(svgstore({
-      inlineSvg: true
-    }))
-    .pipe(rename("sprite.svg"))
-    .pipe(gulp.dest("build/img"));
+  return (
+    gulp
+      .src("source/img/icons/icon-*.svg")
+      .pipe(plumber())
+      .pipe(
+        svgo({
+          plugins: [
+            {
+              removeAttrs: { attrs: ["fill", "fill-rule", "stroke", "style"] }
+            }
+          ]
+        })
+      )
+      .pipe(svgstore({ inlineSvg: true }))
+      .pipe(rename("sprite.svg"))
+      .pipe(gulp.dest("build/img"))
+  );
 });
 
 gulp.task("sprite-png", function () {
@@ -165,10 +177,23 @@ gulp.task("jsmin", function () {
       "source/js/popup.js",
       "source/js/select.js",
       "source/js/tabs.js",
-      "source/js/timer.js",
       "source/js/viewportChecker.js"
     ])
     .pipe(concat("main.min.js"))
+    .pipe(
+      uglify({
+        mangle: false
+      })
+    )
+    .pipe(gulp.dest("build/js"));
+});
+
+gulp.task("js-timer", function() {
+  gulp
+    .src([
+      "source/js/timer.js",
+    ])
+    .pipe(concat("timer.min.js"))
     .pipe(
       uglify({
         mangle: false
@@ -188,7 +213,7 @@ gulp.task("serve", function () {
   });
 
   gulp.watch("source/sass/**/*.{scss,sass}", ["style"]);
-  gulp.watch("source/js/**/*.js", ["jsmin"]);
+  gulp.watch("source/js/**/*.js", ["jsmin"]["js-timer"]);
   gulp.watch("source/**/*.html", ["html"]).on("change", server.reload);
 });
 
@@ -203,6 +228,7 @@ gulp.task("build", function (done) {
     "html",
     "vendor",
     "jsmin",
+    "js-timer",
     done
   );
 });

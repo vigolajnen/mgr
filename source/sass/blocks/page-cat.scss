@@ -1,0 +1,75 @@
+.page-cat {
+  &__header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  &__nav {
+    display: none;
+    @include respond-above(md) {
+      width: 25%;
+      display: flex;
+    }
+  }
+  &__info {
+    width: 100%;
+
+    @include respond-above(md) {
+      width: 70%;
+    }
+  }
+  &__content {
+    display: flex;
+    flex-direction: column;
+    & .link-button--green {
+      margin: auto;
+    }
+  }
+  &__products {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  & .product {
+    width: 200px;
+    width: calc(50% - 10px);
+    margin-right: 20px;
+    &:nth-child(2n) {
+      margin-right: 0;
+    }
+
+    @include respond-above(sm) {
+      width: calc(100% / 3 - 25px);
+      margin-right: 25px;
+      &:nth-child(2n) {
+        margin-right: 25px;
+      }
+
+      &:nth-child(3n) {
+        margin-right: 0;
+      }
+    }
+    @include respond-above(md) {
+      width: calc(100% / 4 - 25px);
+      margin-right: 25px;
+      &:nth-child(3n) {
+        margin-right: 25px;
+      }
+      &:nth-child(4n) {
+        margin-right: 0;
+      }
+    }
+    @include respond-above(lg) {
+      width: calc(100% / 5 - 25px);
+      margin-right: 25px;
+      &:nth-child(3n) {
+        margin-right: 25px;
+      }
+      &:nth-child(4n) {
+        margin-right: 25px;
+      }
+      &:nth-child(5n) {
+        margin-right: 0;
+      }
+    }
+  }
+}

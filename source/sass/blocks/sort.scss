@@ -1,0 +1,46 @@
+.sort {
+  display: flex;
+
+  align-items: center;
+  margin-bottom: 20px;
+
+  &__caption {
+    margin-right: 20px;
+    @include ff(
+      "font-size",
+      (
+        375px: 12px,
+        1280px: 14px
+      )
+    );
+  }
+
+  &__list {
+    @include listReset();
+
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-right: 20px;
+    }
+  }
+
+  &__button {
+    color: $color-blue;
+    font-weight: 600;
+    @include ff(
+      "font-size",
+      (
+        375px: 12px,
+        1280px: 14px
+      )
+    );
+  }
+}
+
+.sort__item--active .sort__button {
+  color: $text-color;
+}

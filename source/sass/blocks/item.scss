@@ -13,7 +13,7 @@
     }
   }
 
-  &__text {
+  &__text, & .tabs__content {
     width: 100%;
     color: $text-color;
 
@@ -28,6 +28,19 @@
     @include respond-above(md1100) {
       width: 60%;
       padding-left: 45px;
+    }
+
+    & h3,
+    h4,
+    h2 {
+      font-weight: 600;
+      @include ff(
+        "font-size",
+        (
+          375px: 20px,
+          1280px: 25px
+        )
+      );
     }
 
     & p {
@@ -49,7 +62,6 @@
 
           top: 10px;
           left: 0;
-
 
           display: inline-block;
           width: 1em;
@@ -87,7 +99,6 @@
     }
   }
 }
-
 
 .item__tabs .tabs__list {
   margin-bottom: 40px;

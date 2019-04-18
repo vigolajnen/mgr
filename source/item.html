@@ -70,7 +70,7 @@
     </div>
   </div>
 
-  <div class="item__tabs tabs vp-invisible">
+  <div class="item__tabs tabs">
     <div class="tabs__wrapper wrapper">
       <ul id="tabs-links" class="tabs__list">
         <li class="tabs__item">
@@ -92,14 +92,8 @@
       <div id="tabs-container" class="tabs__container">
         <div id="tab-01" class="tabs__content">
           <div class="item__descr">
-            <iframe class="item__video"  src="https://www.youtube.com/embed/_j6Os3lIQ4U" frameborder="0"
+            <iframe class="item__video" src="https://www.youtube.com/embed/_j6Os3lIQ4U" frameborder="0"
               allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-              <!-- <video class="item__video" src="https://youtu.be/_j6Os3lIQ4U">video</video> -->
-
-            <!-- <video class="item__video" autoplay muted loop playsinline poster="">
-              <source src="https://youtu.be/_j6Os3lIQ4U" type="video/mp4">
-            </video> -->
             <div class="item__text">
               <p>Cоздание привлекательного продукта сайта-лендинга в короткие сроки (48 часов) для
                 любых целей. Лендинг создается с помощью конструктора битрикс сайты 24.</p>
@@ -131,15 +125,35 @@
           </div>
         </div>
         <div id="tab-02" class="tabs__content">
-          Архив заказов
+          @@include('_include/_reviews-no-bg.html')
         </div>
 
         <div id="tab-03" class="tabs__content">
-          Архив заказов
+          <div class="item__pay">
+            <div class="item__pay-box">
+              <div class="item__pay-title">Безналичная оплата</div>
+              <div class="item__pay-text">Маркетинговое исследование с анализом конкурентов. Исполнитель проводит
+                маркетинговые исследования для изучения товаров или услуг Заказчика с целью
+                определения и разработки оптимальной структуры сайта.</div>
+            </div>
+            <div class="item__pay-box">
+              <div class="item__pay-title">Оплата банковской картой</div>
+              <div class="item__pay-text">Маркетинговое исследование с анализом конкурентов. Исполнитель проводит
+                маркетинговые исследования для изучения товаров или услуг Заказчика с целью
+                определения и разработки оптимальной структуры сайта.</div>
+            </div>
+          </div>
         </div>
 
         <div id="tab-04" class="tabs__content">
-          Архив заказов
+          <h3>Шаг 1</h3>
+          <p>Маркетинговое исследование с анализом конкурентов. Исполнитель проводит
+            маркетинговые исследования для изучения товаров или услуг Заказчика с целью
+            определения и разработки оптимальной структуры сайта.</p>
+          <h3>Шаг 2</h3>
+          <p>Маркетинговое исследование с анализом конкурентов. Исполнитель проводит
+            маркетинговые исследования для изучения товаров или услуг Заказчика с целью
+            определения и разработки оптимальной структуры сайта.</p>
         </div>
 
         <div id="tab-05" class="tabs__content">
@@ -153,11 +167,11 @@
     <div class="wrapper">
       <h3 class="accompanying-services__title">Сопутствующие услуги</h3>
       <div class="accompanying-services__inner">
-        @@include('_include/_product.html')
-        @@include('_include/_product.html')
-        @@include('_include/_product.html')
-        @@include('_include/_product.html')
-        @@include('_include/_product.html')
+        @@include('_include/_product-2.html')
+        @@include('_include/_product-2.html')
+        @@include('_include/_product-2.html')
+        @@include('_include/_product-2.html')
+        @@include('_include/_product-2.html')
       </div>
     </div>
   </section>
@@ -184,10 +198,10 @@
     </div>
   </section>
 
-  <div class="team-and-guarantee team-and-guarantee--bg">
+  <div class="team-and-guarantee bl-bg--blue">
     <section class="project-team">
       <div class="wrapper">
-        <h2 class="project-team__title title-2">Кто работает в проекте?</h2>
+        <h2 class="project-team__title title title--line-blue">Кто работает в проекте?</h2>
         <ul class="project-team__list">
           <li class="project-team__item">
             <div class="project-team__inner">
@@ -222,15 +236,15 @@
     </section>
     <section class="guarantee">
       <div class="wrapper">
-        <h3 class="guarantee__title title-2">Гарантии</h3>
+        <h3 class="guarantee__title title title--line-blue">Гарантии</h3>
         <div class="guarantee__inner">
           <div class="guarantee__item">
             <div class="guarantee__name">Гарантия покупателя</div>
-            <a class="link-btn" href="#">Ознакомиться</a>
+            <a class="link-button" href="#">Ознакомиться</a>
           </div>
           <div class="guarantee__item">
             <div class="guarantee__name">Гарантия возврата</div>
-            <a class="link-btn" href="#">Ознакомиться</a>
+            <a class="link-button" href="#">Ознакомиться</a>
           </div>
         </div>
       </div>
@@ -240,7 +254,7 @@
 
   @@include('_include/_block-order.html')
 
-  <section class="sale sale--bg">
+  <section class="sale bl-bg">
     <div class="wrapper">
       <h3 class="title">Распродажа</h3>
       <div class="sale__warning">для зарегистрированных клиентов!</div>
