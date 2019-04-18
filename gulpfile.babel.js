@@ -165,6 +165,7 @@ gulp.task("jsmin", function () {
       "source/js/popup.js",
       "source/js/select.js",
       "source/js/tabs.js",
+      "source/js/timer.js",
       "source/js/viewportChecker.js"
     ])
     .pipe(concat("main.min.js"))

@@ -16,16 +16,47 @@
     margin: 0 auto;
     padding: 33px 40px 60px 60px;
 
-    background-image: url("../img/stock/stock-bg.jpg");
+    background-image: url("../img/stock/stock-bg-mb.png");
     background-size: cover;
     background-repeat: no-repeat;
+
+    @include respond-above(sm) {
+      padding-bottom: 130px;
+    }
+
+    @include respond-above(md) {
+      padding-bottom: 80px;
+      background-image: url("../img/stock/stock-bg.jpg");
+    }
   }
 
   &__info {
-    width: 60%;
+    width: 100%;
+    text-align: center;
+    background-color: #ed7053;
+
+    @include respond-above(md) {
+      width: 60%;
+      text-align: left;
+    }
+
+    @include respond-above(lg) {
+      width: 65%;
+    }
   }
   &__timer {
-    width: 40%;
+    width: 100%;
+    text-align: center;
+    background-color: #ed7053;
+
+    @include respond-above(md) {
+      width: 40%;
+      text-align: left;
+    }
+
+    @include respond-above(lg) {
+      width: 35%;
+    }
   }
 
   &__title {
@@ -37,8 +68,9 @@
     @include ff(
       "font-size",
       (
-        375px: 30px,
-        1280px: 37px,
+        375px: 25px,
+        750px: 41px,
+        1280px: 43px,
         1540px: 47px
       )
     );
@@ -46,8 +78,7 @@
     text-transform: uppercase;
   }
   &__present {
-    position: relative;
-    padding-left: 280px;
+    margin-bottom: 20px;
     color: $color-white;
     font-family: $font-title;
     line-height: normal;
@@ -56,20 +87,37 @@
       "font-size",
       (
         375px: 40px,
-        1280px: 40px,
+        750px: 123px,
+        993px: 45px,
+        1280px: 60px,
         1540px: 80px
       )
     );
 
     text-transform: uppercase;
 
-    &::before {
-      position: absolute;
-      content: "";
-      top: 0;
-      left: 0;
+    @include respond-above(sm) {
+      line-height: 100px;
+    }
 
-      @include sprite($icon-gifts);
+    @include respond-above(md) {
+      position: relative;
+      padding-left: 260px;
+      line-height: normal;
+      &::before {
+        position: absolute;
+        content: "";
+        top: 5px;
+        left: -10px;
+
+        @include sprite($icon-gifts);
+      }
+    }
+
+    @include respond-above(lg) {
+      &::before {
+        top: 25px;
+      }
     }
   }
 
@@ -77,11 +125,13 @@
     color: $color-white;
     font-weight: 700;
     line-height: normal;
+    text-align: center;
 
     @include ff(
       "font-size",
       (
-        375px: 14px,
+        375px: 16px,
+        750px: 20px,
         1280px: 17px
       )
     );

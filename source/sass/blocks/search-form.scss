@@ -45,7 +45,6 @@
       @include respond-above(sm769) {
         left: 0;
       }
-
     }
   }
 }
@@ -72,7 +71,6 @@
   border-radius: 40px 0 0 40px;
   border: 1px solid #b3bbc9;
 
-
   @include respond-above(sm) {
     padding: 10px 22px;
   }
@@ -86,16 +84,21 @@
   position: relative;
 }
 
-
 .search-form .select__gap {
   position: relative;
   padding: 5px 20px;
   margin-left: -1px;
 
+  width: 125px;
+  min-height: 39px;
+
   color: #1a1a1a;
   font-size: 15px;
   font-weight: 700;
   // line-height: 33.33px;
+
+  white-space: nowrap;
+  overflow: hidden;
 
   @include ff(
     "font-size",
@@ -108,43 +111,50 @@
   border: 1px solid #b3bbc9;
   background: #ffffff;
 
-
   @include respond-above(xs) {
     padding: 5px 25px 5px 15px;
+    width: 200px;
   }
 
   @include respond-above(sm) {
     padding: 5px 30px 7px 20px;
+    width: 250px;
   }
 
   @include respond-above(md) {
     padding: 10px 50px 10px 22px;
   }
 
+  @include respond-above(lg) {
+    width: 200px;
+  }
+
   &::before {
     position: absolute;
     content: "";
     top: 50%;
-    right: 13px;
+    right: 0;
+
+    padding: 5px 15px 5px 10px;
+
+    background: #ffffff;
 
     @include sprite($icon-arrow-close);
 
     transform: rotate(180deg) translateY(50%);
-
   }
 }
-
 
 .search-form .select {
   position: relative;
 }
 .search-form .select__list {
   position: absolute;
-  top: 36px;
+  top: 39px;
   left: 0;
   z-index: 5;
 
-  max-width: 179px;
+  // max-width: 179px;
   width: 100%;
 
   @include listReset();
@@ -155,6 +165,11 @@
 
   background: #ffffff;
   border: 1px solid #b3bbc9;
+
+  @include respond-above(md) {
+    top: 46px;
+  }
+
 }
 
 .search-form .select__item {

@@ -40,6 +40,7 @@
   &--line-fz {
     position: relative;
     font-family: $font-base;
+    text-transform: inherit;
     &::before {
       content: "";
       position: absolute;

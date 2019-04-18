@@ -1,0 +1,87 @@
+.timer {
+  &__inner {
+    color: #333;
+    text-align: center;
+    padding-top: 20px;
+
+    max-width: 400px;
+    margin: auto;
+  }
+
+  &__list {
+    @include listReset();
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__item {
+    position: relative;
+    font-size: 30px;
+    font-weight: 600;
+    padding: 0;
+    color: #ffffff;
+
+    @include ff(
+      "font-size",
+      (
+        375px: 20px,
+        750px: 25px,
+        1280px: 30px
+      )
+    );
+
+    &--hidden {
+      display: none;
+    }
+
+    &:not(:first-child)::before {
+      position: absolute;
+      content: ":";
+      top: 3px;
+      right: 110%;
+      width: 10px;
+      height: 10px;
+      color: #ffffff;
+      font-size: 5rem;
+
+      @include ff(
+        "font-size",
+        (
+          375px: 40px,
+          750px: 50px,
+          1280px: 70px
+        )
+      );
+
+      @include respond-above(sm) {
+        right: 150%;
+        top: 8px;
+      }
+    }
+
+    & span {
+      display: block;
+      height: 40px;
+      margin-bottom: 20px;
+      font-size: 4.5rem;
+
+      font-family: $font-title;
+
+      color: #ffffff;
+
+      @include ff(
+        "font-size",
+        (
+          375px: 40px,
+          750px: 60px,
+          1280px: 70px
+        )
+      );
+
+      @include respond-above(sm) {
+        height: 60px;
+        margin-bottom: 20px;
+      }
+    }
+  }
+}
