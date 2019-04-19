@@ -67,4 +67,11 @@
       background-image: url("../img/line/bl-br-blue.png");
     }
   }
+
+  & .wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 }
