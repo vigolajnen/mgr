@@ -94,3 +94,69 @@ $(document).ready(function() {
     }
   });
 });
+
+
+$("#js-slider-project").slick({
+  dots: true,
+  infinite: true,
+  slidesToShow: 5,
+  slidesToScroll: 1,
+  responsive: [
+    {
+      breakpoint: 1024,
+      settings: {
+        dots: true,
+        infinite: true,
+        slidesToShow: 4,
+        slidesToScroll: 1
+      }
+    },
+    {
+      breakpoint: 768,
+      settings: {
+        dots: true,
+        infinite: true,
+        slidesToShow: 3,
+        slidesToScroll: 1
+      }
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        dots: true,
+        infinite: true,
+        slidesToShow: 2,
+        slidesToScroll: 1
+      }
+    }
+  ]
+});
+
+// $("#js-slider-project").slick({
+//   responsive: [
+//     {
+//       breakpoint: 99999,
+//       settings: "unslick"
+//     },
+//     {
+//       breakpoint: 768,
+//       settings: {
+//         dots: true,
+//         infinite: true,
+//         slidesToShow: 3,
+//         slidesToScroll: 1
+//       }
+//     },
+//     {
+//       breakpoint: 480,
+//       settings: {
+//         dots: true,
+//         arrow: false,
+//         centerPadding: "40px",
+//         infinite: true,
+//         slidesToShow: 2,
+//         slidesToScroll: 1
+//       }
+//     }
+//   ]
+// });
