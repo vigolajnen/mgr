@@ -125,6 +125,7 @@
 
 .page-header__mob .page__title {
   margin-left: 20px;
+  margin-bottom: 0;
 
   @include respond-above(xs) {
     margin-left: 50px;
@@ -212,19 +213,19 @@
 }
 
 .page-header__nav .phone {
-  @media (min-width: $mobile-width-only) {
-    display: none;
-  }
+  // @media (min-width: $mobile-width-only) {
+  //   display: none;
+  // }
 
-  @media (max-width: $mobile-width-only) {
-    position: absolute;
-    display: block;
-    padding: 0;
-    z-index: 1;
-    top: 50%;
-    right: 30px;
-    transform: translateY(-50%);
-  }
+  // @media (max-width: $mobile-width-only) {
+  //   position: absolute;
+  //   display: block;
+  //   padding: 0;
+  //   z-index: 1;
+  //   top: 50%;
+  //   right: 30px;
+  //   transform: translateY(-50%);
+  // }
 }
 
 .page-header__bottom {

@@ -1,6 +1,8 @@
 .basket {
   position: relative;
-  padding-left: 60px;
+  display: flex;
+  align-items: center;
+  // padding-left: 60px;
   padding-right: 35px;
 
   color: $text-color;
@@ -16,17 +18,17 @@
     )
   );
 
-  &::before {
-    position: absolute;
-    content: "";
-    top: 50%;
-    left: 0;
-    transform: translateY(-50%);
+  // &::before {
+  //   position: absolute;
+  //   content: "";
+  //   top: 50%;
+  //   left: 0;
+  //   transform: translateY(-50%);
 
-    background-repeat: no-repeat;
+  //   background-repeat: no-repeat;
 
-    @include sprite($icon-basket);
-  }
+  //   @include sprite($icon-basket);
+  // }
   &__count {
     display: block;
 
@@ -42,5 +44,9 @@
         1280px: 15px
       )
     );
+  }
+  &__icon {
+    margin-right: 10px;
+    fill: $color-orange;
   }
 }

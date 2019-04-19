@@ -32,20 +32,24 @@
       width: 52px;
     }
 
-    &::before {
-      position: absolute;
-      content: "";
-      top: 50%;
-      left: -5px;
+    // &::before {
+    //   position: absolute;
+    //   content: "";
+    //   top: 50%;
+    //   left: -5px;
 
-      transform: translateY(-50%);
+    //   transform: translateY(-50%);
 
-      @include sprite($icon-button-search);
+    //   @include sprite($icon-button-search);
 
-      @include respond-above(sm769) {
-        left: 0;
-      }
-    }
+    //   @include respond-above(sm769) {
+    //     left: 0;
+    //   }
+    // }
+  }
+
+  &__icon {
+    fill: #ffffff;
   }
 }
 
@@ -112,12 +116,13 @@
   background: #ffffff;
 
   @include respond-above(xs) {
-    padding: 5px 25px 5px 15px;
+    padding: 10px 25px 5px 15px;
     width: 200px;
+    height: 46px;
   }
 
   @include respond-above(sm) {
-    padding: 5px 30px 7px 20px;
+    padding: 10px 30px 7px 20px;
     width: 250px;
   }
 
@@ -134,12 +139,14 @@
     content: "";
     top: 50%;
     right: 0;
+    padding: 5px 33px 5px 0;
+    background: #fff;
+    background-image: url("../img/sprite-png.png");
+    background-position: -50px -56px;
+    width: 24px;
+    height: 17px;
 
-    padding: 5px 15px 5px 10px;
-
-    background: #ffffff;
-
-    @include sprite($icon-arrow-close);
+    // @include sprite($icon-arrow-close);
 
     transform: rotate(180deg) translateY(50%);
   }

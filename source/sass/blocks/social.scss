@@ -37,6 +37,13 @@
     height: 100%;
     text-decoration: none;
   }
+  &__svg {
+    fill: #c9cdd4;
+  }
+}
+
+.social__link:hover .social__svg {
+  fill: #008dca;
 }
 
 .social__link--vk,

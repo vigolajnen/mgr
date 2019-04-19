@@ -81,7 +81,11 @@
   }
   &__phone {
     width: 100%;
+    
     text-decoration: none;
+  }
+  & .phone__link {
+    font-size: 1.3rem;
   }
 }
 

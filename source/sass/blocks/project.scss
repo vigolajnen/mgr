@@ -22,7 +22,10 @@
     left: 5px;
     z-index: 1;
 
-    padding: 5px 15px 5px 35px;
+    display: flex;
+    align-items: center;
+
+    padding: 5px 15px 5px 5px;
 
     color: $color-white;
 
@@ -39,19 +42,23 @@
 
     border-radius: 20px;
 
-    &::before {
-      content: "";
-      position: absolute;
-      top: 50%;
-      left: 5px;
-      display: block;
+    // &::before {
+    //   content: "";
+    //   position: absolute;
+    //   top: 50%;
+    //   left: 5px;
+    //   display: block;
 
-      transform: translateY(-50%);
+    //   transform: translateY(-50%);
 
-      // иконка часов
+    //   // иконка часов
 
-      @include sprite($icon-time);
-    }
+    //   @include sprite($icon-time);
+    // }
+  }
+  &__svg {
+    margin-right: 10px;
+    fill: #ffffff;
   }
   &__text {
     padding: 0 20px;
