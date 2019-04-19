@@ -3,7 +3,7 @@
   //min-height: 450px;
   margin-bottom: 35px;
   padding: 10px;
-
+  background-color: #ffffff;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 50%;
@@ -16,10 +16,111 @@
     background-image: url("../img/product/product-bg-2.png");
   }
 
+  &--br {
+    position: relative;
+    &::before {
+      position: absolute;
+      content: "";
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 13px;
+      background-image: url("../../img/product/pr-br-top.png");
+    }
+
+    &::after {
+      position: absolute;
+      content: "";
+      bottom: -7px;
+      left: 0;
+      width: 100%;
+      height: 17px;
+      background-image: url("../../img/product/pr-br-bm.png");
+    }
+  }
+
+  &--br-blue {
+    position: relative;
+    background-color: #f7faff;
+    &::before {
+      position: absolute;
+      content: "";
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 13px;
+      background-image: url("../../img/product/pr-br-top-2.png");
+    }
+
+    &::after {
+      position: absolute;
+      content: "";
+      bottom: -7px;
+      left: 0;
+      width: 100%;
+      height: 17px;
+      background-image: url("../../img/product/pr-br-bm-2.png");
+    }
+  }
+
   &__wrapper {
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    &--br {
+      position: relative;
+      &::before {
+        position: absolute;
+        content: "";
+        top: -7px;
+        left: -16px;
+        width: 10px;
+        height: 104%;
+        background-image: url("../../img/product/pr-br-left.png");
+        background-repeat: repeat-y;
+        background-size: cover;
+      }
+
+      &::after {
+        position: absolute;
+        content: "";
+        top: -9px;
+        right: -12px;
+        height: 104%;
+        width: 10px;
+        background-image: url("../../img/product/pr-br-right.png");
+        background-repeat: repeat-y;
+        background-size: cover;
+      }
+    }
+
+    &--br-blue {
+      position: relative;
+      &::before {
+        position: absolute;
+        content: "";
+        top: -7px;
+        left: -16px;
+        width: 10px;
+        height: 104%;
+        background-image: url("../../img/product/pr-br-left-2.png");
+        background-repeat: repeat-y;
+        background-size: cover;
+      }
+
+      &::after {
+        position: absolute;
+        content: "";
+        top: -9px;
+        right: -12px;
+        height: 104%;
+        width: 10px;
+        background-image: url("../../img/product/pr-br-right-2.png");
+        background-repeat: repeat-y;
+        background-size: cover;
+      }
+    }
   }
   &__pic {
     position: relative;

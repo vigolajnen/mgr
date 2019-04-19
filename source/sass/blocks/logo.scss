@@ -1,4 +1,10 @@
-.logo {}
+.logo {
+  display: block;
+  width: 150px;
+  @include respond-above(md) {
+    width: 200px;
+  }
+}
 
 .logo--mobile {
   display: block;

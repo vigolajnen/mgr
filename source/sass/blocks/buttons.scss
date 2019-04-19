@@ -10,6 +10,10 @@
   border: none;
 
   outline: none;
+
+  &--blue {
+    color: $color-blue;
+  }
 }
 
 .button--icon-del {

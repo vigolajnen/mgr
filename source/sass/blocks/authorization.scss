@@ -1,0 +1,36 @@
+.authorization {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    max-width: 670px;
+    margin: 0 auto;
+
+    @include respond-above(xs) {
+     align-items: flex-start;
+    }
+
+    @include respond-above(sm769) {
+      max-width: 340px;
+    }
+  }
+
+  &__logo {
+    @include respond-above(sm769) {
+      display: none;
+    }
+  }
+  & .title {
+    display: none;
+    @include respond-above(sm769) {
+      display: block;
+    }
+  }
+  & .form {
+    margin-top: 40px;
+  }
+}
