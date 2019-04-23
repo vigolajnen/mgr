@@ -1,0 +1,20 @@
+.marker {
+
+  padding: 0 1rem 0.5rem 1rem;
+  font-family: $font-title;
+  font-size: 1em;
+  line-height: normal;
+  text-align: center;
+  color: #ffffff;
+
+  background-color: #10b9bc;
+  border-radius: 50%;
+
+  &__num {
+    display: block;
+    margin-top: -5px;
+
+    font-size: 2.7em;
+    line-height: 1;
+  }
+}

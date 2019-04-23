@@ -99,7 +99,9 @@
 
 
 @import "blocks/slider-base.scss";
+@import "blocks/slider.scss";
 
+@import "blocks/marker.scss";
 @import "blocks/preloader.scss";
 
 
@@ -120,3 +122,4 @@
 @import "blocks/text.scss";
 
 @import "blocks/authorization.scss";
+@import "blocks/share.scss";

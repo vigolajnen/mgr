@@ -1,4 +1,36 @@
 .item {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  & .wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  &__info {
+    width: 100%;
+    order: 1;
+
+    @include respond-above(md) {
+      width: 47%;
+    }
+  }
+  &__slider {
+    position: relative;
+    width: 100%;
+
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+
+    @include respond-above(md) {
+      width: 47%;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+  }
   &__descr {
     display: flex;
     flex-wrap: wrap;
@@ -13,7 +45,8 @@
     }
   }
 
-  &__text, & .tabs__content {
+  &__text,
+  & .tabs__content {
     width: 100%;
     color: $text-color;
 
@@ -98,8 +131,114 @@
       }
     }
   }
+
+  &__price {
+    background-color: #f7f2ed;
+    padding: 1.5em 1em;
+    margin-bottom: 2em;
+  }
+  &__price-list {
+    @include listReset();
+  }
+  &__price-item {
+    margin-bottom: 1em;
+
+    display: flex;
+    justify-content: space-around;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  &__price-val {
+    font-weight: 600;
+    width: 50%;
+
+    &--sale {
+      color: #ec6045;
+      font-size: 1.875em;
+
+      @include ff(
+    "font-size",
+    (
+      375px: 22px,
+      1280px: 30px
+    )
+  );
+    }
+    &--old {
+      text-decoration: line-through;
+    }
+  }
+  &__buttons {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+  }
+  &__share-doc {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  &__link-doc {
+    text-decoration: none;
+    color: $color-blue;
+    font-weight: 600;
+    max-width: 250px;
+    display: flex;
+  }
+  &__link-icon-doc {
+    fill: #919aad;
+    margin-right: 10px;
+    width: 30px;
+    height: 30px;
+  }
 }
 
 .item__tabs .tabs__list {
   margin-bottom: 40px;
+}
+
+.item__markers {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1em;
+}
+
+.item__marker {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+
+  width: 100%;
+
+  @include respond-above(sm) {
+    width: calc(100% / 3);
+  }
+}
+
+.item__marker-text {
+  max-width: 120px;
+}
+
+.item__marker-icon {
+  width: 50px;
+  height: 50px;
+  padding: 10px;
+  margin: 0 5px;
+  background-color: #80c8d1;
+  border-radius: 50%;
+
+  fill: #ffffff;
+
+  &--security {
+    background-color: #ff9999;
+  }
+  &--clock {
+    background-color: #a3b806;
+  }
 }

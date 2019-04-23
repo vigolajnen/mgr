@@ -37,6 +37,14 @@
     box-shadow: 0 8px 0px -1px #e6e8ed;
   }
 
+  &--white-green {
+    background-color: #ffffff;
+    border: 3px solid #6db629;
+    color: #6db629;
+    box-shadow: 0 8px 0px -1px transparent;
+    text-transform: inherit;
+  }
+
   &:focus, &:hover {
     box-shadow: 0 8px 0px -1px transparent;
   }

@@ -2,7 +2,7 @@
   display: inline-block;
   margin: 0;
   font-family: $font-title;
-  font-size: 50px;
+  font-size: 3.125em;
   font-weight: 400;
   line-height: normal;
   color: $color-title;
@@ -75,6 +75,10 @@
 
       background-image: url("../img/line/title-br-blue.png");
     }
+  }
+
+  &--md {
+
   }
 }
 

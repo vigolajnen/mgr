@@ -1,0 +1,69 @@
+.slider {
+  &__for {
+    width: 100%;
+    height: 100%;
+
+    @include respond-above(md) {
+      width: 70%;
+
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+  }
+  &__nav {
+    width: 100%;
+
+    @include respond-above(md) {
+      position: absolute;
+      top: 0;
+      left: -65%;
+
+      height: 100%;
+      width: 100%;
+
+      margin: 0;
+
+      transform: rotate(90deg);
+    }
+  }
+  &__nav-item {
+    transform: rotate(-90deg);
+  }
+  &__item {
+    position: relative;
+    height: 100%;
+  }
+  &__pic {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  &__marker {
+    position: absolute;
+    top: 4%;
+    left: 3%;
+  }
+  &__loupe {
+    position: absolute;
+    bottom: 4%;
+    right: 3%;
+    width: 2.5rem;
+    height: 2.5rem;
+    background-color: $color-blue;
+    border-radius: 50%;
+  }
+  &__loupe-icon {
+    fill: #ffffff;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  & .slick-list.draggable {
+    // position: absolute;
+    // top: 0;
+    // left: 0;
+  }
+}

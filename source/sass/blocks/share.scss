@@ -1,0 +1,30 @@
+.share {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+
+  &__list {
+    @include listReset();
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  &__text {
+    margin-right: 1rem;
+  }
+  &__item {
+    margin-right: 1rem;
+  }
+
+  &__svg {
+    width: 25px;
+    height: 25px;
+    fill: #1281b8;
+    &--vk {
+      fill: #419cca;
+    }
+    &--inst {
+      fill: #dc97dc;
+    }
+  }
+}
