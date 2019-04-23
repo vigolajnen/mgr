@@ -4,20 +4,29 @@
   flex-direction: column;
   flex-wrap: wrap;
   justify-content: center;
-  align-items: flex-end;
 
   text-align: left;
 
   background-color: $color-white;
 
-  &__wrapper {
+  &__inner {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-between;
     align-items: flex-start;
+
+    height: auto;
+
+    
+
+    @include respond-above(md) {
+      max-height: 560px;
+    }
   }
 
   &__title {
+    width: 100%;
+
     margin: auto;
     margin-bottom: 40px;
 
@@ -27,20 +36,21 @@
     font-weight: 400;
     line-height: normal;
     //line-height: 175px;
+    text-align: center;
 
     @include ff(
-      "font-size",
+      'font-size',
       (
         375px: 34px,
         1280px: 44px,
-        1540px: 54px
+        1540px: 54px,
       )
     );
-    text-align: center;
 
     @include respond-above(md) {
-      text-align: left;
-      margin-left: 0;
+      text-align: right;
+      max-width: 430px;
+      margin-right: 0;
     }
   }
 
@@ -48,7 +58,7 @@
     padding-left: 142px;
     margin-bottom: 60px;
 
-    min-height: 122px;
+     min-height: 122px;
 
     color: #1a1a1a;
 
@@ -56,11 +66,11 @@
     //line-height: 33.33px;
 
     @include ff(
-      "font-size",
+      'font-size',
       (
         375px: 18px,
         1280px: 22px,
-        1540px: 25px
+        1540px: 25px,
       )
     );
 
@@ -68,7 +78,7 @@
       position: relative;
       &::before {
         position: absolute;
-        content: "";
+        content: '';
         top: 0;
         left: 0;
         display: block;
@@ -92,30 +102,46 @@
 .promo__nav {
   order: 1;
   width: 100%;
+  padding-top: 40px;
 
   @include respond-above(md) {
     order: 0;
     width: 25%;
+    padding-top: 0;
   }
 }
 
 .promo__info {
-  display: none;
   position: relative;
   width: 100%;
-  min-height: 400px;
+
+  display: flex;
+  flex-direction: column;
+
+  @include respond-above(xs) {
+    
+    min-height: 500px;
+    padding-left: 20px;
+
+    &::before {
+      position: absolute;
+      content: '';
+      bottom: -12%;
+      left: 3%;
+
+      width: 100%;
+      height: 100%;
+
+      background-image: url('../img/promo/promo-men.png');
+      background-repeat: no-repeat;
+      background-size: 50%;
+      background-position-y: 100%;
+    }
+  }
 
   @include respond-above(md) {
-    width: 75%;
-    min-height: 550px;
-    padding-left: 20px;
+width: 75%;
   }
-}
-
-.promo__inner {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
 }
 
 .promo__pic {
@@ -135,24 +161,15 @@
   width: 100%;
   max-width: 400px;
   margin: auto;
+  margin-right: 0;
 
-  background-image: url("../img/promo/promo-info-bg.png");
+  text-align: center;
+
+  background-image: url('../img/promo/promo-info-bg.png');
   background-repeat: no-repeat;
   background-size: contain;
 
   @include respond-above(sm) {
-    top: 0;
-    width: 50%;
-    height: 100%;
-
-    transform: translate(50%, 50%);
-  }
-
-  @include respond-above(md) {
-    top: 50%;
-    width: 50%;
-    height: 100%;
-
-    transform: translate(50%, 50%);
+    text-align: left;
   }
 }

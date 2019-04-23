@@ -1,6 +1,4 @@
 .navigation-promo {
-  margin-bottom: 45px;
-
   &__list {
     @include listReset();
 
@@ -10,7 +8,7 @@
     flex-wrap: wrap;
     justify-content: space-between;
 
-    @include respond-above(sm769) {
+    @include respond-above(md) {
       flex-direction: column;
       background-color: #f7faff;
     }
@@ -23,128 +21,86 @@
       width: calc(100% / 4);
     }
 
-    @include respond-above(sm769) {
+    @include respond-above(md) {
       width: 100%;
       text-align: left;
     }
   }
   &__link {
     position: relative;
-    display: block;
-    padding: 80px 0 20px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0;
 
     color: $text-color;
-
 
     font-weight: 700;
 
     @include ff(
-      "font-size",
+      'font-size',
       (
         375px: 14px,
-        1280px: 17px
+        1280px: 17px,
       )
     );
 
     text-decoration: none;
 
-    @include respond-above(sm769) {
-      padding: 20px 0 20px 45px;
+    @include respond-above(md) {
+      padding: 15px 0;
+      flex-direction: row;
     }
   }
-}
+  &__icon {
+    margin-bottom: 10px;
+    width: 70px;
+    height: 70px;
+    fill: #00c5db;
 
-.navigation-promo__link--icon-1,
-.navigation-promo__link--icon-2,
-.navigation-promo__link--icon-3,
-.navigation-promo__link--icon-4,
-.navigation-promo__link--icon-5,
-.navigation-promo__link--icon-6,
-.navigation-promo__link--icon-7,
-.navigation-promo__link--icon-8 {
-  position: relative;
-
-  &::before {
-    position: absolute;
-    content: "";
-    top: 0;
-    left: 50%;
-    transform: translate(-50%, 0);
-    display: block;
-    background-color: transparent;
-    background-repeat: no-repeat;
-
-    @include respond-above(sm769) {
-      left: 0;
-      top: 50%;
-      transform: translate(0, -50%);
+    &--blue {
+      fill: #008dca;
     }
-  }
-}
 
-.navigation-promo__link--icon-1::before {
-  @include sprite($icon-menu_1-mb);
+    &--blue-2 {
+      fill: #80c8d1;
+    }
 
-  @include respond-above(sm769) {
-    @include sprite($icon-menu_1);
-  }
-}
-.navigation-promo__link--icon-2::before {
-  @include sprite($icon-menu_8-mb);
+    &--orange {
+      fill: #f3941c;
+    }
 
-  @include respond-above(sm769) {
-    @include sprite($icon-menu_8);
-  }
-}
-.navigation-promo__link--icon-3::before {
-  @include sprite($icon-menu_7-mb);
-
-  @include respond-above(sm769) {
-    @include sprite($icon-menu_7);
-  }
-}
-.navigation-promo__link--icon-4::before {
-  @include sprite($icon-menu_6-mb);
-  @include respond-above(sm769) {
-    @include sprite($icon-menu_6);
-  }
-}
-.navigation-promo__link--icon-5::before {
-  @include sprite($icon-menu_5-mb);
-  @include respond-above(sm769) {
-    @include sprite($icon-menu_5);
-  }
-}
-.navigation-promo__link--icon-6::before {
-  @include sprite($icon-menu_4-mb);
-  @include respond-above(sm769) {
-    @include sprite($icon-menu_4);
-  }
-}
-.navigation-promo__link--icon-7::before {
-  @include sprite($icon-menu_3-mb);
-  @include respond-above(sm769) {
-    @include sprite($icon-menu_3);
-  }
-}
-.navigation-promo__link--icon-8::before {
-  @include sprite($icon-menu_2-mb);
-  @include respond-above(sm769) {
-    @include sprite($icon-menu_2);
+    &--green {
+      fill: #6db629;
+    }
+    &--pink {
+      fill: #ef5421;
+    }
+    &--pink-2 {
+      fill: #ff6666;
+    }
+    &--purple {
+      fill: #cc99cc;
+    }
+    @include respond-above(md) {
+      margin-bottom: 0;
+      margin-right: 20px;
+      width: 25px;
+      height: 25px;
+    }
   }
 }
 
 .navigation-promo__item:not(:last-child) .navigation-promo__link {
-  @include respond-above(sm769) {
-    padding: 20px 0 20px 45px;
+  @include respond-above(md) {
     &::after {
-      content: "";
+      content: '';
       position: absolute;
       bottom: 1px;
       left: 0;
       width: 100%;
       height: 4px;
-      background-image: url("../img/nav-promo/navigation-promo--border.png");
+      background-image: url('../img/nav-promo/navigation-promo--border.png');
       background-repeat: repeat;
       background-size: cover;
       background-position: 0;
