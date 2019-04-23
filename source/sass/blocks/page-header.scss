@@ -1,11 +1,12 @@
 .page-header {
+  display: none;
   position: relative;
   z-index: 2;
   top: 0;
   left: 50%;
   width: 100%;
   min-height: 60px;
-  display: flex;
+
   flex-wrap: wrap;
   justify-content: space-between;
 
@@ -37,6 +38,10 @@
     background-repeat: repeat-x;
 
     background-image: url("../img/header/header-border.png");
+  }
+
+  @include respond-above(sm769) {
+    display: flex;
   }
 
   &__item {
@@ -114,13 +119,13 @@
     justify-content: space-between;
   }
 
-  &__mob {
-    display: flex;
-    align-items: center;
-    @include respond-above(sm769) {
-      display: none;
-    }
-  }
+  // &__mob {
+  //   display: flex;
+  //   align-items: center;
+  //   @include respond-above(sm769) {
+  //     display: none;
+  //   }
+  // }
 }
 
 .page-header__mob .page__title {

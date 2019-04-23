@@ -13,17 +13,26 @@
 <body>
   <div class="paranja"></div>
   <div class="preloader"></div>
+
+  <header class="mobile-header">
+    <div class="mobile-header__inner">
+      <a class="mobile-header__link" href="index.html">
+        <svg class="mobile-header__icon" width="20" height="20">
+          <use xlink:href="img/sprite.svg#icon-023-arrow-point-to-right"></use>
+        </svg>
+        <span class="visually-hidden">ссылка назад</span>
+      </a>
+      <div class="mobile-header__title title">корзина</div>
+    </div>
+  </header>
+
   @@include('_include/_page-header.html')
 
   @@include('_include/_promo.html')
 
   @@include('_include/_main-goods.html')
 
-  <!-- @@include('_include/_stock.html') -->
-  <!-- @@include('_include/_advantages.html')
-  @@include('_include/_last-projects.html')
-  @@include('_include/_block-order.html')
-  @@include('_include/_reviews.html') -->
+
 
   @@include('_include/_page-footer.html')
 

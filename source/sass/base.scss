@@ -23,6 +23,16 @@
   outline: none;
 }
 
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
 body {
   position: relative;
   min-width: 320px;
@@ -47,3 +57,9 @@ img {
   object-fit: cover;
   outline: none;
 }
+
+// .container {
+//   display: flex;
+//   flex-direction: column;
+//   height: 100%;
+// }

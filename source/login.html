@@ -13,28 +13,25 @@
 <body>
 
   <div class="preloader"></div>
-
   <header class="mobile-header">
     <div class="mobile-header__inner">
-      <a class="mobile-header__link" href="#">
+      <a class="mobile-header__link" href="index.html">
         <svg class="mobile-header__icon" width="20" height="20">
           <use xlink:href="img/sprite.svg#icon-023-arrow-point-to-right"></use>
         </svg>
         <span class="visually-hidden">ссылка назад</span>
       </a>
-      <div class="mobile-header__title title">Регистрация</div>
+      <div class="mobile-header__title title">Авторизация</div>
     </div>
   </header>
 
   @@include('_include/_mobile.html')
 
-
-
   @@include('_include/_page-header.html')
   <div class="wrapper">
     <div class="breadcrumbs">
       <a class="breadcrumbs__link" href="index.html">Главная</a>
-      <a class="breadcrumbs__link">Регистрация</a>
+      <a class="breadcrumbs__link">Авторизация</a>
     </div>
   </div>
 
@@ -46,35 +43,23 @@
             <img src="img/logo.svg" alt="Logo" width="200" height="200">
           </a>
         </div>
-        <h1 class="title">Регистрация</h1>
+        <h1 class="title">Авторизация</h1>
         <div class="form">
           <div class="form__wrapper">
             <form class="form__form" action="https://echo.htmlacademy.ru" method="post">
               <div class="form__item">
                 <label for="form-login" class="visually-hidden">Ваше имя</label>
-                <input id="form-login" class="form__input" name="form-login" type="text"
-                  placeholder="vitaliy_ostriy@gmail.com" required="">
-              </div>
-              <div class="form__item">
-                <label for="form-tel" class="visually-hidden">Ваш телефон</label>
-                <input id="form-tel" class="form__input" name="form-tel" type="tel" placeholder="+7 (945) 4506789"
+                <input id="form-login" class="form__input" name="form-login" type="text" placeholder="vitaliy_ostriy@gmail.com"
                   required="">
               </div>
               <div class="form__item">
-                <label for="form-mail" class="visually-hidden">Ваш email</label>
-                <input id="form-mail" class="form__input" name="form-mail" type="mail"
-                  placeholder="vitaliy_ostriy@gmail.com" required="">
-              </div>
-              <div class="form__item">
                 <label for="form-pass" class="visually-hidden">Ваш пароль</label>
-                <input id="form-pass" class="form__input" name="form-pass" type="password" placeholder="" required="">
+                <input id="form-pass" class="form__input" name="form-pass" type="password" placeholder=""
+                  required="">
               </div>
               <div class="form__item">
-                <div class="form__policy">Нажимая на кнопку «Продолжить», я подтверждаю свое согласие на <a
-                    href="">«Политику в отношении обработки персональных данных»</a> и понимаю «<a
-                    href>НПользовательское соглашение</a>»</div>
-                <button class="button link-button" type="submit">Зарегистрироваться</button>
-
+                <button class="button link-button" type="submit">Войти</button>
+                <button class="button button--blue" type="button" aria-label="Забыли пароль" data-id="js-popup-btn-mob">Забыли пароль?</button>
               </div>
             </form>
           </div>
@@ -83,10 +68,31 @@
     </div>
   </main>
 
+
   @@include('_include/_page-footer.html')
 
   <!-- @@include('_include/_popup.html') -->
 
+  <div class="popup-overlay">
+    <section class="popup popup-order form">
+      <div class="popup-order__wrapper">
+        <h3 class="">Востановление пароля</h3>
+        <div>введите email, который использовался при регистрации и мы вышлем на него новый пароль.</div>
+        <form class="popup-order__form form__form" action="https://echo.htmlacademy.ru" method="post">
+          <ul class="popup-order__list">
+            <li class="popup-order__item form__item">
+              <label class="visually-hidden" for="mail">Выберите модуль</label>
+              <input id="mail" class="form__input" type="email" placeholder="Электронная почта">
+            </li>
+          </ul>
+          <div class="popup-order__bottom">
+            <button class="button link-button" type="submit">Отправить</button>
+            <button class="button popup-close" type="button" aria-label="Закрыть окно">Отмена</button>
+          </div>
+        </form>
+      </div>
+    </section>
+  </div>
 
   @@include('_include/_script.html')
 

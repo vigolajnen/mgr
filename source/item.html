@@ -12,6 +12,21 @@
 
 <body>
   <div class="preloader"></div>
+
+  <header class="mobile-header">
+    <div class="mobile-header__inner">
+      <a class="mobile-header__link" href="cat-1.html">
+        <svg class="mobile-header__icon" width="20" height="20">
+          <use xlink:href="img/sprite.svg#icon-023-arrow-point-to-right"></use>
+        </svg>
+        <span class="visually-hidden">ссылка назад</span>
+      </a>
+      <div class="mobile-header__title title">Лендинг за 48 часов</div>
+    </div>
+  </header>
+
+  @@include('_include/_mobile.html')
+
   @@include('_include/_page-header.html')
 
   <div class="wrapper">
@@ -385,8 +400,6 @@
   </section>
 
   @@include('_include/_page-footer.html')
-
-  @@include('_include/_mobile.html')
 
   <!-- @@include('_include/_popup.html') -->
 
