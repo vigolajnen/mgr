@@ -6,23 +6,23 @@
   width: 100%;
   max-width: 100vw;
   margin: 0 auto;
-  padding: 25px 10px 10px 10px;
+  padding: 5% 5% 2% 5%;
 
   background: #ffffff;
 
   &::before {
     position: absolute;
     content: "";
-    top: 0;
+    top: -2px;
     left: 0;
     z-index: 10;
 
     width: 100%;
     height: 10px;
 
-    background-image: url("../img/icons/icon-wave.png");
+    background-image: url("../img/line/title-br.png");
     background-repeat: repeat-x;
-    background-size: 30%;
+    background-size: 16px;
   }
 
   @include respond-above(sm) {
@@ -51,7 +51,7 @@
     @include ff(
       "font-size",
       (
-        375px: 17px,
+        375px: 14px,
         1280px: 21px
       )
     );
@@ -59,8 +59,8 @@
 
   &__icon {
     fill: #919aad;
-    width: 30px;
-    height: 30px;
+    width: 25px;
+    height: 25px;
 
     @include respond-above(xs) {
       width: 45px;

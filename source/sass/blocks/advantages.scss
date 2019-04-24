@@ -11,7 +11,7 @@
     overflow: hidden;
   }
   &__title {
-    margin-bottom: 75px;
+    margin-bottom: 10vh;
   }
   &__list {
     @include listReset();
@@ -24,15 +24,18 @@
   }
   &__item {
     width: calc(50% - 20px);
-    padding-top: 195px;
-    margin-bottom: 45px;
+    padding-top: 10vh;
+    margin-bottom: 3vh;
 
     @include respond-above(sm) {
       width: calc(100% / 3 - 30px);
+      padding-top: 15vh;
     }
 
     @include respond-above(lg) {
       width: calc(100% / 3 - 50px);
+      padding-top: 20vh;
+      margin-bottom: 5vh;
     }
   }
   &__text {
@@ -44,7 +47,8 @@
     @include ff(
       "font-size",
       (
-        375px: 18px,
+        375px: 15px,
+        750px: 18px,
         1280px: 21px
       )
     );
@@ -72,24 +76,50 @@
     transform: translateX(-50%);
     display: block;
     background: transparent;
+
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 20vw;
+    height: 10vh;
+
+    @include respond-above(sm) {
+      height: 15vh;
+    }
+
+    @include respond-above(lg) {
+      height: 20vh;
+    }
   }
 }
 
 .advantages__item--icon-1::before {
-  @include sprite($icon-why_5);
+  // @include sprite($icon-why_5);
+
+  background-image: url("../img/icons/icon-why_5.png");
 }
 .advantages__item--icon-2::before {
-  @include sprite($icon-why_3);
+  // @include sprite($icon-why_3);
+
+  background-image: url("../img/icons/icon-why_3.png");
 }
 .advantages__item--icon-3::before {
-  @include sprite($icon-why_4);
+  // @include sprite($icon-why_4);
+
+  background-image: url("../img/icons/icon-why_4.png");
 }
 .advantages__item--icon-4::before {
-  @include sprite($icon-why_6);
+  // @include sprite($icon-why_6);
+
+  background-image: url("../img/icons/icon-why_6.png");
 }
 .advantages__item--icon-5::before {
-  @include sprite($icon-why_1);
+  // @include sprite($icon-why_1);
+
+  background-image: url("../img/icons/icon-why_1.png");
 }
 .advantages__item--icon-6::before {
-  @include sprite($icon-why_2);
+  // @include sprite($icon-why_2);
+
+  background-image: url("../img/icons/icon-why_2.png");
 }
