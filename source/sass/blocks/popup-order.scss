@@ -95,13 +95,23 @@
   }
 
   &__button {
-    padding: 10px 15px;
-    margin: 0 auto 13px;
+    padding: 5px 15px 15px;
+
     display: block;
 
-    @media (min-width: $tablet-width) {
-      margin-left: auto;
+    &:not(:last-child) {
+      margin-right: 30px;
     }
+  }
+
+  & .popup-close {
+    font-weight: 600;
+    color: $color-blue;
+  }
+
+  & .select__list {
+    @include listReset();
+    padding: 1em;
   }
 
   & .select__gap {
@@ -123,11 +133,10 @@
   }
 
   &__bottom {
+    display: flex;
     text-align: center;
 
     @media (min-width: $tablet-width) {
-      display: flex;
-      flex-direction: row;
       justify-content: flex-start;
       align-items: center;
     }
@@ -135,33 +144,7 @@
 }
 
 .popup-close {
-  // position: absolute;
-  // top: 0;
-  // right: 0;
 
-  // border: none;
-  // border-radius: 50%;
-  // width: 40px;
-  // height: 40px;
-  // background-color: transparent;
-
-  // @media (min-width: $tablet-width) {
-  //   top: 0;
-  //   right: 0;
-  // }
-
-  // &::before {
-  //   position: absolute;
-  //   content: "";
-  //   top: 50%;
-  //   left: 50%;
-  //   transform: translate(-50%, -50%);
-  //   width: 18px;
-  //   height: 18px;
-  //   background-image: url("../img/icons/icon-menu-close.svg");
-  //   background-repeat: no-repeat;
-  //   background-size: contain;
-  // }
 }
 
 .popup-order__chous {

@@ -178,11 +178,8 @@
 .search-form .select {
   position: relative;
   min-height: 100%;
-  display: flex;
-}
-
-.search-form #select-4 {
   width: 100%;
+  display: flex;
 }
 
 .search-form .select__list {
@@ -191,7 +188,6 @@
   left: 0;
   z-index: 5;
 
-  // max-width: 179px;
   width: 100%;
 
   @include listReset();

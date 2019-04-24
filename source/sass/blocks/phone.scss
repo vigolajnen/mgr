@@ -2,10 +2,10 @@
   &__link {
     display: flex;
     align-items: flex-end;
-  text-decoration: none;
-  color: $text-color;
-  font-weight: 700;
-  line-height: normal;
+    text-decoration: none;
+    color: $text-color;
+    font-weight: 700;
+    line-height: normal;
 
     @include ff(
       "font-size",
@@ -16,6 +16,6 @@
     );
   }
   &__icon {
-    fill: $text-color;
+    fill: #919aad;
   }
 }

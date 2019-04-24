@@ -24,8 +24,12 @@
   }
   &__item {
     width: calc(50% - 20px);
-    padding-top: 10vh;
+    padding-top: 12vh;
     margin-bottom: 3vh;
+
+    @include respond-above(xs) {
+      padding-top: 13vh;
+    }
 
     @include respond-above(sm) {
       width: calc(100% / 3 - 30px);
@@ -81,7 +85,12 @@
     background-repeat: no-repeat;
     background-position: center;
     width: 20vw;
-    height: 10vh;
+    height: 11vh;
+
+    @include respond-above(sm) {
+      height: 13vh;
+    }
+
 
     @include respond-above(sm) {
       height: 15vh;

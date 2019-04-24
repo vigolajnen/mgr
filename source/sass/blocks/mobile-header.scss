@@ -2,13 +2,14 @@
   position: relative;
 
   padding: 15px 15px 25px 15px;
+  margin-bottom: 40px;
 
   background-color: #f7faff;
 
   &::after {
     content: "";
     position: absolute;
-    bottom: 0;
+    bottom: -10px;
     left: 0;
     z-index: 1;
     display: block;
@@ -17,6 +18,8 @@
     background-repeat: repeat-x;
 
     background-image: url("../img/header/header-border.png");
+
+    background-size: 30px;
   }
 
   @include respond-above(sm769) {
@@ -28,10 +31,14 @@
     align-items: center;
   }
   &__title {
-    margin-top: -10px;
-    @include respond-above(xs) {
-      margin-top: -15px;
-    }
+    font-weight: 600;
+    @include ff(
+      "font-size",
+      (
+        375px: 23px,
+        750px: 33px
+      )
+    );
   }
   &__icon {
     transform: rotate(180deg);

@@ -14,30 +14,10 @@
   &--blue {
     color: $color-blue;
   }
-}
 
-.button--icon-del {
-  position: relative;
-
-  &::before {
-    position: absolute;
-    content: "";
-    top: -15px;
-    left: 0;
-
-    // @include sprite($icon-delete);
-  }
-}
-
-.button--icon-edit {
-  position: relative;
-
-  &::before {
-    position: absolute;
-    content: "";
-    top: -15px;
-    left: 0;
-
-    // @include sprite($icon-edit);
+  &__icon {
+    fill: #c9cdd4;
+    width: 20px;
+    height: 20px;
   }
 }

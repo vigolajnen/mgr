@@ -22,7 +22,7 @@
         </svg>
         <span class="visually-hidden">ссылка назад</span>
       </a>
-      <div class="mobile-header__title title">Мои подарки</div>
+      <div class="mobile-header__title">Мои подарки</div>
     </div>
   </header>
 
@@ -35,18 +35,27 @@
     <div class="promo-inner">
       <nav class="promo-inner__nav navigation-promo">
         <ul class="navigation-promo__list">
-          <li class="navigation-promo__item">
+          <li class="navigation-promo__item navigation-promo__item--active">
             <a class="navigation-promo__link navigation-promo__link--icon-1" href="cabinet.html">
+              <svg class="navigation-promo__icon navigation-promo__icon--pink" width="20" height="20">
+                <use xlink:href="img/sprite.svg#icon-user-1"></use>
+              </svg>
               <span class="navigation-promo__name">Общая информация</span>
             </a>
           </li>
           <li class="navigation-promo__item">
             <a class="navigation-promo__link navigation-promo__link--icon-2" href="cabinet.2.html">
+              <svg class="navigation-promo__icon" width="20" height="20">
+                <use xlink:href="img/sprite.svg#icon-024-document"></use>
+              </svg>
               <span class="navigation-promo__name">Мои заказы</span>
             </a>
           </li>
-          <li class="navigation-promo__item navigation-promo__item--active">
+          <li class="navigation-promo__item">
             <a class="navigation-promo__link navigation-promo__link--icon-3" href="cabinet.1.html">
+              <svg class="navigation-promo__icon navigation-promo__icon--orange" width="20" height="20">
+                <use xlink:href="img/sprite.svg#icon-013-gift"></use>
+              </svg>
               <span class="navigation-promo__name">Мои подарки</span>
             </a>
           </li>
@@ -58,8 +67,10 @@
           <a class="breadcrumbs__link">Личный кабинет</a>
           <a class="breadcrumbs__link">Мои подарки</a>
         </div>
-        <h1 class="promo-inner__title title-inner">Личный кабинет</h1>
-        <h2 class="">Мои подарки</h2>
+        <div class="promo-inner__header">
+          <h1 class="promo-inner__title title-inner">Личный кабинет</h1>
+          <h2 class="">Мои подарки</h2>
+        </div>
         @@include('_include/_presents.html')
       </section>
     </div>

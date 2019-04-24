@@ -1,4 +1,4 @@
-.order-table {
+.table {
   border-collapse: collapse;
 
   &__title {
@@ -17,7 +17,7 @@
       )
     );
 
-     &::before {
+    &::before {
       content: "";
       position: absolute;
       bottom: 0;
@@ -31,6 +31,40 @@
       background-size: 30px;
 
       background-image: url("../img/projects/projects-title-border-2.png");
+    }
+  }
+
+  &__head {
+    @include respond-below(md) {
+      display: none;
+    }
+  }
+
+  &__row {
+    @include respond-below(md) {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 1em;
+      padding-bottom: 2em;
+
+      &::before {
+        position: absolute;
+        content: "";
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 1;
+        display: block;
+        background-repeat: repeat-x;
+
+        width: 100%;
+        height: 10px;
+
+        background-image: url("../img/line/title-br-blue.png");
+
+        background-size: 18px;
+      }
     }
   }
 
@@ -56,6 +90,21 @@
 
     &--tel {
       min-width: 140px;
+    }
+
+    @include respond-below(md) {
+      position: relative;
+      display: flex;
+      width: 100%;
+      max-width: 100%;
+      padding-left: 20%;
+
+      &::before {
+        position: absolute;
+        content: attr(data-name);
+        top: 9px;
+        left: 0;
+      }
     }
   }
 

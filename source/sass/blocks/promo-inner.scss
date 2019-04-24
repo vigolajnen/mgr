@@ -20,6 +20,13 @@
     }
   }
 
+  &__header {
+    margin-bottom: 40px;
+    @include respond-below(md) {
+      display: none;
+    }
+  }
+
   &__nav {
     display: none;
 
