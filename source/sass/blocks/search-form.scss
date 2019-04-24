@@ -1,21 +1,42 @@
 .search-form {
   display: flex;
-  margin-bottom: 20px;
-  margin-top: 20px;
-  padding: 5px;
+  flex-direction: column;
+
+  width: 100%;
+
+  @include respond-above(xs) {
+    flex-direction: row;
+  }
 
   @include respond-above(sm769) {
-    margin-top: 0;
     margin-bottom: 10px;
-    padding: 0;
+    flex-direction: column;
+  }
+
+  @include respond-above(lg) {
+    flex-direction: row;
   }
 
   &__item {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    width: 100%;
 
     &:first-child {
       flex-grow: 1;
+      margin-bottom: 1rem;
+
+      @include respond-above(xs) {
+        margin-bottom: 0;
+      }
+
+      @include respond-above(sm769) {
+        margin-bottom: 1rem;
+      }
+
+      @include respond-above(lg) {
+        margin-bottom: 0;
+      }
     }
   }
 
@@ -23,29 +44,23 @@
     position: relative;
     height: 100%;
     width: 42px;
+    min-height: 100%;
+    padding: 0.87rem 0.5rem;
     background: #008dca;
 
     border-radius: 0 40px 40px 0;
     overflow: hidden;
 
+    @include respond-above(xs) {
+      width: 52px;
+      min-height: 43px;
+      margin-left: -1px;
+      padding: 0.5rem;
+    }
+
     @include respond-above(sm769) {
       width: 52px;
     }
-
-    // &::before {
-    //   position: absolute;
-    //   content: "";
-    //   top: 50%;
-    //   left: -5px;
-
-    //   transform: translateY(-50%);
-
-    //   @include sprite($icon-button-search);
-
-    //   @include respond-above(sm769) {
-    //     left: 0;
-    //   }
-    // }
   }
 
   &__icon {
@@ -54,9 +69,10 @@
 }
 
 .search-form__val {
-  padding: 5px;
+  padding: 1rem;
 
   height: 100%;
+  width: 100%;
 
   color: #b3bbc9;
   font-family: $fontGoogleSans;
@@ -72,11 +88,23 @@
     )
   );
 
-  border-radius: 40px 0 0 40px;
+  border-radius: 2em;
   border: 1px solid #b3bbc9;
 
+  @include respond-above(xs) {
+    border-radius: 2em 0 0 2em;
+  }
+
   @include respond-above(sm) {
-    padding: 10px 22px;
+    padding: 0.5rem 1rem;
+  }
+
+  @include respond-above(sm769) {
+    border-radius: 2em;
+  }
+
+  @include respond-above(lg) {
+    border-radius: 2em 0 0 2em;
   }
 
   &::placeholder {
@@ -90,16 +118,14 @@
 
 .search-form .select__gap {
   position: relative;
-  padding: 5px 20px;
-  margin-left: -1px;
+  padding: 0.8rem 1rem;
 
-  width: 125px;
+  width: 100%;
   min-height: 39px;
 
   color: #1a1a1a;
   font-size: 15px;
   font-weight: 700;
-  // line-height: 33.33px;
 
   white-space: nowrap;
   overflow: hidden;
@@ -113,40 +139,37 @@
   );
 
   border: 1px solid #b3bbc9;
+  border-radius: 2em 0 0 2em;
   background: #ffffff;
 
   @include respond-above(xs) {
-    padding: 10px 25px 5px 15px;
-    width: 200px;
-    height: 46px;
+    border-radius: 0;
+    min-height: 43px;
+    margin-left: -1px;
+    padding: 1rem;
   }
 
   @include respond-above(sm) {
-    padding: 10px 30px 7px 20px;
-    width: 250px;
+    padding: 0.5rem 1rem;
   }
 
-  @include respond-above(md) {
-    padding: 10px 50px 10px 22px;
+  @include respond-above(sm769) {
+    border-radius: 2em 0 0 2em;
   }
 
   @include respond-above(lg) {
-    width: 200px;
+    border-radius: 0;
   }
 
   &::before {
     position: absolute;
     content: "";
     top: 50%;
-    right: 0;
+    right: 5%;
     padding: 5px 33px 5px 0;
     background: #fff;
-    background-image: url("../img/sprite-png.png");
-    background-position: -50px -56px;
-    width: 24px;
-    height: 17px;
 
-    // @include sprite($icon-arrow-close);
+    @include sprite($icon-arrow-close);
 
     transform: rotate(180deg) translateY(50%);
   }
@@ -154,11 +177,17 @@
 
 .search-form .select {
   position: relative;
-  height: 46px;
+  min-height: 100%;
+  display: flex;
 }
+
+.search-form #select-4 {
+  width: 100%;
+}
+
 .search-form .select__list {
   position: absolute;
-  top: 39px;
+  top: 52px;
   left: 0;
   z-index: 5;
 
@@ -174,10 +203,14 @@
   background: #ffffff;
   border: 1px solid #b3bbc9;
 
-  @include respond-above(md) {
-    top: 46px;
+  @include respond-above(xs) {
+    top: 43px;
+    left: 0;
   }
 
+  @include respond-above(md) {
+    top: 43px;
+  }
 }
 
 .search-form .select__item {

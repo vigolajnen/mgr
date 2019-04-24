@@ -1,95 +1,85 @@
 <!DOCTYPE html>
 <html lang="ru" class="no-js">
-  <head>
-    <meta charset="utf-8" />
-    <title>ЕИМ</title>
-    @@include('_include/_head-meta.html')
-    <link rel="preload" href="fonts/CrowdFunded-Regular.woff2" as="font" />
-    <link rel="preload" href="fonts/GoogleSans.woff2" as="font" />
-    <link rel="stylesheet" href="css/style.min.css" />
-  </head>
 
-  <body>
-    <div class="preloader"></div>
+<head>
+  <meta charset="utf-8" />
+  <title>ЕИМ</title>
+  @@include('_include/_head-meta.html')
+  <link rel="preload" href="fonts/CrowdFunded-Regular.woff2" as="font" />
+  <link rel="preload" href="fonts/GoogleSans.woff2" as="font" />
+  <link rel="stylesheet" href="css/style.min.css" />
+</head>
 
-    <header class="mobile-header">
-      <div class="mobile-header__inner">
-        <form class="search-form" action="">
+<body>
+  <div class="preloader"></div>
+
+  <header class="mobile-header">
+    <div class="mobile-header__inner">
+      <form class="search-form" action="">
         <div class="search-form__item">
           <label for="search" class="visually-hidden">Поиск</label>
-          <input
-            class="search-form__val"
-            type="text"
-            name="search"
-            id="search"
-            placeholder="Начните вводить текст..."
-          />
-        </div>
-        <div class="search-form__item" id="select-4">
-          <select
-            class="search-form__select custom-select js-size select select-4"
-            aria-placeholder="Все категории"
-          >
-            <option value="Все категории">Все категории</option>
-            <option value="Дизайн и Арт">Дизайн и Арт</option>
-            <option value="Разработка сайтов">Разработка сайтов</option>
-            <option value="Программирование">Программирование</option>
-            <option value="Реклама и продвижение">Реклама и продвижение</option>
-            <option value="Полиграфия">Полиграфия</option>
-            <option value="Мобильные приложения">Мобильные приложения</option>
-            <option value="Автоматизация бизнеса">Автоматизация бизнеса</option>
-            <option value="Производство видео">Производство видео</option>
-          </select>
+          <input class="search-form__val" type="text" name="search" id="search"
+            placeholder="Начните вводить текст..." />
         </div>
         <div class="search-form__item">
-          <button
-            class="search-form__button button"
-            type="search"
-            aria-label="Поиск"
-          >
+          <div id="select-4">
+            <select class="search-form__select custom-select js-size select select-4" aria-placeholder="Все категории">
+              <option value="Все категории">Все категории</option>
+              <option value="Дизайн и Арт">Дизайн и Арт</option>
+              <option value="Разработка сайтов">Разработка сайтов</option>
+              <option value="Программирование">Программирование</option>
+              <option value="Реклама и продвижение">Реклама и продвижение</option>
+              <option value="Полиграфия">Полиграфия</option>
+              <option value="Мобильные приложения">Мобильные приложения</option>
+              <option value="Автоматизация бизнеса">Автоматизация бизнеса</option>
+              <option value="Производство видео">Производство видео</option>
+            </select>
+          </div>
+          <button class="search-form__button button" type="search" aria-label="Поиск">
             <svg class="search-form__icon" width="20" height="20">
               <use xlink:href="img/sprite.svg#icon-022-musica-searcher"></use>
             </svg>
           </button>
         </div>
       </form>
+    </div>
+  </header>
+
+  @@include('_include/_page-header.html')
+
+  <!-- @@include('_include/_promo.html') -->
+
+  <div class="promo wrapper">
+    <div class="promo__inner">
+      <div class="promo__nav">
+        @@include('_include/_navigation-promo.html')
       </div>
-    </header>
 
-    @@include('_include/_page-header.html')
-
-    <!-- @@include('_include/_promo.html') -->
-
-    <div class="promo wrapper">
-      <div class="promo__inner">
-        <div class="promo__nav">
-          @@include('_include/_navigation-promo.html')
-        </div>
-
-        <div class="promo__info">
-          <div class="promo__title">Покупай результат, а не услугу</div>
-          <div class="promo__text">
-            <div class="promo__sale-text promo__sale-text--icon">
-              Бонус за регистрацию - первая услуга половина стоимости
-            </div>
-            <button class="promo__button button link-button">
-              Зарегистрироваться
-            </button>
+      <div class="promo__info">
+        <div class="promo__title">Покупай результат, а не услугу</div>
+        <div class="promo__text">
+          <div class="promo__sale-text promo__sale-text--icon">
+            Бонус за регистрацию - первая услуга половина стоимости
           </div>
+          <button class="promo__button button link-button">
+            Зарегистрироваться
+          </button>
         </div>
       </div>
     </div>
+  </div>
 
-    @@include('_include/_main-goods.html') @@include('_include/_stock.html')
-    @@include('_include/_advantages.html')
-    @@include('_include/_last-projects.html')
-    @@include('_include/_block-order.html') @@include('_include/_reviews.html')
-    @@include('_include/_page-footer.html') @@include('_include/_mobile.html')
+  @@include('_include/_main-goods.html') @@include('_include/_stock.html')
+  @@include('_include/_advantages.html')
+  @@include('_include/_last-projects.html')
+  @@include('_include/_block-order.html') @@include('_include/_reviews.html')
+  @@include('_include/_page-footer.html') @@include('_include/_mobile.html')
 
-    <!-- @@include('_include/_popup.html') -->
+  <!-- @@include('_include/_popup.html') -->
 
-    @@include('_include/_script.html')
+  @@include('_include/_script.html')
 
-    <script src="js/timer.min.js"></script>
-  </body>
+  <script src="js/timer.min.js"></script>
+</body>
+
 </html>

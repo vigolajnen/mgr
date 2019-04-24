@@ -2,7 +2,6 @@
   position: relative;
   display: flex;
   align-items: center;
-  // padding-left: 60px;
   padding-right: 35px;
 
   color: $text-color;
@@ -18,19 +17,10 @@
     )
   );
 
-  // &::before {
-  //   position: absolute;
-  //   content: "";
-  //   top: 50%;
-  //   left: 0;
-  //   transform: translateY(-50%);
 
-  //   background-repeat: no-repeat;
-
-  //   @include sprite($icon-basket);
-  // }
   &__count {
     display: block;
+    margin-top: 5px;
 
     color: #008dca;
 
