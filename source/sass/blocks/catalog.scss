@@ -16,6 +16,7 @@
 
     @include respond-above(sm) {
       width: calc(100% / 3 - 26px);
+      margin-bottom: 1em;
     }
 
     @include respond-above(lg) {
