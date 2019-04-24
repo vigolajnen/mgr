@@ -38,11 +38,22 @@
   }
 
   &--white-green {
+    padding: 20px;
+    font-family: $font-base;
+
+    @include ff(
+    "font-size",
+    (
+      375px: 17px,
+      1280px: 20px
+    )
+  );
+
     background-color: #ffffff;
     border: 3px solid #6db629;
     color: #6db629;
     box-shadow: 0 8px 0px -1px transparent;
-    text-transform: inherit;
+
   }
 
   &:focus, &:hover {

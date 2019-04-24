@@ -12,9 +12,12 @@
     }
   }
   &__nav {
+    display: none;
     width: 100%;
 
+
     @include respond-above(md) {
+      display: block;
       position: absolute;
       top: 0;
       left: -65%;
