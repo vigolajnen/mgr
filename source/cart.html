@@ -22,15 +22,136 @@
         </svg>
         <span class="visually-hidden">ссылка назад</span>
       </a>
-      <div class="mobile-header__title">корзина</div>
+      <div class="mobile-header__title">Корзина</div>
     </div>
   </header>
 
   @@include('_include/_page-header.html')
 
-  @@include('_include/_promo.html')
+  <div class="wrapper">
+    <div class="breadcrumbs">
+      <a class="breadcrumbs__link" href="index.html">Главная</a>
+      <a class="breadcrumbs__link">Корзина</a>
+    </div>
+    <h1 class="title">Корзина заказа</h1>
 
-  @@include('_include/_main-goods.html')
+
+    <div class="tabs-2">
+      <ul class="tabs-2__list">
+        <li class="tabs-2__item active">
+          <a class="tabs-2__link step" href="">
+            <div class="step__number">1</div>
+            <div class="spen__name">Список услуг</div>
+          </a>
+        </li>
+        <li class="tabs-2__item">
+          <a class="tabs-2__link step" href="">
+            <div class="step__number">2</div>
+            <div class="spen__name">Регистрация</div>
+          </a>
+        </li>
+        <li class="tabs-2__item">
+          <a class="tabs-2__link step" href="">
+            <div class="step__number">3</div>
+            <div class="spen__name">Заполнение брифа</div>
+          </a>
+        </li>
+        <li class="tabs-2__item">
+          <a class="tabs-2__link step" href="">
+            <div class="step__number">4</div>
+            <div class="spen__name">Завершение</div>
+          </a>
+        </li>
+      </ul>
+      <div class="tabs-2__content">
+        <div class="tabs-2__panel active" data-index="0">
+          <p>1Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis pharetra erat at dui dictum, ac semper ante
+            blandit. Suspendisse eleifend felis augue, et egestas odio tempor sed. Quisque sed justo eget arcu viverra
+            sodales. Suspendisse a venenatis
+            augue, imperdiet elementum lorem. Donec neque dui, fringilla vitae ultricies vel, scelerisque non ante.
+            Aliquam
+            erat volutpat. Donec erat velit, finibus at lobortis nec, venenatis ac ipsum. Proin blandit urna turpis,
+            quis
+            euismod dui elementum
+            quis. Vestibulum hendrerit eget est ornare sollicitudin. Cras sit amet mi ut dui venenatis maximus. Donec
+            blandit libero risus, non cursus mauris dignissim a. Donec vitae risus condimentum, rhoncus nibh in,
+            scelerisque
+            massa. Vivamus semper laoreet
+            neque at molestie. Integer nulla nisl, accumsan convallis bibendum ac, suscipit ac leo. Nunc at odio
+            interdum,
+            interdum arcu eu, ullamcorper felis.</p>
+
+        </div>
+        <div class="tabs-2__panel" data-index="1">
+          <p>2Nam auctor orci nec consectetur lacinia. Fusce finibus efficitur hendrerit. Maecenas sit amet turpis eget
+            velit
+            feugiat luctus. Quisque eu tristique urna, at rhoncus lectus. Nullam non leo quis urna euismod convallis at
+            a
+            nibh. Etiam et bibendum
+            sapien. Suspendisse potenti. Nulla et mauris lacinia tortor facilisis dapibus a id dolor. Fusce luctus
+            sapien ac
+            varius mattis. Interdum et malesuada fames ac ante ipsum primis in faucibus. Mauris posuere ipsum nibh, at
+            scelerisque diam feugiat
+            eget.
+          </p>
+        </div>
+        <div class="tabs-2__panel" data-index="2">
+          <p>3Mauris id justo accumsan, semper metus non, aliquam purus. Mauris nunc libero, dignissim sit amet est in,
+            egestas molestie nunc. Mauris gravida vel tellus sit amet consequat. Maecenas malesuada varius nibh, vel
+            feugiat
+            enim convallis vitae. Suspendisse
+            et pharetra velit. Vestibulum in ex est. Vestibulum tempor interdum metus et malesuada. Nullam ornare mi
+            elit,
+            id scelerisque ante dictum in. Nullam id mauris erat. Nunc non imperdiet dui. Ut pellentesque ultrices
+            tincidunt. Nulla ac diam id dolor
+            semper malesuada nec eu massa. Nam tortor magna, luctus a blandit vitae, aliquam et arcu. Aenean non
+            vestibulum
+            leo, in pellentesque odio.</p>
+        </div>
+        <div class="tabs-2__panel" data-index="3">
+          <p>4Mauris id justo accumsan, semper metus non, aliquam purus. Mauris nunc libero, dignissim sit amet est in,
+            egestas molestie nunc. Mauris gravida vel tellus sit amet consequat. Maecenas malesuada varius nibh, vel
+            feugiat
+            enim convallis vitae. Suspendisse
+            et pharetra velit. Vestibulum in ex est. Vestibulum tempor interdum metus et malesuada. Nullam ornare mi
+            elit,
+            id scelerisque ante dictum in. Nullam id mauris erat. Nunc non imperdiet dui. Ut pellentesque ultrices
+            tincidunt. Nulla ac diam id dolor
+            semper malesuada nec eu massa. Nam tortor magna, luctus a blandit vitae, aliquam et arcu. Aenean non
+            vestibulum
+            leo, in pellentesque odio.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section class="bl-bg">
+    <div class="wrapper">
+      <h3 class="title title--line">Рекомендуем также добавить</h3>
+      <div class="slider-base">
+
+        <div class="slider-base__wrapper">
+          <div id="js-slider-project" class="slider-base__slider">
+            <div class="slider-base__item">
+              @@include('_include/_product.html')
+            </div>
+            <div class="slider-base__item">
+              @@include('_include/_product.html')
+            </div>
+            <div class="slider-base__item">
+              @@include('_include/_product.html')
+            </div>
+            <div class="slider-base__item">
+              @@include('_include/_product.html')
+            </div>
+            <div class="slider-base__item">
+              @@include('_include/_product.html')
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
 
 

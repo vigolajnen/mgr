@@ -10,22 +10,22 @@
     flex-direction: column;
   }
 
-  &--wave {
+  &--br {
     position: relative;
-
     &::before {
-      position: absolute;
       content: "";
-      top: 0;
+      position: absolute;
+      top: -7px;
       left: 0;
-      z-index: 10;
-
+      z-index: 1;
+      display: block;
       width: 100%;
-      height: 20px;
-
-      background-image: url("../img/icons/icon-wave.png");
+      height: 15px;
       background-repeat: repeat-x;
-      background-size: 15%;
+
+      background-image: url("../img/line/title-br.png");
+
+      opacity: 0.5;
     }
   }
 
@@ -81,7 +81,7 @@
   }
   &__phone {
     width: 100%;
-    
+
     text-decoration: none;
   }
   & .phone__link {

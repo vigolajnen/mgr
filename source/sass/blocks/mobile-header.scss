@@ -31,6 +31,7 @@
     align-items: center;
   }
   &__title {
+    max-width: 70%;
     font-weight: 600;
     @include ff(
       "font-size",
@@ -51,6 +52,16 @@
       width: 25px;
       height: 25px;
       margin-top: 5px;
+    }
+  }
+  &__buttons {
+    position: absolute;
+    top: 50%;
+    right: 1em;
+    transform: translateY(-50%);
+
+    & .button {
+      margin-right: 1em;
     }
   }
 }

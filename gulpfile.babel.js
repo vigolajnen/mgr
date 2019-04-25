@@ -177,6 +177,7 @@ gulp.task("jsmin", function () {
       "source/js/popup.js",
       "source/js/select.js",
       "source/js/tabs.js",
+      "source/js/tabs-2.js",
       "source/js/rating.js",
       "source/js/viewportChecker.js"
     ])
