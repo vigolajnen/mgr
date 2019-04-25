@@ -1,0 +1,215 @@
+.cart-item {
+  display: flex;
+  flex-direction: column;
+  padding-top: 2em;
+
+  &__box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2em;
+
+  }
+  &__pic {
+    width: 45%;
+
+    @include respond-above(xxs) {
+      width: 10%;
+    }
+
+    @include respond-above(md) {
+      position: relative;
+      &::before {
+        position: absolute;
+        content: attr(data-name);
+
+        top: -35px;
+        left: 0;
+
+        font-size: 15px;
+        font-weight: 400;
+        color: $text-color;
+      }
+    }
+  }
+  &__info {
+    display: flex;
+    flex-direction: column;
+    width: 38%;
+
+    @include respond-above(sm769) {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+  }
+
+  &__btn {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+
+    @include respond-above(xs) {
+      padding-left: 25%;
+    }
+
+    @include respond-above(sm769) {
+      width: 35%;
+      padding-left: 0;
+    }
+
+    & .button {
+      @include ff(
+        "font-size",
+        (
+          375px: 15px,
+          750px: 20px,
+          1280px: 15px
+        )
+      );
+
+      &:first-child {
+        padding-left: 1em;
+      }
+      &:not(:last-child) {
+        margin-right: 1em;
+      }
+    }
+  }
+  &__brief-info {
+    width: 20%;
+
+    display: flex;
+    align-items: center;
+
+    @include respond-above(sm769) {
+      width: 10%;
+    }
+
+    @include respond-above(md) {
+      position: relative;
+      &::before {
+        position: absolute;
+        content: attr(data-name);
+
+        top: -80px;
+        left: 0;
+
+        width: 145px;
+
+        font-size: 15px;
+        font-weight: 400;
+        color: $text-color;
+      }
+    }
+  }
+
+  &__title {
+    margin-bottom: 30px;
+    font-weight: 600;
+    line-height: normal;
+    color: $color-blue;
+    @include ff(
+      "font-size",
+      (
+        375px: 20px,
+        750px: 25px,
+        1280px: 15px
+      )
+    );
+
+    @include respond-above(sm769) {
+      width: 50%;
+      margin-bottom: 0;
+    }
+
+    @include respond-above(md) {
+      position: relative;
+      &::before {
+        position: absolute;
+        content: attr(data-name);
+
+        top: -75px;
+        left: 0;
+
+        font-size: 15px;
+        font-weight: 400;
+        color: $text-color;
+      }
+    }
+  }
+  &__price {
+    margin-bottom: 30px;
+    font-weight: 600;
+    @include ff(
+      "font-size",
+      (
+        375px: 20px,
+        750px: 29px,
+        1280px: 20px
+      )
+    );
+
+    @include respond-above(sm769) {
+      width: 40%;
+      margin-bottom: 0;
+    }
+
+    @include respond-above(md) {
+      position: relative;
+      &::before {
+        position: absolute;
+        content: attr(data-name);
+
+        top: -75px;
+        left: 0;
+
+        font-size: 15px;
+        font-weight: 400;
+        color: $text-color;
+      }
+    }
+  }
+  &__num {
+    margin-left: 1em;
+    font-weight: 600;
+    @include ff(
+      "font-size",
+      (
+        375px: 20px,
+        750px: 25px,
+        1280px: 15px
+      )
+    );
+  }
+  &__brief-bar {
+    display: none;
+
+    @include respond-above(sm) {
+      position: relative;
+      display: flex;
+
+      width: 60px;
+      min-width: 60px;
+      height: 8px;
+
+      background-color: #e6e6e6;
+      border-radius: 10px;
+
+      &::before {
+        position: absolute;
+        content: "";
+        top: 0;
+        left: 0;
+
+        width: 20%;
+        height: 8px;
+
+        border-radius: 10px;
+        background-color: $color-green;
+      }
+    }
+  }
+}

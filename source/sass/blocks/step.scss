@@ -7,11 +7,19 @@
 
   &__number {
     margin-right: 1em;
-    padding: 0.5em 1em;
+    padding: 0.5em 0.85em;
     font-weight: 600;
     color: #ffffff;
     background-color: #e6e6e6;
     border-radius: 50%;
+
+    @include ff(
+    "font-size",
+    (
+      375px: 20px,
+      750px: 25px
+    )
+  );
 
     &:active,
     &:visited {
