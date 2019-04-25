@@ -67,14 +67,15 @@
           <a class="breadcrumbs__link">Личный кабинет</a>
         </div>
         <div class="promo-inner__header">
-          <h1 class="promo-inner__title title-inner">Личный кабинет</h1>
+          <h1 class="promo-inner__title title">Личный кабинет</h1>
         </div>
 
 
         <div class="profile">
           <div class="profile__pic">
             <img class="profile__img" src="img/profile/user.png" alt="pic">
-            <input class="profile__foto" type="file" placeholder="Загрузить фото">
+            <!-- <input class="profile__foto" type="file" placeholder="Загрузить фото"> -->
+            <a class="profile__link" href="#">Загрузить фото</a>
           </div>
           <div class="profile__info">
             <div class="profile__title">Информация о пользователе</div>
@@ -100,7 +101,7 @@
           </div>
           <div class="profile__company">
             <h3 class="profile__title-2">Мои компании</h3>
-            <table class="profile__table table">
+            <table class="profile__table table table-company">
               <thead class="table__head">
                 <tr class="table__row">
                   <td class="table__title">Компания, Бернд</td>
@@ -113,16 +114,16 @@
               </thead>
               <tbody>
                 <tr class="table__row">
-                  <td class="table__val">ООО Авалон</td>
-                  <td class="table__val">
+                  <td class="table__val" data-name="Компания, Бернд:">ООО Авалон</td>
+                  <td class="table__val" data-name="Юр. название компании:">
                     <a class="table__link" href="#">ИП Островский</a>
                   </td>
-                  <td class="table__val">
+                  <td class="table__val" data-name="Сайт:">
                     <a class="table__link" href="www.avalon.spb.ru" target="_blank">www.avalon.spb.ru</a>
                   </td>
-                  <td class="table__val">Санкт-Петербург, ул. Красновская, 23</td>
-                  <td class="table__val table__val--tel">+7 (495) 2308900</td>
-                  <td class="table__val">
+                  <td class="table__val" data-name="Адрес:">Санкт-Петербург, ул. Красновская, 23</td>
+                  <td class="table__val table__val--tel" data-name="Телефон:">+7 (495) 2308900</td>
+                  <td class="table__val" data-name="Действия:">
                     <button class="button" type="button" aria-label="Редактировать компанию">
                       <svg class="button__icon" width="20" height="20">
                         <use xlink:href="img/sprite.svg#icon-018-pencil-edit-button"></use>
@@ -136,16 +137,16 @@
                   </td>
                 </tr>
                 <tr class="table__row">
-                  <td class="table__val">ООО Авалон</td>
-                  <td class="table__val">
+                  <td class="table__val" data-name="Компания, Бернд:">ООО Авалон</td>
+                  <td class="table__val" data-name="Юр. название компании:">
                     <a class="table__link" href="#">ИП Островский</a>
                   </td>
-                  <td class="table__val">
+                  <td class="table__val" data-name="Сайт:">
                     <a class="table__link" href="www.avalon.spb.ru" target="_blank">www.avalon.spb.ru</a>
                   </td>
-                  <td class="table__val">Санкт-Петербург, ул. Красновская, 23</td>
-                  <td class="table__val table__val--tel">+7 (495) 2308900</td>
-                  <td class="table__val">
+                  <td class="table__val" data-name="Адрес:">Санкт-Петербург, ул. Красновская, 23</td>
+                  <td class="table__val table__val--tel" data-name="Телефон:">+7 (495) 2308900</td>
+                  <td class="table__val" data-name="Действия:">
                     <button class="button" type="button" aria-label="Редактировать компанию">
                       <svg class="button__icon" width="20" height="20">
                         <use xlink:href="img/sprite.svg#icon-018-pencil-edit-button"></use>
@@ -160,7 +161,7 @@
                 </tr>
               </tbody>
             </table>
-            <button class="button button--blue" type="button">Добавить компанию</button>
+            <a class="link-button" href="add-company.html">Добавить компанию</a>
           </div>
         </div>
 
@@ -169,7 +170,10 @@
     </div>
   </div>
 
-  @@include('_include/_page-footer.html')
+  <div class="bl-br">
+    @@include('_include/_page-footer.html')
+  </div>
+
 
 
   @@include('_include/_script.html')

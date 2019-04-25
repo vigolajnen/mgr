@@ -1,0 +1,42 @@
+.table-company {
+  & .table__val {
+    @include respond-below(xxs) {
+      padding: 5px 10px;
+      padding-left: 35%;
+
+      &::before {
+        top: 5px;
+      }
+
+      &:last-child {
+        display: none;
+      }
+
+      &:nth-child(2) {
+        padding-left: 49%;
+      }
+      &:nth-child(3) {
+        padding-left: 15%;
+      }
+      &:nth-child(4) {
+        padding-left: 16%;
+      }
+      &:nth-child(5) {
+        padding-left: 19%;
+      }
+    }
+
+    @include respond-below(md) {
+      padding: 5px 10px;
+      padding-left: 36%;
+
+      &::before {
+        top: 5px;
+      }
+
+      &:last-child {
+        display: none;
+      }
+    }
+  }
+}

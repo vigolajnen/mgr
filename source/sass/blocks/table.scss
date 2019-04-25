@@ -112,4 +112,7 @@
     color: #008dca;
     text-decoration: none;
   }
+  &__link[target="_blank"] {
+    color: $text-color;
+  }
 }

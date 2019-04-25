@@ -5,9 +5,13 @@
 
   &__pic {
     width: 100%;
+    text-align: center;
     @include respond-above(sm) {
       width: 40%;
     }
+  }
+  &__img {
+    margin-bottom: 1rem;
   }
 
   &__info {
@@ -37,6 +41,8 @@
   }
 
   &__title-2 {
+    margin-bottom: 1rem;
+    padding-left: 10px;
     color: $text-color;
 
     font-weight: 700;
@@ -78,6 +84,7 @@
   }
 
   &__link {
+    display: block;
     color: #008dca;
 
     font-weight: 700;
@@ -93,7 +100,10 @@
   }
 
   &__table {
+    width: 100%;
     margin-bottom: 30px;
+
+
   }
 
   & .button {
