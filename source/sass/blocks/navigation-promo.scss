@@ -115,3 +115,10 @@
     }
   }
 }
+
+
+.navigation-promo__item {
+  & .navigation-promo__link:hover {
+    color: #008dca;
+  }
+}

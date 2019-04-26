@@ -93,6 +93,8 @@
     & ul {
       list-style: none;
       padding: 0;
+      margin-top: 1em;
+      margin-bottom: 1em;
 
       & li {
         position: relative;
@@ -117,6 +119,9 @@
     }
 
     & ol {
+      margin-top: 1em;
+      margin-bottom: 1em;
+      padding-left: 2em;
       list-style: none;
       counter-reset: li;
 
@@ -127,10 +132,10 @@
           content: counter(li);
 
           display: inline-block;
-          width: 1.3em;
+          width: 1.5em;
           margin-left: -2em;
           margin-right: 10px;
-          padding: 0 6px;
+          padding: 0 0.5em;
 
           color: #ffffff;
           background: #0fb9bc;
@@ -248,11 +253,74 @@
     display: flex;
     flex-wrap: wrap;
   }
+  &__pay-title {
+    margin-bottom: 1em;
+    font-weight: 600;
+    @include ff(
+      "font-size",
+      (
+        375px: 20px,
+        1280px: 25px
+      )
+    );
+  }
   &__pay-box {
+    position: relative;
     width: 100%;
+    padding-top: 35%;
+    margin-bottom: 1em;
+
+    text-align: center;
+
+    &::before {
+      position: absolute;
+      content: "";
+
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+
+      width: 30%;
+      height: 90%;
+
+      background-image: url("../img/icons/icon-pk.svg");
+      background-repeat: no-repeat;
+
+      @include respond-above(xxs) {
+        width: 20%;
+
+        top: 50%;
+        left: 0;
+        transform: translate(0, -50%);
+      }
+
+      @include respond-above(sm) {
+        width: 25%;
+      }
+
+      @include respond-above(md) {
+        width: 30%;
+      }
+    }
+
+    &:last-child::before {
+      background-image: url("../img/icons/icon-pay-1.svg");
+    }
+
+    @include respond-above(xxs) {
+      padding-left: 25%;
+      padding-top: 0;
+
+      text-align: left;
+    }
 
     @include respond-above(sm) {
+    }
+
+    @include respond-above(md) {
       width: 50%;
+      padding-top: 0;
+      padding-left: 15%;
     }
   }
   &__links {
