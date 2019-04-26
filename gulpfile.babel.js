@@ -155,12 +155,14 @@ gulp.task("html-2", function () {
 });
 
 gulp.task("vendor", function () {
-  gulp.src([
+  gulp
+    .src([
       "source/js/libs/jquery-3.3.1.js",
       "source/js/libs/picturefill.min.js",
       "source/js/libs/svg4everybody.min.js",
       "source/js/libs/jquery.viewportchecker.min.js",
       "source/js/libs/slick.min.js",
+      "source/js/libs/jquery.fancybox.min.js"
     ])
     .pipe(concat("vendor.min.js"))
     .pipe(gulp.dest("build/js"));
@@ -179,6 +181,7 @@ gulp.task("jsmin", function () {
       "source/js/tabs.js",
       "source/js/tabs-2.js",
       "source/js/rating.js",
+      "source/js/fancybox.js",
       "source/js/viewportChecker.js"
     ])
     .pipe(concat("main.min.js"))

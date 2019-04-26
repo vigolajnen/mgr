@@ -10,18 +10,26 @@
       top: 0;
       right: 0;
     }
+
+    & .slick-list {
+      height: 100%;
+    }
+
+    & .slick-track {
+      height: 100%;
+    }
   }
   &__nav {
     display: none;
     width: 100%;
 
-
     @include respond-above(md) {
       display: block;
       position: absolute;
-      top: 0;
-      left: -65%;
-
+      z-index: 1;
+      top: -33px;
+      left: auto;
+      right: 80%;
       height: 100%;
       width: 100%;
 
