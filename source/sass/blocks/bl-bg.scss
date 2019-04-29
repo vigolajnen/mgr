@@ -1,40 +1,42 @@
-.bl-bg {
+.bl {
   position: relative;
-  padding: 50px 0;
-  background-image: url("../img/bg/bg-1.png");
-  background-repeat: repeat;
-  background-size: 20%;
-  background-color: $bg-color;
+  @include rem(padding, 50px 0 60px);
+  &--bg {
+    background-image: url("../img/bg/bg-1.png");
+    background-repeat: repeat;
+    background-size: 20%;
+    background-color: $bg-color;
 
-  &::before {
-    content: "";
-    position: absolute;
-    top: -7px;
-    left: 0;
-    z-index: 1;
-    display: block;
-    width: 100%;
-    height: 8px;
-    background-repeat: repeat-x;
+    &::before {
+      content: "";
+      position: absolute;
+      top: -7px;
+      left: 0;
+      z-index: 1;
+      display: block;
+      width: 100%;
+      height: 8px;
+      background-repeat: repeat-x;
 
-    background-image: url("../img/line/bl-br-top.png");
+      background-image: url("../img/line/bl-br-top.png");
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -10px;
+      left: 0;
+      z-index: 1;
+      display: block;
+      width: 100%;
+      height: 20px;
+      background-repeat: repeat-x;
+
+      background-image: url("../img/line/bl-br-bm.png");
+    }
   }
 
-  &::after {
-    content: "";
-    position: absolute;
-    bottom: -10px;
-    left: 0;
-    z-index: 1;
-    display: block;
-    width: 100%;
-    height: 20px;
-    background-repeat: repeat-x;
-
-    background-image: url("../img/line/bl-br-bm.png");
-  }
-
-  &--blue {
+  &--bg-blue {
     position: relative;
     background-color: $bg-color-2;
     background-image: url("../img/bg/bg-2.png");
@@ -69,18 +71,157 @@
     }
   }
 
+  &--br {
+    position: relative;
+    padding: 2rem 0;
+    margin-bottom: 3rem;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: -15px;
+      left: 0;
+      z-index: 1;
+      display: block;
+      width: 100%;
+      height: 15px;
+
+      background-repeat: repeat-x;
+      background-size: 20px;
+      background-image: url("../img/line/title-br-blue.png");
+
+      transform: rotate(180deg);
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -15px;
+      left: 0;
+      z-index: 1;
+      display: block;
+      width: 100%;
+      height: 15px;
+      background-repeat: repeat-x;
+      background-size: 20px;
+      background-image: url("../img/line/title-br-blue.png");
+    }
+  }
+
+  &--br-bm {
+    position: relative;
+    padding: 0 0 2rem;
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -15px;
+      left: 0;
+      z-index: 1;
+      display: block;
+      width: 100%;
+      height: 15px;
+      background-repeat: repeat-x;
+      background-size: 20px;
+      background-image: url("../img/line/title-br-blue.png");
+    }
+  }
+
   & .wrapper {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+
+
   }
 
   & .title {
-    margin: 0;
-    margin-bottom: 60px;
+    @include rem(margin, 0 0 35px 0);
+
+    @include respond-above(sm) {
+      @include rem(margin, 0 0 60px 0);
+    }
   }
 }
+// .bl-bg {
+//   position: relative;
+//   padding: 50px 0;
+//   background-image: url("../img/bg/bg-1.png");
+//   background-repeat: repeat;
+//   background-size: 20%;
+//   background-color: $bg-color;
+
+//   &::before {
+//     content: "";
+//     position: absolute;
+//     top: -7px;
+//     left: 0;
+//     z-index: 1;
+//     display: block;
+//     width: 100%;
+//     height: 8px;
+//     background-repeat: repeat-x;
+
+//     background-image: url("../img/line/bl-br-top.png");
+//   }
+
+//   &::after {
+//     content: "";
+//     position: absolute;
+//     bottom: -10px;
+//     left: 0;
+//     z-index: 1;
+//     display: block;
+//     width: 100%;
+//     height: 20px;
+//     background-repeat: repeat-x;
+
+//     background-image: url("../img/line/bl-br-bm.png");
+//   }
+
+//   &--blue {
+//     position: relative;
+//     background-color: $bg-color-2;
+//     background-image: url("../img/bg/bg-2.png");
+
+//     &::before {
+//       content: "";
+//       position: absolute;
+//       top: -15px;
+//       left: 0;
+//       z-index: 1;
+//       display: block;
+//       width: 100%;
+//       height: 18px;
+
+//       background-repeat: repeat-x;
+//       background-image: url("../img/line/bl-br-blue.png");
+
+//       transform: rotate(180deg);
+//     }
+
+//     &::after {
+//       content: "";
+//       position: absolute;
+//       bottom: -15px;
+//       left: 0;
+//       z-index: 1;
+//       display: block;
+//       width: 100%;
+//       height: 18px;
+//       background-repeat: repeat-x;
+//       background-image: url("../img/line/bl-br-blue.png");
+//     }
+//   }
+
+//   & .wrapper {
+//     display: flex;
+//     flex-direction: column;
+//     justify-content: center;
+//     align-items: center;
+//   }
+
+//   & .title {
+//     margin: 0;
+//     margin-bottom: 60px;
+//   }
+// }
 
 .bl-br {
   position: relative;

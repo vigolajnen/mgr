@@ -1,11 +1,11 @@
 .project-team {
-  padding-top: 50px;
+  // padding-top: 50px;
   & .wrapper {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding-bottom: 40px;
+    // padding-bottom: 40px;
   }
   &__title {
     margin-bottom: 85px;
@@ -25,7 +25,7 @@
     }
   }
   &__item {
-    margin-bottom: 35px;
+    @include rem(margin-bottom, 35px);
 
     @include respond-above(md) {
       width: calc(50% - 16px);
@@ -44,20 +44,19 @@
   }
 
   &__pic {
-    margin-bottom: 20px;
+    @include rem(margin-bottom, 20px);
     @include respond-above(sm) {
-      padding-right: 30px;
+      @include rem(padding-right, 30px);
       margin-bottom: 0;
     }
 
     @include respond-above(md) {
-      padding-right: 45px;
+      @include rem(padding-right, 45px);
     }
   }
 
   &__position {
-    color: #000000;
-    font-size: 25px;
+    @include rem(margin-bottom, 30px);
     font-weight: 700;
 
     @include ff(
@@ -67,6 +66,7 @@
         768px: 25px
       )
     );
+    color: $text-color;
 
     &--blue {
       color: #008dca;
@@ -74,8 +74,6 @@
   }
 
   &__text {
-    color: $text-color;
-
     font-weight: 400;
     @include ff(
       "font-size",
@@ -85,5 +83,6 @@
         1920px: 17px
       )
     );
+    color: $text-color;
   }
 }

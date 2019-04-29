@@ -27,6 +27,10 @@
     @include rem(background-size, 30px);
   }
 
+  @include respond-above(xs) {
+    margin-bottom: 0;
+  }
+
   @include respond-above(sm769) {
     display: none;
   }

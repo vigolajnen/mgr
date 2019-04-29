@@ -58,12 +58,28 @@ img {
   outline: none;
 }
 
-// .container {
-//   display: flex;
-//   flex-direction: column;
-//   height: 100%;
-// }
+.wrap {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
 
+.content {
+  flex: 1 0 auto;
+  margin-bottom: 70px;
+
+  @media (min-width: 600px) {
+    margin-bottom: 100px;
+  }
+
+  @media (min-width: 768px) {
+    margin-bottom: 0;
+  }
+}
+
+.page-footer {
+  flex: 0 0 auto;
+}
 
 .overlay {
   overflow: hidden;

@@ -39,11 +39,10 @@
   }
   &__svg {
     fill: #c9cdd4;
+    border-radius: 50%;
   }
 }
 
 .social__link:hover .social__svg {
   fill: #008dca;
 }
-
-

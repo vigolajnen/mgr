@@ -11,39 +11,42 @@
 </head>
 
 <body>
+  <div class="preloader"></div>
+  <div class="wrap">
+    <div class="content">
+      <!-- контент -->
+      <header class="mobile-header">
+        <div class="mobile-header__inner">
+          <a class="mobile-header__link" href="index.html">
+            <svg class="mobile-header__icon" width="20" height="20">
+              <use xlink:href="img/sprite.svg#icon-023-arrow-point-to-right"></use>
+            </svg>
+            <span class="visually-hidden">ссылка назад</span>
+          </a>
+          <div class="mobile-header__title">Ошибка 404</div>
+        </div>
+      </header>
 
+      @@include('_include/_mobile.html')
+      @@include('_include/_page-header.html')
 
-  <div class="paranja"></div>
-  <header class="mobile-header">
-    <div class="mobile-header__inner">
-      <a class="mobile-header__link" href="index.html">
-        <svg class="mobile-header__icon" width="20" height="20">
-          <use xlink:href="img/sprite.svg#icon-023-arrow-point-to-right"></use>
-        </svg>
-        <span class="visually-hidden">ссылка назад</span>
-      </a>
-      <div class="mobile-header__title">Ошибка 404</div>
-    </div>
-  </header>
+      <div class="page page-inner page-404">
 
-  @@include('_include/_mobile.html')
-  @@include('_include/_page-header.html')
-  <div class="container">
-    <div class="page page-inner page-404">
+        <div class="page-404__info">
+          <div class="page__title title-inner">Упс...</div>
+          <p class="page__text">Такая страница не найдена на нашем сайте!</p>
+          <a class="link-button" href="index.html">На главную</a>
+        </div>
+        <div class="page-404__pic">
+          <img class="picture" src="img/404.svg" alt="pic">
+        </div>
 
-      <div class="page-404__info">
-        <div class="page__title title-inner">Упс...</div>
-        <p class="page__text">Такая страница не найдена на нашем сайте!</p>
-        <a class="link-button" href="index.html">На главную</a>
       </div>
-      <div class="page-404__pic">
-        <img class="picture" src="img/404.svg" alt="pic">
-      </div>
 
+      <!-- контент -->
     </div>
 
     @@include('_include/_page-footer_br.html')
-
   </div>
 
   @@include('_include/_script.html')

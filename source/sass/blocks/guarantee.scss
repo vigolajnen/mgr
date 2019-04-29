@@ -1,19 +1,89 @@
 .guarantee {
-  padding-bottom: 50px;
+  width: 100%;
+  @include rem(padding-bottom, 10px);
   & .wrapper {
     text-align: center;
   }
   &__inner {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
+
+    width: 100%;
+
+    @include respond-above(xs) {
+      justify-content: space-between;
+    }
   }
   & .title {
     margin: auto;
+    @include rem(margin-bottom, 60px);
+
+    @include respond-above(xs) {
+      @include rem(margin-bottom, 85px);
+    }
   }
   &__item {
     display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+
+    width: 100%;
+
+    @include rem(margin-bottom, 30px);
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    @include respond-above(xs) {
+      width: calc(50% - 16px);
+      margin-bottom: 0;
+    }
+  }
+  &__info {
+    display: flex;
     flex-direction: column;
+  }
+  &__name {
+    @include rem(margin-bottom, 30px);
+    @include ff(
+      "font-size",
+      (
+        375px: 20px,
+        1280px: 25px
+      )
+    );
+    font-weight: 600;
+  }
+  &__icon {
+    @include rem(
+      (
+        width: 75px,
+        height: 75px,
+        padding: 17px,
+        margin: 0 10px 0 0
+      )
+    );
+    background: #00c5db;
+    border-radius: 50%;
+
+    fill: #ffffff;
+
+    &--orange {
+      background: #ff9966;
+    }
+
+    @include respond-above(md) {
+      @include rem(
+      (
+        width: 150px,
+        height: 150px,
+        padding: 35px,
+        margin: 0 50px 0 0
+      )
+    );
+    }
   }
 }

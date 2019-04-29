@@ -4,7 +4,7 @@
 
   &__title {
     position: relative;
-    padding: 10px 10px 20px 10px;
+    @include rem(padding, 10px 10px 20px 10px);
     color: $text-color;
 
     font-weight: 700;
@@ -19,19 +19,20 @@
     );
 
     &::before {
+      display: block;
       content: "";
       position: absolute;
       bottom: 0;
       left: 50%;
       transform: translateX(-50%);
       z-index: 1;
-      display: block;
-      width: 100%;
-      height: 10px;
-      background-repeat: repeat-x;
-      background-size: 30px;
 
+      width: 100%;
+      @include rem(height, 10px);
+
+      background-repeat: repeat-x;
       background-image: url("../img/projects/projects-title-border-2.png");
+      @include rem(background-size, 30px);
     }
   }
 
@@ -46,32 +47,41 @@
       position: relative;
       display: flex;
       flex-direction: column;
-      margin-bottom: 1em;
-      padding-bottom: 2em;
+
+      @include rem(
+        (
+          margin-bottom: 15px,
+          padding-bottom: 30px
+        )
+      );
 
       &::before {
-        position: absolute;
+        display: block;
         content: "";
+        position: absolute;
         bottom: 0;
         left: 50%;
         transform: translateX(-50%);
+
         z-index: 1;
-        display: block;
-        background-repeat: repeat-x;
 
         width: 100%;
-        height: 10px;
+        @include rem(height, 10px);
 
+        background-repeat: repeat-x;
         background-image: url("../img/line/title-br-blue.png");
-
-        background-size: 18px;
+        @include rem(background-size, 18px);
       }
     }
   }
 
   &__val {
-    max-width: 175px;
-    padding: 10px;
+    @include rem(
+      (
+        max-width: 175px,
+        padding: 10px
+      )
+    );
     color: $text-color;
 
     font-weight: 700;
@@ -90,7 +100,7 @@
     }
 
     &--tel {
-      min-width: 140px;
+      @include rem(min-width, 140px);
     }
 
     @include respond-below(md) {

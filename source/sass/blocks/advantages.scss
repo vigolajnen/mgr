@@ -1,6 +1,7 @@
 .advantages {
-  @include rem(padding, 40px 0 20px 0);
-
+  &.bl {
+    padding-top: 0;
+  }
   & .wrapper {
     display: flex;
     flex-direction: column;

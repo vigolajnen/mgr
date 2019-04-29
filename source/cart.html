@@ -11,99 +11,77 @@
 </head>
 
 <body>
-  <div class="paranja"></div>
   <div class="preloader"></div>
+  <div class="wrap">
+    <div class="content">
+      <!-- контент -->
 
-  <header class="mobile-header">
-    <div class="mobile-header__inner">
-      <a class="mobile-header__link" href="index.html">
-        <svg class="mobile-header__icon" width="20" height="20">
-          <use xlink:href="img/sprite.svg#icon-023-arrow-point-to-right"></use>
-        </svg>
-        <span class="visually-hidden">ссылка назад</span>
-      </a>
-      <div class="mobile-header__title">Корзина</div>
-    </div>
-  </header>
+      <header class="mobile-header">
+        <div class="mobile-header__inner">
+          <a class="mobile-header__link" href="index.html">
+            <svg class="mobile-header__icon" width="20" height="20">
+              <use xlink:href="img/sprite.svg#icon-023-arrow-point-to-right"></use>
+            </svg>
+            <span class="visually-hidden">ссылка назад</span>
+          </a>
+          <div class="mobile-header__title">Корзина</div>
+        </div>
+      </header>
 
-  @@include('_include/_page-header.html')
+      @@include('_include/_page-header.html')
 
-  <div class="wrapper">
-    <div class="breadcrumbs">
-      <a class="breadcrumbs__link" href="index.html">Главная</a>
-      <a class="breadcrumbs__link">Корзина</a>
-    </div>
-    <h1 class="title">Корзина заказа</h1>
+      <div class="wrapper">
+        <div class="breadcrumbs">
+          <a class="breadcrumbs__link" href="index.html">Главная</a>
+          <a class="breadcrumbs__link">Корзина</a>
+        </div>
+        <h1 class="title">Корзина заказа</h1>
 
-    <div class="cart-item">
-      <div class="cart-item__box">
-        <div class="cart-item__pic" data-name="Фото">
-          <img class="picture" src="img/product/product-1.jpg" alt="pic">
-        </div>
-        <div class="cart-item__info">
-          <a class="cart-item__title" data-name="Услуга">Лендинг за 48 часов. Шаблон «Лес 1».</a>
-          <div class="cart-item__price" data-name="Цена услуги">110. 000 руб.</div>
-        </div>
-        <div class="cart-item__brief-info" data-name="Заполните бриф">
-          <div class="cart-item__brief-bar"></div>
-          <div class="cart-item__num">100%</div>
-        </div>
-        <div class="cart-item__btn" data-name="1">
-          <button class="button">Посмотреть бриф</button>
-        </div>
-      </div>
-      <div class="cart-item__box">
-        <div class="cart-item__pic">
-          <img class="picture" src="img/product/product-1.jpg" alt="pic">
-        </div>
-        <div class="cart-item__info">
-          <a class="cart-item__title">Лендинг за 48 часов. Шаблон «Лес 1».</a>
-          <div class="cart-item__price">110. 000 руб.</div>
-        </div>
-        <div class="cart-item__brief-info">
-          <div class="cart-item__brief-bar"></div>
-          <div class="cart-item__num">20%</div>
-        </div>
-        <div class="cart-item__btn">
-          <button class="button link-button link-button--green">Заполнить бриф</button>
-          <button class="button">Не хочу заполнять</button>
-        </div>
-      </div>
-    </div>
-
-
-  </div>
-  <!-- <section class="bl-bg">
-    <div class="wrapper">
-      <h3 class="title title--line">Рекомендуем также добавить</h3>
-      <div class="slider-base">
-
-        <div class="slider-base__wrapper">
-          <div id="js-slider-project" class="slider-base__slider">
-            <div class="slider-base__item">
-              @@include('_include/_product.html')
+        <div class="cart-item">
+          <div class="cart-item__box">
+            <div class="cart-item__pic" data-name="Фото">
+              <img class="picture" src="img/product/product-1.jpg" alt="pic">
             </div>
-            <div class="slider-base__item">
-              @@include('_include/_product.html')
+            <div class="cart-item__info">
+              <a class="cart-item__title" data-name="Услуга">Лендинг за 48 часов. Шаблон «Лес 1».</a>
+              <div class="cart-item__price" data-name="Цена услуги">110. 000 руб.</div>
             </div>
-            <div class="slider-base__item">
-              @@include('_include/_product.html')
+            <div class="cart-item__brief-info" data-name="Заполните бриф">
+              <div class="cart-item__brief-bar"></div>
+              <div class="cart-item__num">100%</div>
             </div>
-            <div class="slider-base__item">
-              @@include('_include/_product.html')
+            <div class="cart-item__btn" data-name="1">
+              <button class="button">Посмотреть бриф</button>
             </div>
-            <div class="slider-base__item">
-              @@include('_include/_product.html')
+          </div>
+          <div class="cart-item__box">
+            <div class="cart-item__pic">
+              <img class="picture" src="img/product/product-1.jpg" alt="pic">
+            </div>
+            <div class="cart-item__info">
+              <a class="cart-item__title">Лендинг за 48 часов. Шаблон «Лес 1».</a>
+              <div class="cart-item__price">110. 000 руб.</div>
+            </div>
+            <div class="cart-item__brief-info">
+              <div class="cart-item__brief-bar"></div>
+              <div class="cart-item__num">20%</div>
+            </div>
+            <div class="cart-item__btn">
+              <button class="button link-button link-button--green">Заполнить бриф</button>
+              <button class="button">Не хочу заполнять</button>
             </div>
           </div>
         </div>
+
+
       </div>
+
+
+      <!-- контент -->
     </div>
-  </section> -->
 
-
-
-  @@include('_include/_page-footer.html')
+    @@include('_include/_page-footer_br.html')
+  </div>
 
   @@include('_include/_mobile.html')
 

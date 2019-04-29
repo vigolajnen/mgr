@@ -11,72 +11,78 @@
 </head>
 
 <body>
-  <div class="paranja"></div>
   <div class="preloader"></div>
+  <div class="wrap">
+    <div class="content">
+      <!-- контент -->
 
-  <header class="mobile-header">
-    <div class="mobile-header__inner">
-      <a class="mobile-header__link" href="cabinet.html">
-        <svg class="mobile-header__icon" width="20" height="20">
-          <use xlink:href="img/sprite.svg#icon-023-arrow-point-to-right"></use>
-        </svg>
-        <span class="visually-hidden">ссылка назад</span>
-      </a>
-      <div class="mobile-header__title">Мои подарки</div>
-    </div>
-  </header>
-
-  @@include('_include/_mobile.html')
-
-  @@include('_include/_page-header.html')
-
-
-  <div class="wrapper">
-    <div class="promo-inner">
-      <nav class="promo-inner__nav navigation-promo">
-        <ul class="navigation-promo__list">
-          <li class="navigation-promo__item navigation-promo__item--active">
-            <a class="navigation-promo__link navigation-promo__link--icon-1" href="cabinet.html">
-              <svg class="navigation-promo__icon navigation-promo__icon--pink" width="20" height="20">
-                <use xlink:href="img/sprite.svg#icon-user-1"></use>
-              </svg>
-              <span class="navigation-promo__name">Общая информация</span>
-            </a>
-          </li>
-          <li class="navigation-promo__item">
-            <a class="navigation-promo__link navigation-promo__link--icon-2" href="cabinet.2.html">
-              <svg class="navigation-promo__icon" width="20" height="20">
-                <use xlink:href="img/sprite.svg#icon-024-document"></use>
-              </svg>
-              <span class="navigation-promo__name">Мои заказы</span>
-            </a>
-          </li>
-          <li class="navigation-promo__item">
-            <a class="navigation-promo__link navigation-promo__link--icon-3" href="cabinet.1.html">
-              <svg class="navigation-promo__icon navigation-promo__icon--orange" width="20" height="20">
-                <use xlink:href="img/sprite.svg#icon-013-gift"></use>
-              </svg>
-              <span class="navigation-promo__name">Мои подарки</span>
-            </a>
-          </li>
-        </ul>
-      </nav>
-      <section class="promo-inner__info">
-        <div class="breadcrumbs">
-          <a class="breadcrumbs__link" href="index.html">Главная</a>
-          <a class="breadcrumbs__link">Личный кабинет</a>
-          <a class="breadcrumbs__link">Мои подарки</a>
+      <header class="mobile-header">
+        <div class="mobile-header__inner">
+          <a class="mobile-header__link" href="cabinet.html">
+            <svg class="mobile-header__icon" width="20" height="20">
+              <use xlink:href="img/sprite.svg#icon-023-arrow-point-to-right"></use>
+            </svg>
+            <span class="visually-hidden">ссылка назад</span>
+          </a>
+          <div class="mobile-header__title">Мои подарки</div>
         </div>
-        <div class="promo-inner__header">
-          <h1 class="promo-inner__title title-inner">Личный кабинет</h1>
-          <h2 class="">Мои подарки</h2>
+      </header>
+
+      @@include('_include/_mobile.html')
+
+      @@include('_include/_page-header.html')
+
+
+      <div class="wrapper">
+        <div class="promo-inner">
+          <nav class="promo-inner__nav navigation-promo">
+            <ul class="navigation-promo__list">
+              <li class="navigation-promo__item navigation-promo__item--active">
+                <a class="navigation-promo__link navigation-promo__link--icon-1" href="cabinet.html">
+                  <svg class="navigation-promo__icon navigation-promo__icon--pink" width="20" height="20">
+                    <use xlink:href="img/sprite.svg#icon-user-1"></use>
+                  </svg>
+                  <span class="navigation-promo__name">Общая информация</span>
+                </a>
+              </li>
+              <li class="navigation-promo__item">
+                <a class="navigation-promo__link navigation-promo__link--icon-2" href="cabinet.2.html">
+                  <svg class="navigation-promo__icon" width="20" height="20">
+                    <use xlink:href="img/sprite.svg#icon-024-document"></use>
+                  </svg>
+                  <span class="navigation-promo__name">Мои заказы</span>
+                </a>
+              </li>
+              <li class="navigation-promo__item">
+                <a class="navigation-promo__link navigation-promo__link--icon-3" href="cabinet.1.html">
+                  <svg class="navigation-promo__icon navigation-promo__icon--orange" width="20" height="20">
+                    <use xlink:href="img/sprite.svg#icon-013-gift"></use>
+                  </svg>
+                  <span class="navigation-promo__name">Мои подарки</span>
+                </a>
+              </li>
+            </ul>
+          </nav>
+          <section class="promo-inner__info">
+            <div class="breadcrumbs">
+              <a class="breadcrumbs__link" href="index.html">Главная</a>
+              <a class="breadcrumbs__link">Личный кабинет</a>
+              <a class="breadcrumbs__link">Мои подарки</a>
+            </div>
+            <div class="promo-inner__header">
+              <h1 class="promo-inner__title title-inner">Личный кабинет</h1>
+              <h2 class="">Мои подарки</h2>
+            </div>
+            @@include('_include/_presents.html')
+          </section>
         </div>
-        @@include('_include/_presents.html')
-      </section>
+      </div>
+
+      <!-- контент -->
     </div>
+
+    @@include('_include/_page-footer_br.html')
   </div>
-
-  @@include('_include/_page-footer_br.html')
 
 
   @@include('_include/_popup.html')

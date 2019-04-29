@@ -13,97 +13,112 @@
 <body>
 
   <div class="preloader"></div>
+  <div class="wrap">
+    <div class="content">
+      <!-- контент -->
 
-  <header class="mobile-header">
-    <div class="mobile-header__inner">
-      <a class="mobile-header__link" href="catalog.html">
-        <svg class="mobile-header__icon" width="20" height="20">
-          <use xlink:href="img/sprite.svg#icon-023-arrow-point-to-right"></use>
-        </svg>
-        <span class="visually-hidden">ссылка назад</span>
-      </a>
-      <div class="mobile-header__title">Дизайн и Арт</div>
-    </div>
-  </header>
+      <header class="mobile-header">
+        <div class="mobile-header__inner">
+          <a class="mobile-header__link" href="catalog.html">
+            <svg class="mobile-header__icon" width="20" height="20">
+              <use xlink:href="img/sprite.svg#icon-023-arrow-point-to-right"></use>
+            </svg>
+            <span class="visually-hidden">ссылка назад</span>
+          </a>
+          <div class="mobile-header__title">Дизайн и Арт</div>
+        </div>
+      </header>
 
-  @@include('_include/_mobile.html')
+      @@include('_include/_mobile.html')
 
-  @@include('_include/_page-header.html')
+      @@include('_include/_page-header.html')
 
-  <main class="page-cat">
-    <div class="wrapper">
-      <div class="page-cat__header">
-        <aside class="page-cat__nav">
-          @@include('_include/_navigation-promo.html')
-        </aside>
-        <div class="page-cat__info">
-          <div class="breadcrumbs">
-            <a class="breadcrumbs__link" href="index.html">Главная</a>
-            <a class="breadcrumbs__link">Каталог</a>
-            <a class="breadcrumbs__link">Дизайн и Арт</a>
+      <main class="page-cat">
+        <div class="wrapper">
+          <div class="page-cat__header">
+            <aside class="page-cat__nav">
+              @@include('_include/_navigation-promo.html')
+            </aside>
+            <div class="page-cat__info">
+              <div class="breadcrumbs">
+                <a class="breadcrumbs__link" href="index.html">Главная</a>
+                <a class="breadcrumbs__link">Каталог</a>
+                <a class="breadcrumbs__link">Дизайн и Арт</a>
+              </div>
+              <div class="page-cat__text">
+                <h1 class="title title--cat">Дизайн и Арт</h1>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vero consequuntur similique vel libero
+                  omnis facere dolorum recusandae quod officia earum.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio, sapiente, dolore perferendis
+                  iste maxime at odio quae quis impedit mollitia recusandae corporis quo porro commodi velit. Tempore
+                  atque aliquid officiis rem? Fugiat accusamus quidem iste nisi consectetur est suscipit soluta odit
+                  quisquam, unde veritatis, sit exercitationem quo incidunt officiis ratione ipsam amet praesentium
+                  corporis culpa repudiandae libero recusandae voluptatibus? Ullam soluta eius quam nihil, illum quae
+                  nobis? Illum et ratione nisi atque unde corrupti quia ex veniam, eaque sunt possimus fugit mollitia.
+                  Sequi modi assumenda repellat in et qui animi magnam voluptate dolore? Aperiam delectus non optio et,
+                  neque nemo.</p>
+
+              </div>
+            </div>
           </div>
-          <div class="page-cat__text">
-            <h1 class="title title--cat">Дизайн и Арт</h1>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vero consequuntur similique vel libero omnis facere dolorum recusandae quod officia earum.</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio, sapiente, dolore perferendis iste maxime at odio quae quis impedit mollitia recusandae corporis quo porro commodi velit. Tempore atque aliquid officiis rem? Fugiat accusamus quidem iste nisi consectetur est suscipit soluta odit quisquam, unde veritatis, sit exercitationem quo incidunt officiis ratione ipsam amet praesentium corporis culpa repudiandae libero recusandae voluptatibus? Ullam soluta eius quam nihil, illum quae nobis? Illum et ratione nisi atque unde corrupti quia ex veniam, eaque sunt possimus fugit mollitia. Sequi modi assumenda repellat in et qui animi magnam voluptate dolore? Aperiam delectus non optio et, neque nemo.</p>
-
+          <div class="page-cat__content">
+            <div class="sort">
+              <div class="sort__caption">Сортировать:</div>
+              <ul class="sort__list">
+                <li class="sort__item sort__item--active">
+                  <button class="button sort__button">По виду работ</button>
+                </li>
+                <li class="sort__item">
+                  <button class="button sort__button">По результату</button>
+                </li>
+                <li class="sort__item">
+                  <button class="button sort__button">По цене</button>
+                </li>
+              </ul>
+            </div>
+            <div class="page-cat__products">
+              @@include('_include/_product-2.html')
+              @@include('_include/_product-2.html')
+              @@include('_include/_product-2.html')
+              @@include('_include/_product-2.html')
+              @@include('_include/_product-2.html')
+              @@include('_include/_product-2.html')
+              @@include('_include/_product-2.html')
+              @@include('_include/_product-2.html')
+              @@include('_include/_product-2.html')
+              @@include('_include/_product-2.html')
+            </div>
+            <div class="page-cat__stock">
+              @@include('_include/_stock.html')
+            </div>
+            <div class="page-cat__products">
+              @@include('_include/_product-2.html')
+              @@include('_include/_product-2.html')
+              @@include('_include/_product-2.html')
+              @@include('_include/_product-2.html')
+              @@include('_include/_product-2.html')
+              @@include('_include/_product-2.html')
+              @@include('_include/_product-2.html')
+              @@include('_include/_product-2.html')
+              @@include('_include/_product-2.html')
+              @@include('_include/_product-2.html')
+            </div>
+            <a class="link-button link-button--green" href="#">Показать еще 20</a>
           </div>
         </div>
-      </div>
-      <div class="page-cat__content">
-        <div class="sort">
-          <div class="sort__caption">Сортировать:</div>
-          <ul class="sort__list">
-            <li class="sort__item sort__item--active">
-              <button class="button sort__button">По виду работ</button>
-            </li>
-            <li class="sort__item">
-              <button class="button sort__button">По результату</button>
-            </li>
-            <li class="sort__item">
-              <button class="button sort__button">По цене</button>
-            </li>
-          </ul>
-        </div>
-        <div class="page-cat__products">
-          @@include('_include/_product-2.html')
-          @@include('_include/_product-2.html')
-          @@include('_include/_product-2.html')
-          @@include('_include/_product-2.html')
-          @@include('_include/_product-2.html')
-          @@include('_include/_product-2.html')
-          @@include('_include/_product-2.html')
-          @@include('_include/_product-2.html')
-          @@include('_include/_product-2.html')
-          @@include('_include/_product-2.html')
-        </div>
-        <div class="page-cat__stock">
-          @@include('_include/_stock.html')
-        </div>
-        <div class="page-cat__products">
-          @@include('_include/_product-2.html')
-          @@include('_include/_product-2.html')
-          @@include('_include/_product-2.html')
-          @@include('_include/_product-2.html')
-          @@include('_include/_product-2.html')
-          @@include('_include/_product-2.html')
-          @@include('_include/_product-2.html')
-          @@include('_include/_product-2.html')
-          @@include('_include/_product-2.html')
-          @@include('_include/_product-2.html')
-        </div>
-        <a class="link-button link-button--green" href="#">Показать еще 20</a>
-      </div>
+      </main>
+
+
+      @@include('_include/_advantages.html')
+      @@include('_include/_last-projects.html')
+      @@include('_include/_block-order.html')
+      @@include('_include/_reviews.html')
+
+      <!-- контент -->
     </div>
-  </main>
 
-
-  @@include('_include/_advantages.html')
-  @@include('_include/_last-projects.html')
-  @@include('_include/_block-order.html')
-  @@include('_include/_reviews.html')
-
-  @@include('_include/_page-footer.html')
+    @@include('_include/_page-footer.html')
+  </div>
 
 
   <!-- @@include('_include/_popup.html') -->

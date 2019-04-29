@@ -13,144 +13,152 @@
 <body>
 
 
-  <div class="paranja"></div>
-  <header class="mobile-header">
-    <div class="mobile-header__inner">
-      <a class="mobile-header__link" href="index.html">
-        <svg class="mobile-header__icon" width="20" height="20">
-          <use xlink:href="img/sprite.svg#icon-023-arrow-point-to-right"></use>
-        </svg>
-        <span class="visually-hidden">ссылка назад</span>
-      </a>
-      <div class="mobile-header__title">Мои компании</div>
-    </div>
-  </header>
-
-  @@include('_include/_mobile.html')
-  @@include('_include/_page-header.html')
-  <div class="wrapper">
-
-    <div class="promo-inner">
-      <nav class="promo-inner__nav navigation-promo">
-        <ul class="navigation-promo__list">
-          <li class="navigation-promo__item navigation-promo__item--active">
-            <a class="navigation-promo__link navigation-promo__link--icon-1" href="cabinet.html">
-              <svg class="navigation-promo__icon navigation-promo__icon--pink" width="20" height="20">
-                <use xlink:href="img/sprite.svg#icon-user-1"></use>
-              </svg>
-              <span class="navigation-promo__name">Общая информация</span>
-            </a>
-          </li>
-          <li class="navigation-promo__item">
-            <a class="navigation-promo__link navigation-promo__link--icon-2" href="cabinet.2.html">
-              <svg class="navigation-promo__icon" width="20" height="20">
-                <use xlink:href="img/sprite.svg#icon-024-document"></use>
-              </svg>
-              <span class="navigation-promo__name">Мои заказы</span>
-            </a>
-          </li>
-          <li class="navigation-promo__item">
-            <a class="navigation-promo__link navigation-promo__link--icon-3" href="cabinet.1.html">
-              <svg class="navigation-promo__icon navigation-promo__icon--orange" width="20" height="20">
-                <use xlink:href="img/sprite.svg#icon-013-gift"></use>
-              </svg>
-              <span class="navigation-promo__name">Мои подарки</span>
-            </a>
-          </li>
-        </ul>
-      </nav>
-      <section class="promo-inner__info">
-        <div class="breadcrumbs">
-          <a class="breadcrumbs__link" href="index.html">Главная</a>
-          <a class="breadcrumbs__link" href="cabinet.html">Личный кабинет</a>
-          <a class="breadcrumbs__link">Добавить компанию</a>
+  <div class="preloader"></div>
+  <div class="wrap">
+    <div class="content">
+      <!-- контент -->
+      <header class="mobile-header">
+        <div class="mobile-header__inner">
+          <a class="mobile-header__link" href="index.html">
+            <svg class="mobile-header__icon" width="20" height="20">
+              <use xlink:href="img/sprite.svg#icon-023-arrow-point-to-right"></use>
+            </svg>
+            <span class="visually-hidden">ссылка назад</span>
+          </a>
+          <div class="mobile-header__title">Мои компании</div>
         </div>
-        <div class="promo-inner__header">
-          <h1 class="promo-inner__title title-inner">Личный кабинет</h1>
-          <h2 class="">Добавление компании</h2>
+      </header>
+
+      @@include('_include/_mobile.html')
+      @@include('_include/_page-header.html')
+      <div class="wrapper">
+
+        <div class="promo-inner">
+          <nav class="promo-inner__nav navigation-promo">
+            <ul class="navigation-promo__list">
+              <li class="navigation-promo__item navigation-promo__item--active">
+                <a class="navigation-promo__link navigation-promo__link--icon-1" href="cabinet.html">
+                  <svg class="navigation-promo__icon navigation-promo__icon--pink" width="20" height="20">
+                    <use xlink:href="img/sprite.svg#icon-user-1"></use>
+                  </svg>
+                  <span class="navigation-promo__name">Общая информация</span>
+                </a>
+              </li>
+              <li class="navigation-promo__item">
+                <a class="navigation-promo__link navigation-promo__link--icon-2" href="cabinet.2.html">
+                  <svg class="navigation-promo__icon" width="20" height="20">
+                    <use xlink:href="img/sprite.svg#icon-024-document"></use>
+                  </svg>
+                  <span class="navigation-promo__name">Мои заказы</span>
+                </a>
+              </li>
+              <li class="navigation-promo__item">
+                <a class="navigation-promo__link navigation-promo__link--icon-3" href="cabinet.1.html">
+                  <svg class="navigation-promo__icon navigation-promo__icon--orange" width="20" height="20">
+                    <use xlink:href="img/sprite.svg#icon-013-gift"></use>
+                  </svg>
+                  <span class="navigation-promo__name">Мои подарки</span>
+                </a>
+              </li>
+            </ul>
+          </nav>
+          <section class="promo-inner__info">
+            <div class="breadcrumbs">
+              <a class="breadcrumbs__link" href="index.html">Главная</a>
+              <a class="breadcrumbs__link" href="cabinet.html">Личный кабинет</a>
+              <a class="breadcrumbs__link">Добавить компанию</a>
+            </div>
+            <div class="promo-inner__header">
+              <h1 class="promo-inner__title title-inner">Личный кабинет</h1>
+              <h2 class="">Добавление компании</h2>
+            </div>
+
+            <section class="form">
+              <div class="form__wrapper">
+                <form class="form__form" action="https://echo.htmlacademy.ru" method="post">
+                  <div class="form__col">
+                    <div class="form__item">
+                      <label for="form-company" class="visually-hidden">Компания, Бренд</label>
+                      <input id="form-company" class="form__input" name="form-company" type="text"
+                        placeholder="Компания, Бренд" required="">
+                    </div>
+                    <div class="form__item">
+                      <label for="form-company-2" class="visually-hidden">Юр. название компании</label>
+                      <input id="form-company-2" class="form__input" name="form-company-2" type="text"
+                        placeholder="Юр. название компании" required="">
+                    </div>
+                    <div class="form__item">
+                      <label for="form-web" class="visually-hidden">Сайт</label>
+                      <input id="form-web" class="form__input" name="form-web" type="text" placeholder="Сайт"
+                        required="">
+                    </div>
+                    <div class="form__item">
+                      <label for="form-company-3" class="visually-hidden">Юр. адрес</label>
+                      <input id="form-company-3" class="form__input" name="form-company-3" type="text"
+                        placeholder="Юр. адрес" required="">
+                    </div>
+                    <div class="form__item">
+                      <label for="form-phone" class="visually-hidden">Телефона</label>
+                      <input id="form-phone" class="form__input" name="form-phone" type="tel" placeholder="Телефона"
+                        required="">
+                    </div>
+                  </div>
+                  <div class="form__item">
+                    <h3 class="form__title">Реквизиты</h3>
+                  </div>
+                  <div class="form__col">
+                    <div class="form__item">
+                      <label for="form-name" class="visually-hidden">Название компании</label>
+                      <input id="form-name" class="form__input" name="form-name" type="text"
+                        placeholder="Название компании" required="">
+                    </div>
+                    <div class="form__item">
+                      <label for="form-inn" class="visually-hidden">ИНН</label>
+                      <input id="form-inn" class="form__input" name="form-inn" type="text" placeholder="ИНН"
+                        required="">
+                    </div>
+                    <div class="form__item">
+                      <label for="form-kpp" class="visually-hidden">КПП</label>
+                      <input id="form-kpp" class="form__input" name="form-kpp" type="text" placeholder="КПП"
+                        required="">
+                    </div>
+                    <div class="form__item">
+                      <label for="form-rs" class="visually-hidden">Р/с</label>
+                      <input id="form-rs" class="form__input" name="form-rs" type="text" placeholder="Р/с" required="">
+                    </div>
+                  </div>
+                  <div class="form__col">
+                    <div class="form__item">
+                      <label for="form-bik" class="visually-hidden">БИК</label>
+                      <input id="form-bik" class="form__input" name="form-bik" type="text" placeholder="БИК"
+                        required="">
+                    </div>
+                    <div class="form__item">
+                      <label for="form-bank" class="visually-hidden">Банк</label>
+                      <input id="form-bank" class="form__input" name="form-bank" type="text" placeholder="Банк"
+                        required="">
+                    </div>
+                    <div class="form__item">
+                      <label for="form-addredd" class="visually-hidden">Адрес</label>
+                      <input id="form-addredd" class="form__input" name="form-addredd" type="text" placeholder="Адрес"
+                        required="">
+                    </div>
+                  </div>
+
+                  <div class="form__item">
+                    <button class="form__btn button link-button" type="submit">Отправить</button>
+                  </div>
+                </form>
+              </div>
+            </section>
+
         </div>
-
-        <section class="form">
-          <div class="form__wrapper">
-            <form class="form__form" action="https://echo.htmlacademy.ru" method="post">
-              <div class="form__col">
-                <div class="form__item">
-                  <label for="form-company" class="visually-hidden">Компания, Бренд</label>
-                  <input id="form-company" class="form__input" name="form-company" type="text" placeholder="Компания, Бренд"
-                    required="">
-                </div>
-                <div class="form__item">
-                  <label for="form-company-2" class="visually-hidden">Юр. название компании</label>
-                  <input id="form-company-2" class="form__input" name="form-company-2" type="text" placeholder="Юр. название компании"
-                    required="">
-                </div>
-                <div class="form__item">
-                  <label for="form-web" class="visually-hidden">Сайт</label>
-                  <input id="form-web" class="form__input" name="form-web" type="text" placeholder="Сайт"
-                    required="">
-                </div>
-                <div class="form__item">
-                  <label for="form-company-3" class="visually-hidden">Юр. адрес</label>
-                  <input id="form-company-3" class="form__input" name="form-company-3" type="text" placeholder="Юр. адрес"
-                    required="">
-                </div>
-                <div class="form__item">
-                  <label for="form-phone" class="visually-hidden">Телефона</label>
-                  <input id="form-phone" class="form__input" name="form-phone" type="tel" placeholder="Телефона"
-                    required="">
-                </div>
-              </div>
-              <div class="form__item">
-                <h3 class="form__title">Реквизиты</h3>
-              </div>
-              <div class="form__col">
-                <div class="form__item">
-                  <label for="form-name" class="visually-hidden">Название компании</label>
-                  <input id="form-name" class="form__input" name="form-name" type="text" placeholder="Название компании"
-                    required="">
-                </div>
-                <div class="form__item">
-                  <label for="form-inn" class="visually-hidden">ИНН</label>
-                  <input id="form-inn" class="form__input" name="form-inn" type="text" placeholder="ИНН"
-                    required="">
-                </div>
-                <div class="form__item">
-                  <label for="form-kpp" class="visually-hidden">КПП</label>
-                  <input id="form-kpp" class="form__input" name="form-kpp" type="text" placeholder="КПП" required="">
-                </div>
-                <div class="form__item">
-                  <label for="form-rs" class="visually-hidden">Р/с</label>
-                  <input id="form-rs" class="form__input" name="form-rs" type="text" placeholder="Р/с"
-                    required="">
-                </div>
-              </div>
-              <div class="form__col">
-                <div class="form__item">
-                  <label for="form-bik" class="visually-hidden">БИК</label>
-                  <input id="form-bik" class="form__input" name="form-bik" type="text" placeholder="БИК" required="">
-                </div>
-                <div class="form__item">
-                  <label for="form-bank" class="visually-hidden">Банк</label>
-                  <input id="form-bank" class="form__input" name="form-bank" type="text" placeholder="Банк"
-                    required="">
-                </div>
-                <div class="form__item">
-                  <label for="form-addredd" class="visually-hidden">Адрес</label>
-                  <input id="form-addredd" class="form__input" name="form-addredd" type="text" placeholder="Адрес"
-                    required="">
-                </div>
-              </div>
-
-              <div class="form__item">
-                <button class="form__btn button link-button" type="submit">Отправить</button>
-              </div>
-            </form>
-          </div>
-        </section>
-
+      </div>
+      <!-- контент -->
     </div>
+
+    @@include('_include/_page-footer_br.html')
   </div>
-  @@include('_include/_page-footer_br.html')
 
   @@include('_include/_script.html')
 

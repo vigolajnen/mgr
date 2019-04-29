@@ -11,154 +11,160 @@
 </head>
 
 <body>
-  <div class="paranja"></div>
   <div class="preloader"></div>
+  <div class="wrap">
+    <div class="content">
+      <!-- контент -->
 
-  <header class="mobile-header">
-    <div class="mobile-header__inner">
-      <a class="mobile-header__link" href="cabinet.html">
-        <svg class="mobile-header__icon" width="20" height="20">
-          <use xlink:href="img/sprite.svg#icon-023-arrow-point-to-right"></use>
-        </svg>
-        <span class="visually-hidden">ссылка назад</span>
-      </a>
-      <div class="mobile-header__title">Мои заказы</div>
-    </div>
-  </header>
-  @@include('_include/_mobile.html')
-
-  @@include('_include/_page-header.html')
-
-
-  <div class="wrapper">
-    <div class="promo-inner">
-      <nav class="promo-inner__nav navigation-promo">
-        <ul class="navigation-promo__list">
-          <li class="navigation-promo__item navigation-promo__item--active">
-            <a class="navigation-promo__link navigation-promo__link--icon-1" href="cabinet.html">
-              <svg class="navigation-promo__icon navigation-promo__icon--pink" width="20" height="20">
-                <use xlink:href="img/sprite.svg#icon-user-1"></use>
-              </svg>
-              <span class="navigation-promo__name">Общая информация</span>
-            </a>
-          </li>
-          <li class="navigation-promo__item">
-            <a class="navigation-promo__link navigation-promo__link--icon-2" href="cabinet.2.html">
-              <svg class="navigation-promo__icon" width="20" height="20">
-                <use xlink:href="img/sprite.svg#icon-024-document"></use>
-              </svg>
-              <span class="navigation-promo__name">Мои заказы</span>
-            </a>
-          </li>
-          <li class="navigation-promo__item">
-            <a class="navigation-promo__link navigation-promo__link--icon-3" href="cabinet.1.html">
-              <svg class="navigation-promo__icon navigation-promo__icon--orange" width="20" height="20">
-                <use xlink:href="img/sprite.svg#icon-013-gift"></use>
-              </svg>
-              <span class="navigation-promo__name">Мои подарки</span>
-            </a>
-          </li>
-        </ul>
-      </nav>
-      <section class="promo-inner__info">
-        <div class="breadcrumbs">
-          <a class="breadcrumbs__link" href="index.html">Главная</a>
-          <a class="breadcrumbs__link">Личный кабинет</a>
-          <a class="breadcrumbs__link">Мои заказы</a>
+      <header class="mobile-header">
+        <div class="mobile-header__inner">
+          <a class="mobile-header__link" href="cabinet.html">
+            <svg class="mobile-header__icon" width="20" height="20">
+              <use xlink:href="img/sprite.svg#icon-023-arrow-point-to-right"></use>
+            </svg>
+            <span class="visually-hidden">ссылка назад</span>
+          </a>
+          <div class="mobile-header__title">Мои заказы</div>
         </div>
-        <div class="promo-inner__header">
-          <h1 class="promo-inner__title title-inner">Личный кабинет</h1>
-          <h2 class="">Мои заказы</h2>
-        </div>
-        <div class="promo-inner__tabs tabs vp-invisible">
-          <div class="tabs__wrapper">
-            <ul id="tabs-links" class="tabs__list">
-              <li class="tabs__item">
-                <a class="tabs__link" href="#order-all">Все заказы</a>
+      </header>
+      @@include('_include/_mobile.html')
+
+      @@include('_include/_page-header.html')
+
+
+      <div class="wrapper">
+        <div class="promo-inner">
+          <nav class="promo-inner__nav navigation-promo">
+            <ul class="navigation-promo__list">
+              <li class="navigation-promo__item navigation-promo__item--active">
+                <a class="navigation-promo__link navigation-promo__link--icon-1" href="cabinet.html">
+                  <svg class="navigation-promo__icon navigation-promo__icon--pink" width="20" height="20">
+                    <use xlink:href="img/sprite.svg#icon-user-1"></use>
+                  </svg>
+                  <span class="navigation-promo__name">Общая информация</span>
+                </a>
               </li>
-              <li class="tabs__item">
-                <a class="tabs__link" href="#order-arh">Архив заказов</a>
+              <li class="navigation-promo__item">
+                <a class="navigation-promo__link navigation-promo__link--icon-2" href="cabinet.2.html">
+                  <svg class="navigation-promo__icon" width="20" height="20">
+                    <use xlink:href="img/sprite.svg#icon-024-document"></use>
+                  </svg>
+                  <span class="navigation-promo__name">Мои заказы</span>
+                </a>
+              </li>
+              <li class="navigation-promo__item">
+                <a class="navigation-promo__link navigation-promo__link--icon-3" href="cabinet.1.html">
+                  <svg class="navigation-promo__icon navigation-promo__icon--orange" width="20" height="20">
+                    <use xlink:href="img/sprite.svg#icon-013-gift"></use>
+                  </svg>
+                  <span class="navigation-promo__name">Мои подарки</span>
+                </a>
               </li>
             </ul>
-            <div id="tabs-container" class="tabs__container">
-              <div id="order-all" class="tabs__content">
-                <table class="table">
-                  <thead class="table__head">
-                    <tr class="table__row">
-                      <td class="table__title">№ заказа</td>
-                      <td class="table__title">Услуга</td>
-                      <td class="table__title">Цена</td>
-                      <td class="table__title">Статус</td>
-                      <td class="table__title">Оплата</td>
-                      <td class="table__title">Акты</td>
-                      <td class="table__title">Отзывы</td>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr class="table__row">
-                      <td class="table__val" data-name="№ заказа:">СНН567890</td>
-                      <td class="table__val" data-name="Услуга:">
-                        <a class="table__link" href="#">Лендинг за 48 часов.
-                          Шаблон «Лес 1»</a>
-                      </td>
-                      <td class="table__val" data-name="Цена:">110 000 Р</td>
-                      <td class="table__val" data-name="Статус:">В работе</td>
-                      <td class="table__val" data-name="Оплата:">Оплачен</td>
-                      <td class="table__val" data-name="Акты:">
-                        <a class="table__link" href="#">Запросить</a>
-                      </td>
-                      <td class="table__val" data-name="Отзывы:">
-                        <a class="table__link" href="#" data-id="js-popup-btn-mob">Оставить отзыв</a>
-                      </td>
-                    </tr>
-                    <tr class="table__row">
-                      <td class="table__val" data-name="№ заказа:">СНН567890</td>
-                      <td class="table__val" data-name="Услуга:">
-                        <a class="table__link" href="#">Лендинг за 48 часов.
-                          Шаблон «Лес 1»</a>
-                      </td>
-                      <td class="table__val" data-name="Цена:">110 000 Р</td>
-                      <td class="table__val table__val--no-pay" data-name="Статус:">Не оплачен</td>
-                      <td class="table__val" data-name="Оплата:">
-                        <a class="table__link" href="#" download>Скачать счет</a></td>
-                      <td class="table__val" data-name="Акты:">
-                        Получены
-                      </td>
-                      <td class="table__val" data-name="Отзывы:">
-                        <a class="table__link" href="#">Смотреть отзыв</a>
-                      </td>
-                    </tr>
-                    <tr class="table__row">
-                      <td class="table__val" data-name="№ заказа:">СНН567890</td>
-                      <td class="table__val" data-name="Услуга:">
-                        <a class="table__link" href="#">Лендинг за 48 часов.
-                          Шаблон «Лес 1»</a>
-                      </td>
-                      <td class="table__val" data-name="Цена:">110 000 Р</td>
-                      <td class="table__val table__val--no-pay" data-name="Статус:">Не оплачен</td>
-                      <td class="table__val" data-name="Оплата:">
-                        <a class="table__link" href="#" download>Скачать счет</a></td>
-                      <td class="table__val" data-name="Акты:">
-                        Получены
-                      </td>
-                      <td class="table__val" data-name="Отзывы:">
-                        <a class="table__link" href="#">Смотреть отзыв</a>
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-              <div id="order-arh" class="tabs__content">
-                Архив заказов
+          </nav>
+          <section class="promo-inner__info">
+            <div class="breadcrumbs">
+              <a class="breadcrumbs__link" href="index.html">Главная</a>
+              <a class="breadcrumbs__link">Личный кабинет</a>
+              <a class="breadcrumbs__link">Мои заказы</a>
+            </div>
+            <div class="promo-inner__header">
+              <h1 class="promo-inner__title title-inner">Личный кабинет</h1>
+              <h2 class="">Мои заказы</h2>
+            </div>
+            <div class="promo-inner__tabs tabs vp-invisible">
+              <div class="tabs__wrapper">
+                <ul id="tabs-links" class="tabs__list">
+                  <li class="tabs__item">
+                    <a class="tabs__link" href="#order-all">Все заказы</a>
+                  </li>
+                  <li class="tabs__item">
+                    <a class="tabs__link" href="#order-arh">Архив заказов</a>
+                  </li>
+                </ul>
+                <div id="tabs-container" class="tabs__container">
+                  <div id="order-all" class="tabs__content">
+                    <table class="table">
+                      <thead class="table__head">
+                        <tr class="table__row">
+                          <td class="table__title">№ заказа</td>
+                          <td class="table__title">Услуга</td>
+                          <td class="table__title">Цена</td>
+                          <td class="table__title">Статус</td>
+                          <td class="table__title">Оплата</td>
+                          <td class="table__title">Акты</td>
+                          <td class="table__title">Отзывы</td>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr class="table__row">
+                          <td class="table__val" data-name="№ заказа:">СНН567890</td>
+                          <td class="table__val" data-name="Услуга:">
+                            <a class="table__link" href="#">Лендинг за 48 часов.
+                              Шаблон «Лес 1»</a>
+                          </td>
+                          <td class="table__val" data-name="Цена:">110 000 Р</td>
+                          <td class="table__val" data-name="Статус:">В работе</td>
+                          <td class="table__val" data-name="Оплата:">Оплачен</td>
+                          <td class="table__val" data-name="Акты:">
+                            <a class="table__link" href="#">Запросить</a>
+                          </td>
+                          <td class="table__val" data-name="Отзывы:">
+                            <a class="table__link" href="#" data-id="js-popup-btn-mob">Оставить отзыв</a>
+                          </td>
+                        </tr>
+                        <tr class="table__row">
+                          <td class="table__val" data-name="№ заказа:">СНН567890</td>
+                          <td class="table__val" data-name="Услуга:">
+                            <a class="table__link" href="#">Лендинг за 48 часов.
+                              Шаблон «Лес 1»</a>
+                          </td>
+                          <td class="table__val" data-name="Цена:">110 000 Р</td>
+                          <td class="table__val table__val--no-pay" data-name="Статус:">Не оплачен</td>
+                          <td class="table__val" data-name="Оплата:">
+                            <a class="table__link" href="#" download>Скачать счет</a></td>
+                          <td class="table__val" data-name="Акты:">
+                            Получены
+                          </td>
+                          <td class="table__val" data-name="Отзывы:">
+                            <a class="table__link" href="#">Смотреть отзыв</a>
+                          </td>
+                        </tr>
+                        <tr class="table__row">
+                          <td class="table__val" data-name="№ заказа:">СНН567890</td>
+                          <td class="table__val" data-name="Услуга:">
+                            <a class="table__link" href="#">Лендинг за 48 часов.
+                              Шаблон «Лес 1»</a>
+                          </td>
+                          <td class="table__val" data-name="Цена:">110 000 Р</td>
+                          <td class="table__val table__val--no-pay" data-name="Статус:">Не оплачен</td>
+                          <td class="table__val" data-name="Оплата:">
+                            <a class="table__link" href="#" download>Скачать счет</a></td>
+                          <td class="table__val" data-name="Акты:">
+                            Получены
+                          </td>
+                          <td class="table__val" data-name="Отзывы:">
+                            <a class="table__link" href="#">Смотреть отзыв</a>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <div id="order-arh" class="tabs__content">
+                    Архив заказов
+                  </div>
+                </div>
               </div>
             </div>
-          </div>
+          </section>
         </div>
-      </section>
-    </div>
-  </div>
+      </div>
 
-  @@include('_include/_page-footer_br.html')
+      <!-- контент -->
+    </div>
+
+    @@include('_include/_page-footer_br.html')
+  </div>
 
 
   @@include('_include/_popup-review.html')

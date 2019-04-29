@@ -13,65 +13,70 @@
 <body>
 
   <div class="preloader"></div>
-  <header class="mobile-header">
-    <div class="mobile-header__inner">
-      <a class="mobile-header__link" href="index.html">
-        <svg class="mobile-header__icon" width="20" height="20">
-          <use xlink:href="img/sprite.svg#icon-023-arrow-point-to-right"></use>
-        </svg>
-        <span class="visually-hidden">ссылка назад</span>
-      </a>
-      <div class="mobile-header__title">Авторизация</div>
-    </div>
-  </header>
-
-  @@include('_include/_mobile.html')
-
-  @@include('_include/_page-header.html')
-  <div class="wrapper">
-    <div class="breadcrumbs">
-      <a class="breadcrumbs__link" href="index.html">Главная</a>
-      <a class="breadcrumbs__link">Авторизация</a>
-    </div>
-  </div>
-
-  <main class="login">
-    <div class="wrapper">
-      <section class="login__inner">
-        <div class="login__logo logo">
-          <a href="index.html">
-            <img src="img/logo.svg" alt="Logo" width="200" height="200">
+  <div class="wrap">
+    <div class="content">
+      <!-- контент -->
+      <header class="mobile-header">
+        <div class="mobile-header__inner">
+          <a class="mobile-header__link" href="index.html">
+            <svg class="mobile-header__icon" width="20" height="20">
+              <use xlink:href="img/sprite.svg#icon-023-arrow-point-to-right"></use>
+            </svg>
+            <span class="visually-hidden">ссылка назад</span>
           </a>
+          <div class="mobile-header__title">Авторизация</div>
         </div>
-        <h1 class="title">Авторизация</h1>
-        <div class="form">
-          <div class="form__wrapper">
-            <form class="form__form" action="https://echo.htmlacademy.ru" method="post">
-              <div class="form__item">
-                <label for="form-login" class="visually-hidden">Ваше имя</label>
-                <input id="form-login" class="form__input" name="form-login" type="text" placeholder="vitaliy_ostriy@gmail.com"
-                  required="">
-              </div>
-              <div class="form__item">
-                <label for="form-pass" class="visually-hidden">Ваш пароль</label>
-                <input id="form-pass" class="form__input" name="form-pass" type="password" placeholder=""
-                  required="">
-              </div>
-              <div class="form__item">
-                <button class="button link-button" type="submit">Войти</button>
-                <button class="button button--blue" type="button" aria-label="Забыли пароль" data-id="js-popup-btn-mob">Забыли пароль?</button>
-              </div>
-            </form>
-          </div>
+      </header>
+
+      @@include('_include/_mobile.html')
+
+      @@include('_include/_page-header.html')
+      <div class="wrapper">
+        <div class="breadcrumbs">
+          <a class="breadcrumbs__link" href="index.html">Главная</a>
+          <a class="breadcrumbs__link">Авторизация</a>
         </div>
-      </section>
+      </div>
+
+      <main class="login">
+        <div class="wrapper">
+          <section class="login__inner">
+            <div class="login__logo logo">
+              <a href="index.html">
+                <img src="img/logo.svg" alt="Logo" width="200" height="200">
+              </a>
+            </div>
+            <h1 class="title">Авторизация</h1>
+            <div class="form">
+              <div class="form__wrapper">
+                <form class="form__form" action="https://echo.htmlacademy.ru" method="post">
+                  <div class="form__item">
+                    <label for="form-login" class="visually-hidden">Ваше имя</label>
+                    <input id="form-login" class="form__input" name="form-login" type="text"
+                      placeholder="vitaliy_ostriy@gmail.com" required="">
+                  </div>
+                  <div class="form__item">
+                    <label for="form-pass" class="visually-hidden">Ваш пароль</label>
+                    <input id="form-pass" class="form__input" name="form-pass" type="password" placeholder=""
+                      required="">
+                  </div>
+                  <div class="form__item">
+                    <button class="button link-button" type="submit">Войти</button>
+                    <button class="button button--blue" type="button" aria-label="Забыли пароль"
+                      data-id="js-popup-btn-mob">Забыли пароль?</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </section>
+        </div>
+      </main>
+
+
+      <!-- контент -->
     </div>
-  </main>
-
-
-  @@include('_include/_page-footer_br.html')
-
-  <!-- @@include('_include/_popup.html') -->
+    @@include('_include/_page-footer_br.html')
+  </div>
 
   <div class="popup-overlay">
     <section class="popup popup-order form">

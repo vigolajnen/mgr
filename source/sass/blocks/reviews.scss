@@ -1,16 +1,9 @@
 .reviews {
-  position: relative;
-
-  padding-top: 55px;
-  padding-bottom: 55px;
-
-
   & .wrapper {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding-bottom: 40px;
   }
 
   &__inner {
