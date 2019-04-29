@@ -1,0 +1,18 @@
+.link-arrow {
+  position: relative;
+  display: block;
+
+  @include rem(width, 50px);
+  @include rem(height, 50px);
+  &::before {
+    position: absolute;
+    content: "";
+    @include rem(top, 10px);
+    left: 0;
+    z-index: 1;
+
+    @include sprite($icon-arrow-down);
+
+    transform: rotate(90deg) translateY(-50%);
+  }
+}

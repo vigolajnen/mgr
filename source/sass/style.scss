@@ -18,7 +18,6 @@
 @import "mixins.scss";
 
 @import "sprite-png.scss";
-
 @import "blocks/sprite.scss";
 
 
@@ -27,8 +26,10 @@
 @import "blocks/page-header.scss";
 @import "blocks/page-footer.scss";
 
-@import "blocks/buttons.scss";
-@import "blocks/links.scss";
+@import "blocks/button.scss";
+@import "blocks/link.scss";
+@import "blocks/link-arrow.scss";
+
 @import "blocks/tabs.scss";
 @import "blocks/tabs-2.scss";
 @import "blocks/navigation.scss";

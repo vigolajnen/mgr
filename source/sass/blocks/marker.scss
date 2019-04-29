@@ -1,8 +1,8 @@
 .marker {
+  @include rem(padding, 15px);
 
-  padding: 0.2em 0.9em 0.7em;
   font-family: $font-title;
-  font-size: 1em;
+
   line-height: normal;
   text-align: center;
   color: #ffffff;
@@ -10,19 +10,27 @@
   background-color: #10b9bc;
   border-radius: 50%;
 
+  @include respond-above(sm) {
+    @include rem(padding, 15px 18px);
+  }
+
   &__num {
     display: block;
-    margin-top: -5px;
 
-    font-size: 2.7em;
+    @include rem(margin-top, -5px);
+
     line-height: 1;
 
     @include ff(
-    "font-size",
-    (
-      375px: 24px,
-      1280px: 45px
-    )
-  );
+      "font-size",
+      (
+        375px: 22px,
+        1280px: 45px
+      )
+    );
+
+    @include respond-above(sm) {
+      @include rem(margin-top, -10px);
+    }
   }
 }

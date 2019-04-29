@@ -4,8 +4,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding-top: 55px;
-    padding-bottom: 55px;
+
+    @include rem(padding, 55px 0);
   }
 
   &__inner {
@@ -13,10 +13,11 @@
     width: 100%;
 
     margin: 0 auto;
-    padding: 40px;
+    @include rem(padding, 40px);
 
-    background-color: #ed7053;
-    border-radius: 10px;
+    background-color: $color-orange-2;
+
+    @include rem(border-radius, 10px);
 
     &::before {
       position: absolute;
@@ -24,7 +25,7 @@
       top: -8px;
       left: 0;
       width: 100%;
-      height: 10px;
+      @include rem(height, 10px);
       background-image: url("../img/stock/br-top.png");
     }
 
@@ -34,51 +35,56 @@
       bottom: -8px;
       left: 0;
       width: 100%;
-      height: 10px;
+      @include rem(height, 10px);
       background-image: url("../img/stock/br-bm.png");
     }
 
     @include respond-above(sm) {
-      padding-bottom: 130px;
+      @include rem(padding-bottom, 130px);
     }
 
     @include respond-above(md) {
-      padding-bottom: 80px;
+      @include rem(padding-bottom, 80px);
     }
   }
 
   &__inner-br {
-    width: 100%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+
+    width: 100%;
+
     &::before {
-      position: absolute;
       content: "";
+      position: absolute;
       top: 0;
-      left: -8px;
-      width: 10px;
+      @include rem(left, -8px);
+
+      @include rem(width, 10px);
       height: 100%;
+
       background-image: url("../img/stock/br-left.png");
-      background-repeat-y: repeat;
+      background-repeat: repeat-y;
     }
 
     &::after {
-      position: absolute;
       content: "";
+      position: absolute;
       top: 0;
-      right: -6px;
-      width: 10px;
+      @include rem(right, -6px);
+
+      @include rem(width, 10px);
       height: 100%;
+
       background-image: url("../img/stock/br-right.png");
-      background-repeat-y: repeat;
+      background-repeat: repeat-y;
     }
   }
 
   &__info {
     width: 100%;
     text-align: center;
-    //background-color: #ed7053;
 
     @include respond-above(md) {
       width: 60%;
@@ -92,7 +98,7 @@
   &__timer {
     width: 100%;
     text-align: center;
-    background-color: #ed7053;
+    background-color: $color-orange-2;
 
     @include respond-above(md) {
       width: 40%;
@@ -123,8 +129,8 @@
     text-transform: uppercase;
   }
   &__present {
-    margin-bottom: 20px;
-    color: $color-white;
+    @include rem(margin-bottom, 20px);
+
     font-family: $font-title;
     line-height: normal;
     font-weight: 400;
@@ -138,7 +144,7 @@
         1540px: 80px
       )
     );
-
+    color: #ffffff;
     text-transform: uppercase;
 
     @include respond-above(sm) {
@@ -147,13 +153,20 @@
 
     @include respond-above(md) {
       position: relative;
-      padding-left: 260px;
+
+      @include rem(padding-left, 260px);
+
       line-height: normal;
       &::before {
         position: absolute;
         content: "";
-        top: 5px;
-        left: -10px;
+
+        @include rem(
+          (
+            top: 5px,
+            left: -10px
+          )
+        );
 
         @include sprite($icon-gifts);
       }
@@ -161,16 +174,15 @@
 
     @include respond-above(lg) {
       &::before {
-        top: 25px;
+        @include rem(top, 25px);
       }
     }
   }
 
   &__timer-text {
-    margin: 0;
-    margin-top: 10px;
-    margin-bottom: 30px;
-    color: $color-white;
+    @include rem(margin, 10px 0 30px);
+
+    color: #ffffff;
     font-weight: 700;
     line-height: normal;
     text-align: center;

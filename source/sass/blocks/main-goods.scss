@@ -9,7 +9,7 @@
   }
 
   &__title {
-    margin: 50px auto;
+    @include rem(margin, 50px auto);
 
     color: $color-title;
     font-family: $font-title;
@@ -17,21 +17,19 @@
     text-transform: uppercase;
 
     @include ff(
-      'font-size',
+      "font-size",
       (
         375px: 24px,
-        1280px: 50px,
+        1280px: 50px
       )
     );
   }
 
   &__list {
-    @include respond-above(md ) {
+    @include respond-above(md) {
       display: flex;
-
-    flex-wrap: wrap;
-
-    justify-content: flex-start;
+      flex-wrap: wrap;
+      justify-content: flex-start;
     }
   }
 
@@ -55,26 +53,26 @@
     //   }
     // }
     @include respond-above(md) {
-      width: calc(100% / 4 - 25px);
-      margin-right: 25px;
+      width: calc(100% / 4);
+      @include rem(padding-right, 25px);
       &:nth-child(3n) {
-        margin-right: 25px;
+        @include rem(padding-right, 25px);
       }
       &:nth-child(4n) {
-        margin-right: 0;
+        padding-right: 0;
       }
     }
     @include respond-above(lg) {
-      width: calc(100% / 5 - 25px);
-      margin-right: 25px;
+      width: calc(100% / 5);
+      @include rem(padding-right, 25px);
       &:nth-child(3n) {
-        margin-right: 25px;
+        @include rem(padding-right, 25px);
       }
       &:nth-child(4n) {
-        margin-right: 25px;
+        @include rem(padding-right, 25px);
       }
       &:nth-child(5n) {
-        margin-right: 0;
+        padding-right: 0;
       }
     }
   }
