@@ -1,6 +1,5 @@
 .advantages {
-  padding-top: 40px;
-  padding-bottom: 20px;
+  @include rem(padding, 40px 0 20px 0);
 
   & .wrapper {
     display: flex;
@@ -11,7 +10,7 @@
     overflow: hidden;
   }
   &__title {
-    margin-bottom: 10vh;
+    @include rem(margin-bottom, 70px);
   }
   &__list {
     @include listReset();
@@ -23,23 +22,25 @@
     width: 100%;
   }
   &__item {
-    width: calc(50% - 20px);
-    padding-top: 12vh;
-    margin-bottom: 3vh;
+    width: 50%;
+
+    @include rem(padding, 80px 10px 0 10px);
+    @include rem(margin-bottom, 20px);
 
     @include respond-above(xs) {
-      padding-top: 13vh;
+      @include rem(padding-top, 85px);
     }
 
     @include respond-above(sm) {
-      width: calc(100% / 3 - 30px);
-      padding-top: 15vh;
+      width: calc(100% / 3);
+      @include rem(padding, 100px 30px 0 30px);
     }
 
     @include respond-above(lg) {
-      width: calc(100% / 3 - 50px);
-      padding-top: 20vh;
-      margin-bottom: 5vh;
+      width: calc(100% / 3);
+
+      @include rem(padding, 130px 50px 0 50px);
+      @include rem(margin-bottom, 30px);
     }
   }
   &__text {
@@ -84,20 +85,16 @@
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-    width: 20vw;
-    height: 11vh;
+
+    @include rem(width, 150px);
+    @include rem(height, 75px);
 
     @include respond-above(sm) {
-      height: 13vh;
-    }
-
-
-    @include respond-above(sm) {
-      height: 15vh;
+      @include rem(height, 85px);
     }
 
     @include respond-above(lg) {
-      height: 20vh;
+      @include rem(height, 130px);
     }
   }
 }
