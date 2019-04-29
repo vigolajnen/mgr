@@ -4,12 +4,13 @@
     order: 1;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    // justify-content: center;
     align-items: center;
     text-align: center;
     @include respond-above(sm) {
       order: 0;
-      width: 50%;
+      justify-content: flex-start;
+      width: 35%;
       text-align: left;
     }
   }
@@ -19,4 +20,5 @@
       width: 50%;
     }
   }
+
 }
