@@ -16,7 +16,7 @@
   }
 
   &__link {
-    padding: 5px;
+    @include rem(padding, 5px);
 
     color: $text-color;
     font-weight: 700;

@@ -10,9 +10,13 @@
   flex-wrap: wrap;
   justify-content: space-between;
 
-  margin-bottom: 30px;
-  padding-top: 10px;
-  padding-bottom: 20px;
+  @include rem(
+    (
+      margin-bottom: 30px,
+      padding-top: 10px,
+      padding-bottom: 20px
+    )
+  );
 
   transform: translate(-50%, 0);
   -webkit-transform: translate(-50%, 0);
@@ -49,23 +53,29 @@
       flex-grow: 1;
 
       @include respond-above(sm769) {
-        padding: 0 20px;
-        margin-top: 10px;
+        @include rem(
+          (
+            padding: 0 20px,
+            margin-top: 10px
+          )
+        );
         width: 50%;
       }
 
       @include respond-above(md1100) {
-
       }
 
       @include respond-above(lg) {
-        padding: 0 50px;
-        margin-top: 0;
+        @include rem(
+          (
+            padding: 0 50px,
+            margin-top: 0
+          )
+        );
       }
     }
 
     &:nth-child(1) {
-
       @include respond-above(sm769) {
         width: 20%;
       }
@@ -76,7 +86,6 @@
     }
 
     &:nth-child(3) {
-
       @include respond-above(sm769) {
         width: 20%;
       }
@@ -93,27 +102,27 @@
       }
     }
     & .logo {
-      padding-top: 10px;
+      @include rem(padding-top, 10px);
     }
   }
 
   &__link {
-    margin-right: 5px;
+    @include rem(margin-right, 5px);
 
     &:last-child {
       margin-right: 0;
     }
 
     @media (min-width: $desktop-width-x) {
-      margin-right: 15px;
+      @include rem(margin-right, 15px);
     }
 
     @media (min-width: $desktop-width-xxl) {
-      margin-right: 20px;
+      @include rem(margin-right, 20px);
     }
 
     @media (min-width: 1700px) {
-      margin-right: 40px;
+      @include rem(margin-right, 40px);
     }
   }
 

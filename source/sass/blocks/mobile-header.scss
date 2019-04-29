@@ -1,8 +1,12 @@
 .mobile-header {
   position: relative;
 
-  padding: 15px 15px 25px 15px;
-  margin-bottom: 40px;
+  @include rem(
+    (
+      padding: 15px 15px 25px 15px,
+      margin-bottom: 40px
+    )
+  );
 
   background-color: #f7faff;
 
@@ -12,14 +16,15 @@
     bottom: -10px;
     left: 0;
     z-index: 1;
+
     display: block;
+
     width: 100%;
-    height: 25px;
+    @include rem(height, 25px);
+
     background-repeat: repeat-x;
-
     background-image: url("../img/header/header-border.png");
-
-    background-size: 30px;
+    @include rem(background-size, 30px);
   }
 
   @include respond-above(sm769) {
@@ -42,26 +47,34 @@
     );
   }
   &__icon {
-    transform: rotate(180deg);
-    margin-right: 10px;
+    @include rem(
+      (
+        margin-right: 10px,
+        width: 15px,
+        height: 15px
+      )
+    );
 
-    width: 15px;
-    height: 15px;
+    transform: rotate(180deg);
 
     @include respond-above(xs) {
-      width: 25px;
-      height: 25px;
-      margin-top: 5px;
+      @include rem(
+        (
+          width: 25px,
+          height: 25px,
+          margin-top: 5px
+        )
+      );
     }
   }
   &__buttons {
     position: absolute;
     top: 50%;
-    right: 1em;
+    @include rem(right, 15px);
     transform: translateY(-50%);
 
     & .button {
-      margin-right: 1em;
+      @include rem(margin-right, 15px);
     }
   }
 }
