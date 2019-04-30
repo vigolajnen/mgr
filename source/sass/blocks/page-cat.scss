@@ -1,5 +1,5 @@
 .page-cat {
-  padding-bottom: 65px;
+  // padding-bottom: 65px;
 
   &__header {
     display: flex;
@@ -23,6 +23,7 @@
   &__content {
     display: flex;
     flex-direction: column;
+    max-width: 100%;
     & .link-button--green {
       margin: auto;
     }
@@ -37,6 +38,7 @@
   &__products {
     display: flex;
     flex-wrap: wrap;
+    max-width: 100%;
   }
   & .product {
     @include rem(

@@ -4,6 +4,10 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    @include rem(padding, 0 15px);
+    @include respond-above(sm) {
+      padding: 0;
+    }
   }
 
   &__title {
@@ -16,6 +20,8 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    max-width: 100%;
+    overflow: hidden;
   }
 
   & .product {
