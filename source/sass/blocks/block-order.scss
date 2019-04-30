@@ -5,13 +5,7 @@
     justify-content: space-between;
     align-items: center;
 
-    // padding-top: 55px;
-    // padding-bottom: 55px;
-
     overflow: hidden;
-  }
-  &__title {
-    margin-bottom: 75px;
   }
   &__list {
     @include listReset();
@@ -22,7 +16,7 @@
 
     overflow-x: scroll;
 
-    @include respond-above(sm) {
+    @include respond-above(md1100) {
       flex-wrap: wrap;
       overflow: auto;
     }
@@ -33,10 +27,16 @@
     flex-direction: column;
     justify-content: flex-start;
     width: 50%;
-    min-width: 220px;
+
     height: auto;
-    margin-bottom: 40px;
-    padding-top: 185px;
+
+    @include rem(
+      (
+        margin-bottom: 40px,
+        padding-top: 185px,
+        min-width: 220px
+      )
+    );
     text-align: center;
 
     @include respond-above(sm) {
@@ -98,18 +98,15 @@
 
 .block-order__item--icon-1::before {
   @include sprite($icon-step-1);
-
 }
 .block-order__item--icon-2::before {
   @include sprite($icon-step-2);
 }
 .block-order__item--icon-3::before {
   @include sprite($icon-step-3);
-
 }
 .block-order__item--icon-4::before {
   @include sprite($icon-step-4);
-
 }
 .block-order__item--icon-5::before {
   @include sprite($icon-step-5);

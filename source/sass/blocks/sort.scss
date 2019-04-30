@@ -1,8 +1,11 @@
 .sort {
   display: flex;
 
-  align-items: center;
-  margin-bottom: 20px;
+  @include rem(margin-bottom, 40px);
+
+  @include respond-above(sm) {
+    align-items: center;
+  }
 
   &__caption {
     margin-right: 20px;
@@ -20,11 +23,16 @@
 
     display: flex;
     flex-wrap: wrap;
+    flex-direction: column;
+
+    @include respond-above(sm) {
+      flex-direction: row;
+    }
   }
 
   &__item {
     &:not(:last-child) {
-      margin-right: 20px;
+      @include rem(margin-right, 20px);
     }
   }
 
@@ -43,4 +51,36 @@
 
 .sort__item--active .sort__button {
   color: $text-color;
+}
+
+.sort__item {
+  display: none;
+  @include respond-above(sm) {
+    display: flex;
+  }
+}
+
+.sort__item.sort__item--active {
+  position: relative;
+  display: block;
+
+  @include rem(padding-right, 15px);
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 40%;
+    right: 0;
+
+    @include rem(
+      (
+        width: 10px,
+        height: 10px
+      )
+    );
+
+    background-image: url("../img/icons/icon-023-arrow-point-to-right.svg");
+
+    transform: rotate(90deg) translateY(-50%);
+  }
 }

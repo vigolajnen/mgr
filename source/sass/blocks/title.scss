@@ -4,14 +4,14 @@
 
   font-family: $font-title;
   font-weight: 400;
-  line-height: normal;
+  line-height: 1;
   color: $color-title;
 
   @include ff(
     "font-size",
     (
       375px: 24px,
-      1280px: 50px
+      750px: 50px
     )
   );
 
@@ -94,5 +94,8 @@
         @include rem(background-size, 40px);
       }
     }
+  }
+  &--gray {
+    color: #333333;
   }
 }

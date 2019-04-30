@@ -31,5 +31,9 @@
 
   & p {
     @include rem(margin, 0 0 30px 0);
+
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
 }
