@@ -24,7 +24,7 @@
             </svg>
             <span class="visually-hidden">ссылка назад</span>
           </a>
-          <div class="mobile-header__title">Пример работы дизайн и арт</div>
+          <div class="mobile-header__title">Пример работы</div>
         </div>
       </header>
 
@@ -32,53 +32,49 @@
 
       @@include('_include/_page-header.html')
 
-      <main class="page-cat">
-        <div class="wrapper">
-          <div class="page-cat__header">
-            <aside class="page-cat__nav">
-              @@include('_include/_navigation-promo.html')
-            </aside>
-            <div class="page-cat__info">
-              <div class="breadcrumbs">
-                <a class="breadcrumbs__link" href="index.html">Главная</a>
-                <a class="breadcrumbs__link">Пример работ</a>
-                <a class="breadcrumbs__link">Пример работы дизайн и арт</a>
-              </div>
-              <div class="page-cat__text">
-                <h1 class="title title--cat">Пример работы дизайн и арт</h1>
-                <div class="page-cat__text-col page-cat__text-col--pic">
-                  <img src="img/example/pic.jpg" alt="pic">
-                </div>
-                <div class="page-cat__text-col">
-                  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vero consequuntur similique vel libero
-                    omnis
-                    facere dolorum
-                    recusandae quod officia earum.</p>
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio, sapiente, dolore perferendis
-                    iste
-                    maxime at odio
-                    quae quis impedit mollitia recusandae corporis quo porro commodi velit. Tempore atque aliquid
-                    officiis
-                    rem? Fugiat
-                    accusamus quidem iste nisi consectetur est suscipit soluta odit quisquam, unde veritatis, sit
-                    exercitationem quo</p>
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio, sapiente, dolore perferendis
-                    iste
-                    maxime at odio
-                    quae quis impedit mollitia recusandae corporis quo porro commodi velit. Tempore atque aliquid
-                    officiis
-                  </p>
+      <div class="wrapper">
+        <div class="bl">
+          <aside class="bl__nav">
+            @@include('_include/_navigation-promo.html')
+          </aside>
+          <section class="bl__content">
+            <div class="breadcrumbs">
+              <a class="breadcrumbs__link" href="index.html">Главная</a>
+              <a class="breadcrumbs__link">Пример работ</a>
+              <a class="breadcrumbs__link">Пример работы дизайн и арт</a>
+            </div>
+            <h1 class="bl__title">Пример работы дизайн и арт</h1>
+            <div class="text">
+              <img class="picture picture--fl" src="img/example/pic.jpg" alt="pic">
+              <div class="text__box">
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vero consequuntur similique vel libero
+                  omnis
+                  facere dolorum
+                  recusandae quod officia earum.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio, sapiente, dolore perferendis
+                  iste
+                  maxime at odio
+                  quae quis impedit mollitia recusandae corporis quo porro commodi velit. Tempore atque aliquid
+                  officiis
+                  rem? Fugiat
+                  accusamus quidem iste nisi consectetur est suscipit soluta odit quisquam, unde veritatis, sit
+                  exercitationem quo</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio, sapiente, dolore perferendis
+                  iste
+                  maxime at odio
+                  quae quis impedit mollitia recusandae corporis quo porro commodi velit. Tempore atque aliquid
+                  officiis
+                </p>
 
-                  <button class="button link-button">Хочу также!</button>
-                </div>
+                <button class="button link-button">Хочу также!</button>
               </div>
             </div>
-          </div>
+          </section>
         </div>
-      </main>
+      </div>
 
-      <div class="bl-bg bl-bg--blue">
-        <section class="project-team">
+      <div class="bl bl--bg-blue">
+        <section class="project-team wrapper">
           <div class="wrapper">
             <h2 class="project-team__title title title--line-blue">Кто работал над проектом?</h2>
             <ul class="project-team__list">

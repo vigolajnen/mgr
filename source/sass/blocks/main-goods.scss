@@ -8,23 +8,6 @@
     align-items: center;
   }
 
-  &__title {
-    @include rem(margin, 50px auto);
-
-    color: $color-title;
-    font-family: $font-title;
-    font-weight: 400;
-    text-transform: uppercase;
-
-    @include ff(
-      "font-size",
-      (
-        375px: 24px,
-        1280px: 50px
-      )
-    );
-  }
-
   &__list {
     @include respond-above(md) {
       display: flex;

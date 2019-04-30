@@ -27,3 +27,15 @@
 
 // })();
 
+// (function(){
+//     var teamItems = document.querySelectorAll('.project-team__item');
+//     if (window.outerWidth < 769) {
+//       teamItems.forEach(function() {
+//         if(teamItems.length > 2) {
+//           console.log(teamItems);
+//           teamItems.
+//         }
+//         return teamItems;
+//       })
+//     }
+//   })();

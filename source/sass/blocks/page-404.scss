@@ -1,5 +1,21 @@
 .page-404 {
-  max-width: 760px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+
+  @include rem(max-width, 760px);
+
+  margin: auto;
+  @include rem(padding, 15px);
+
+  @include respond-above(xs) {
+    @include rem(padding, 30px);
+  }
+
+  @include respond-above(md) {
+    @include rem(padding, 0 0 80px 0);
+  }
   &__info {
     order: 1;
     display: flex;
@@ -20,5 +36,4 @@
       width: 50%;
     }
   }
-
 }

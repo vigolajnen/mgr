@@ -12,14 +12,10 @@
     justify-content: space-between;
   }
 
-  &__title {
-    margin-bottom: 85px;
-  }
-
   &__item {
     position: relative;
     width: 100%;
-    margin-bottom: 20px;
+    @include rem(margin-bottom, 20px);
     @include respond-above(sm) {
       width: calc(100% / 2 - 65px);
     }

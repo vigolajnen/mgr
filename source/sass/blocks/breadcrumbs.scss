@@ -1,5 +1,6 @@
 .breadcrumbs {
   display: none;
+  width: 100%;
 
   @include respond-above(md) {
     display: flex;

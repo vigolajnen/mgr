@@ -1,6 +1,9 @@
 .result {
-  padding-top: 50px;
-  padding-bottom: 100px;
+  @include rem(padding, 40px 0);
+  @include respond-above(sm) {
+    @include rem(padding, 50px 0 100px);
+  }
+
   & .wrapper {
     display: flex;
     flex-direction: column;
@@ -31,21 +34,33 @@
   }
   &__item {
     text-align: center;
+    @include rem(margin-bottom, 40px);
+    &:last-child {
+      margin-bottom: 0;
+    }
+    @include respond-above(sm) {
+      margin-bottom: 0;
+    }
   }
   &__num {
-    margin-bottom: 30px;
+    @include rem(margin-bottom, 20px);
     font-weight: 600;
     color: #6db629;
 
     @include ff(
       "font-size",
       (
-        375px: 40px,
+        375px: 45px,
         1280px: 58px
       )
     );
+
+    @include respond-above(sm) {
+      @include rem(margin-bottom, 30px);
+    }
   }
   &__info {
+    font-weight: 600;
     @include ff(
       "font-size",
       (

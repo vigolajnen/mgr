@@ -71,17 +71,21 @@
           <div class="page-cat__content bl">
             <div class="sort">
               <div class="sort__caption">Сортировать:</div>
-              <ul class="sort__list">
-                <li class="sort__item sort__item--active">
-                  <button class="button sort__button">По виду работ</button>
-                </li>
-                <li class="sort__item">
-                  <button class="button sort__button">По результату</button>
-                </li>
-                <li class="sort__item">
-                  <button class="button sort__button">По цене</button>
-                </li>
-              </ul>
+              <div class="sort__mobile">
+                <div class="sort__mobile-item"></div>
+                <ul class="sort__list">
+                  <li class="sort__item sort__item--active">
+                    <button class="button sort__button">По виду работ</button>
+                  </li>
+                  <li class="sort__item">
+                    <button class="button sort__button">По результату</button>
+                  </li>
+                  <li class="sort__item">
+                    <button class="button sort__button">По цене</button>
+                  </li>
+                </ul>
+              </div>
+
             </div>
             <div class="page-cat__products">
               @@include('_include/_product-2.html')
@@ -133,6 +137,7 @@
   @@include('_include/_script.html')
 
   <script src="js/timer.min.js"></script>
+  <!-- <script src="js/sort.min.js"></script> -->
 
 </body>
 

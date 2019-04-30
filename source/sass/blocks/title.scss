@@ -20,6 +20,7 @@
 
   &--line {
     position: relative;
+    @include rem(margin-bottom, 40px);
     &::before {
       content: "";
       position: absolute;
@@ -41,6 +42,10 @@
       @include respond-above(md) {
         @include rem(background-size, 40px);
       }
+    }
+
+    @include respond-above(md) {
+      @include rem(margin-bottom, 60px);
     }
   }
 
@@ -73,6 +78,7 @@
 
   &--line-blue {
     position: relative;
+    @include rem(margin-bottom, 40px);
     &::before {
       content: "";
       position: absolute;
@@ -94,8 +100,16 @@
         @include rem(background-size, 40px);
       }
     }
+    @include respond-above(md) {
+      @include rem(margin-bottom, 60px);
+    }
   }
   &--gray {
     color: #333333;
+  }
+  &--hidden-sm {
+    @include respond-below(sm) {
+      display: none;
+    }
   }
 }

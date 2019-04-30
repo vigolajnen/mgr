@@ -47,6 +47,12 @@
   @include respond-above(sm769) {
     display: flex;
   }
+  &__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    align-items: center;
+  }
 
   &__item {
     &:nth-child(2) {

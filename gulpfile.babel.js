@@ -182,6 +182,7 @@ gulp.task("jsmin", function () {
       "source/js/tabs-2.js",
       "source/js/rating.js",
       "source/js/fancybox.js",
+      "source/js/sort.js",
       "source/js/viewportChecker.js"
     ])
     .pipe(concat("main.min.js"))
@@ -206,6 +207,18 @@ gulp.task("js-timer", function() {
     )
     .pipe(gulp.dest("build/js"));
 });
+
+// gulp.task("js-sort", function() {
+//   gulp
+//     .src(["source/js/sort.js"])
+//     .pipe(concat("sort.min.js"))
+//     .pipe(
+//       uglify({
+//         mangle: false
+//       })
+//     )
+//     .pipe(gulp.dest("build/js"));
+// });
 
 
 gulp.task("serve", function () {

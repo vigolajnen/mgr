@@ -19,13 +19,17 @@
   }
 
   &__list {
+    display: none;
     @include listReset();
-
-    display: flex;
     flex-wrap: wrap;
     flex-direction: column;
 
+    &--active {
+      display: block;
+    }
+
     @include respond-above(sm) {
+      display: flex;
       flex-direction: row;
     }
   }
@@ -47,40 +51,41 @@
       )
     );
   }
+  &__mobile {
+    @include respond-below(sm) {
+      display: block;
+    }
+  }
 }
 
 .sort__item--active .sort__button {
   color: $text-color;
 }
 
-.sort__item {
+.sort__mobile-item {
   display: none;
-  @include respond-above(sm) {
-    display: flex;
-  }
-}
+  @include respond-below(sm) {
+    position: relative;
+    display: block;
 
-.sort__item.sort__item--active {
-  position: relative;
-  display: block;
+    @include rem(padding-right, 15px);
 
-  @include rem(padding-right, 15px);
+    &::before {
+      position: absolute;
+      content: "";
+      top: 30%;
+      right: 0;
 
-  &::before {
-    position: absolute;
-    content: "";
-    top: 40%;
-    right: 0;
+      @include rem(
+        (
+          width: 10px,
+          height: 10px
+        )
+      );
 
-    @include rem(
-      (
-        width: 10px,
-        height: 10px
-      )
-    );
+      background-image: url("../img/icons/icon-023-arrow-point-to-right.svg");
 
-    background-image: url("../img/icons/icon-023-arrow-point-to-right.svg");
-
-    transform: rotate(90deg) translateY(-50%);
+      transform: rotate(90deg) translateY(-50%);
+    }
   }
 }
