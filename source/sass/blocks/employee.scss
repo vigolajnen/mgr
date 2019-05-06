@@ -6,21 +6,49 @@
 
   width: 100%;
 
-  margin-top: 40px;
+  & .title {
+
+    @include respond-above(xxs) {
+      text-align: left;
+    }
+  }
 
   &__item {
     display: flex;
     flex-wrap: wrap;
-    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
     width: 100%;
 
+    @include rem(
+      (
+        padding-bottom: 20px,
+        margin-bottom: 30px
+      )
+    );
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
     @include respond-above(md) {
-      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    @include respond-above(sm) {
       justify-content: space-between;
 
-      padding-bottom: 40px;
-    margin-bottom: 40px;
+      @include rem(
+        (
+          padding-bottom: 40px,
+          margin-bottom: 40px
+        )
+      );
+
+      &:last-child {
+        margin-bottom: 0;
+      }
     }
 
     &--line {
@@ -47,12 +75,31 @@
   &__pic {
     width: 100%;
 
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+    @include respond-above(xxs) {
+      width: 30%;
+    }
+
     @include respond-above(md) {
       width: 20%;
     }
   }
+  &__pic-box {
+    padding-left: 0;
+    @include respond-above(md) {
+      padding-left: 20%;
+    }
+  }
   &__info {
     width: 100%;
+
+    @include respond-above(xxs) {
+      width: 70%;
+    }
 
     @include respond-above(md) {
       width: 80%;

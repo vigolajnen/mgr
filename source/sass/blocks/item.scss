@@ -1,7 +1,9 @@
 .item {
   width: 100%;
-  @include respond-above(sm769) {
-    // @include rem(padding, 50px 0);
+  &.bl {
+    @include respond-below(xxs) {
+      padding-top: 0;
+    }
   }
   &__inner {
     display: flex;
@@ -537,8 +539,13 @@
   }
   & .slider__marker {
     position: absolute;
-    top: 7%;
-    left: 7%;
+    top: 10%;
+    left: 10%;
+
+    @include respond-above(sm) {
+      top: 7%;
+      left: 7%;
+    }
   }
   & .slick-dots li {
     cursor: pointer;
@@ -548,8 +555,10 @@
         height: 10px
       )
     );
-    background-color: #e6e8ed;
+
     border-radius: 50%;
+    border: 2px solid #ccbcaa;
+    background-color: transparent;
   }
 
   & .slick-dots li button {
@@ -560,5 +569,6 @@
 
   & .slick-dots li.slick-active {
     background-color: $color-blue;
+    border: 2px solid $color-blue;
   }
 }
