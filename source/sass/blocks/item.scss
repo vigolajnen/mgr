@@ -34,7 +34,7 @@
     @include rem(margin-bottom, 30px);
 
     @include respond-above(md) {
-      width: 47%;
+      width: 50%;
       flex-direction: row;
       flex-wrap: wrap;
       justify-content: space-between;
@@ -458,5 +458,82 @@
   }
   &--clock {
     background-color: #a3b806;
+  }
+}
+
+.item__slider {
+  & .slick-list.draggable {
+    margin-left: 60px;
+    margin-right: 60px;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+  & .slick-prev {
+    left: 0;
+    background: blue;
+    z-index: 999999;
+    top: 65px;
+    width: 50px;
+    height: 50px;
+  }
+
+  & .slick-next {
+    right: -5px;
+    background: blue;
+    z-index: 999999;
+    top: 65px;
+    width: 50px;
+    height: 50px;
+  }
+
+  & .slider__for .slick-list.draggable {
+    margin-left: 0;
+    margin-right: 0;
+
+    @include respond-below(sm769) {
+      @include rem(padding-bottom, 40px);
+    }
+  }
+  & .slider__nav {
+    @include respond-above(md) {
+      right: 105%;
+      top: 0;
+    }
+    @include respond-above(lg) {
+      right: 80%;
+    }
+
+    @include respond-above(xlg) {
+      top: -33px;
+    }
+  }
+  & .slider__for {
+    @include respond-above(md) {
+      width: 75%;
+    }
+  }
+
+  & .slider__for .slick-dots {
+    display: block;
+    bottom: 0;
+    @include respond-below(sm769) {
+      display: none;
+    }
+  }
+  & .slider__pic {
+    @include respond-above(md) {
+      @include rem(min-height, 530px);
+    }
+  }
+  & .slider__item {
+    @include rem(padding, 25px);
+    background-image: url("../img/item/slide-bg.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+  }
+  & .slider__marker {
+    position: absolute;
+    top: 7%;
+    left: 7%;
   }
 }

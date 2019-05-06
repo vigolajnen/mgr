@@ -46,7 +46,7 @@
 }
 
 //
-
+$xxxs:      420px;
 $xxs:      480px;
 $xs:       576px;
 $sm:       768px;
@@ -57,7 +57,8 @@ $lg:      1300px;
 $xlg:     1600px;
 $xxlg:    1920px;
 
-$breakpoints: (xxs: $xxs,
+$breakpoints: (xxxs: $xxxs,
+xxs: $xxs,
 xs: $xs,
 sm: $sm,
 sm769: $sm769,

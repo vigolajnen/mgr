@@ -51,6 +51,9 @@
       max-width: 430px;
       margin-right: 0;
     }
+    @include respond-above(lg) {
+      max-width: 410px;
+    }
   }
 
   &__sale-text {

@@ -96,6 +96,7 @@ $(document).ready(function() {
    slidesToScroll: 1,
    arrows: false,
    fade: true,
+   dots: true,
    asNavFor: ".slider__nav"
  });
  $(".slider__nav").slick({
@@ -105,5 +106,6 @@ $(document).ready(function() {
    dots: false,
    arrow: true,
    centerMode: true,
+   centerPadding: "40px",
    focusOnSelect: true
  });

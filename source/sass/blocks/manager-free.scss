@@ -1,6 +1,57 @@
 .manager-free {
   @include rem(padding, 0 15px);
-  @include respond-above(sm) {
+  @include respond-above(md) {
     padding: 0;
+  }
+
+  & .wrapper {
+    flex-direction: row;
+  }
+
+  &__info {
+    width: 100%;
+    order: 1;
+
+    @include respond-above(sm) {
+      width: 70%;
+    }
+    @include respond-above(md) {
+      width: 80%;
+    }
+  }
+  &__pic {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @include rem(margin-bottom, 20px);
+
+    @include respond-above(sm) {
+      width: 30%;
+    }
+    @include respond-above(md) {
+      width: 20%;
+    }
+  }
+  &__warning {
+    @include rem(margin-bottom, 20px);
+    font-weight: 700;
+    color: #ef5421;
+
+    @include ff(
+      "font-size",
+      (
+        375px: 20px,
+        1280px: 25px
+      )
+    );
+  }
+  & .link-button {
+    display: inline-block;
+
+    @include respond-above(sm) {
+      margin-left: 0;
+    }
   }
 }
