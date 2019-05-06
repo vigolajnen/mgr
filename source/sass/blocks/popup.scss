@@ -26,9 +26,17 @@
   &__inner {
     padding: 0 1em 2em;
   }
+  &__title {
+    @include respond-below(sm) {
+      padding: 0 15px;
+    }
+  }
 
   &__subtitle {
     margin-bottom: 20px;
+    @include respond-below(sm) {
+      padding: 0 15px;
+    }
   }
 
   &__list {

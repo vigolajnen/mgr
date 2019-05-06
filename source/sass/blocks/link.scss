@@ -1,3 +1,9 @@
+.link {
+  font-weight: 600;
+  color: $color-blue;
+  text-decoration: none;
+}
+
 .link-button {
   @include rem(padding, 15px 25px 20px);
 
@@ -66,6 +72,12 @@
         )
       )
     );
+  }
+
+  &--gray {
+    background-color: #cccccc;
+    @include rem(box-shadow, 0 8px 0px -1px #e6e8ed);
+    // e6e8ed
   }
 
   &:focus,

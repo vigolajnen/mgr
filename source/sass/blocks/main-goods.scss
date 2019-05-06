@@ -7,6 +7,14 @@
     justify-content: center;
     align-items: center;
   }
+  &__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+
+    & .link-button--orange {
+      margin: auto;
+    }
+  }
 
   &__list {
     @include respond-above(md) {

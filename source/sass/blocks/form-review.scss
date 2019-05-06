@@ -20,6 +20,7 @@
     position: relative;
     width: 100%;
     min-height: 50px;
+    margin-left: 10px;
 
     & .link-button {
       position: absolute;
@@ -29,9 +30,13 @@
       padding: 5px 10px 15px;
       cursor: pointer;
     }
+    & input {
+      margin-left: 55px;
+    }
   }
   &__textarea {
     margin: 20px 0 30px;
+    padding: 20px;
     width: 100%;
     height: 100px;
     resize: none;
@@ -45,7 +50,8 @@
       "font-size",
       (
         375px: 16px,
-        1280px: 20px
+        1280px: 20px,
+        1440px: 14px
       )
     );
     &--bold {
@@ -54,6 +60,14 @@
     & a {
       text-decoration: none;
       color: $color-blue;
+    }
+  }
+  & .popup-order__chous {
+    display: none;
+  }
+  & .form-review {
+    @include respond-below(sm) {
+      padding: 0 15px;
     }
   }
 }

@@ -1,7 +1,42 @@
-.cart-item {
-  display: flex;
-  flex-direction: column;
-  padding-top: 2em;
+.cart-table {
+  // display: flex;
+  // flex-direction: column;
+  // padding-top: 2em;
+  width: 100%;
+  border-collapse: collapse;
+
+  &__head {
+    display: none;
+    @include respond-above(sm769) {
+      display: table-header-group;
+    }
+    & .cart-table__val {
+      position: relative;
+      padding: 2rem 0;
+      margin-bottom: 3rem;
+
+      &::before {
+        content: "";
+        position: absolute;
+        bottom: 14px;
+        left: 0;
+        z-index: 1;
+        display: block;
+        width: 100%;
+        height: 15px;
+
+        background-repeat: repeat-x;
+        background-size: 19px;
+        background-image: url("../img/line/title-br-blue.png");
+
+        transform: rotate(180deg);
+      }
+    }
+  }
+
+  &__val {
+    vertical-align: top;
+  }
 
   &__box {
     display: flex;
@@ -9,7 +44,6 @@
     justify-content: space-between;
     align-items: center;
     margin-bottom: 2em;
-
   }
   &__pic {
     width: 45%;
@@ -18,20 +52,20 @@
       width: 10%;
     }
 
-    @include respond-above(md) {
-      position: relative;
-      &::before {
-        position: absolute;
-        content: attr(data-name);
+    // @include respond-above(md) {
+    //   position: relative;
+    //   &::before {
+    //     position: absolute;
+    //     content: attr(data-name);
 
-        top: -35px;
-        left: 0;
+    //     top: -35px;
+    //     left: 0;
 
-        font-size: 15px;
-        font-weight: 400;
-        color: $text-color;
-      }
-    }
+    //     font-size: 15px;
+    //     font-weight: 400;
+    //     color: $text-color;
+    //   }
+    // }
   }
   &__info {
     display: flex;
@@ -42,7 +76,6 @@
       flex-direction: row;
       justify-content: space-between;
     }
-
   }
 
   &__btn {
@@ -88,22 +121,22 @@
       width: 10%;
     }
 
-    @include respond-above(md) {
-      position: relative;
-      &::before {
-        position: absolute;
-        content: attr(data-name);
+    // @include respond-above(md) {
+    //   position: relative;
+    //   &::before {
+    //     position: absolute;
+    //     content: attr(data-name);
 
-        top: -80px;
-        left: 0;
+    //     top: -80px;
+    //     left: 0;
 
-        width: 145px;
+    //     width: 145px;
 
-        font-size: 15px;
-        font-weight: 400;
-        color: $text-color;
-      }
-    }
+    //     font-size: 15px;
+    //     font-weight: 400;
+    //     color: $text-color;
+    //   }
+    // }
   }
 
   &__title {
@@ -125,23 +158,23 @@
       margin-bottom: 0;
     }
 
-    @include respond-above(md) {
-      position: relative;
-      &::before {
-        position: absolute;
-        content: attr(data-name);
+    // @include respond-above(md) {
+    //   position: relative;
+    //   &::before {
+    //     position: absolute;
+    //     content: attr(data-name);
 
-        top: -75px;
-        left: 0;
+    //     top: -75px;
+    //     left: 0;
 
-        font-size: 15px;
-        font-weight: 400;
-        color: $text-color;
-      }
-    }
+    //     font-size: 15px;
+    //     font-weight: 400;
+    //     color: $text-color;
+    //   }
+    // }
   }
   &__price {
-    margin-bottom: 30px;
+    // margin-bottom: 30px;
     font-weight: 600;
     @include ff(
       "font-size",
@@ -153,23 +186,8 @@
     );
 
     @include respond-above(sm769) {
-      width: 40%;
+      // width: 40%;
       margin-bottom: 0;
-    }
-
-    @include respond-above(md) {
-      position: relative;
-      &::before {
-        position: absolute;
-        content: attr(data-name);
-
-        top: -75px;
-        left: 0;
-
-        font-size: 15px;
-        font-weight: 400;
-        color: $text-color;
-      }
     }
   }
   &__num {

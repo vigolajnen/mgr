@@ -107,7 +107,7 @@
                           <td class="table__val" data-name="Статус:">В работе</td>
                           <td class="table__val" data-name="Оплата:">Оплачен</td>
                           <td class="table__val" data-name="Акты:">
-                            <a class="table__link" href="#">Запросить</a>
+                            <a class="table__link" href="#" data-id="js-popup-btn-akt">Запросить</a>
                           </td>
                           <td class="table__val" data-name="Отзывы:">
                             <a class="table__link" href="#" data-id="js-popup-btn-mob">Оставить отзыв</a>
@@ -168,6 +168,30 @@
 
 
   @@include('_include/_popup-review.html')
+
+  <div class="popup-overlay popup-js-akt">
+    <section class="popup popup-order form">
+      <div class="popup-order__wrapper">
+        <h3 class="">Запрос закрывающих документов</h3>
+        <form class="popup-order__form form__form" action="" method="post">
+          <ul class="popup-order__list">
+            <li class="popup-order__item form__item">
+              <label class="visually-hidden" for="mail">Выберите email</label>
+              <input id="mail" class="form__input" type="email" placeholder="Email для отправки электронных актов">
+            </li>
+            <li class="popup-order__item form__item">
+              <label class="visually-hidden" for="mail">Выберите адрес</label>
+              <input id="address" class="form__input" type="address" placeholder="Адрес для отправки оригиналов">
+            </li>
+          </ul>
+          <div class="popup-order__bottom">
+            <button class="button link-button" type="submit">Отправить</button>
+            <button class="button popup-close" type="button" aria-label="Закрыть окно">Отмена</button>
+          </div>
+        </form>
+      </div>
+    </section>
+  </div>
 
   @@include('_include/_script.html')
 

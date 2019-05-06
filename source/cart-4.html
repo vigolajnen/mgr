@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ru" class="no-js">
+
+<head>
+  <meta charset="utf-8">
+  <title>Магазин готовых результатов</title>
+  @@include('_include/_head-meta.html')
+  <link rel="preload" href="fonts/CrowdFunded-Regular.woff2" as="font">
+  <link rel="preload" href="fonts/GoogleSans.woff2" as="font">
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+  <div class="preloader"></div>
+  <div class="wrap">
+    <div class="content">
+      <!-- контент -->
+
+      <header class="mobile-header">
+        <div class="mobile-header__inner">
+          <a class="mobile-header__link" href="index.html">
+            <svg class="mobile-header__icon" width="20" height="20">
+              <use xlink:href="img/sprite.svg#icon-023-arrow-point-to-right"></use>
+            </svg>
+            <span class="visually-hidden">ссылка назад</span>
+          </a>
+          <div class="mobile-header__title">Корзина</div>
+        </div>
+      </header>
+
+      @@include('_include/_page-header.html')
+
+      <div class="wrapper cart">
+        <div class="breadcrumbs">
+          <a class="breadcrumbs__link" href="index.html">Главная</a>
+          <a class="breadcrumbs__link">Корзина</a>
+        </div>
+        <h1 class="title">Корзина заказа</h1>
+
+        <div class="cart__steps steps">
+          <ul class="steps__list">
+            <li class="steps__item steps__item--active steps__item--hidden-sm">
+              <span class="steps__number">1</span>
+              <span class="steps__name">Список услуг</span>
+            </li>
+            <li class="steps__item steps__item--active steps__item--hidden-sm">
+              <span class="steps__number">2</span>
+              <span class="steps__name">Регистрация</span>
+            </li>
+            <li class="steps__item steps__item--active steps__item--hidden-sm">
+              <span class="steps__number">3</span>
+              <span class="steps__name">Заполнение брифа</span>
+            </li>
+            <li class="steps__item steps__item--active">
+              <span class="steps__number">4</span>
+              <span class="steps__name">Завершение</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="cart__info-order">
+          <div class="text">
+            <h3>Дорогой клиент! Огромное спасибо Вам за заказ.</h3>
+            <p>С 10:00 до 18:00 по московскому времени с Вами свяжется наш менеджер для уточнения деталей, а пока вы
+              можете оплатить счет. Это поможет ускорить выполнение вашего задания.</p>
+            <p>Статус Вашего заказа можете просмотреть в <a class="link" href="cabinet.html">личном кабинете.</a></p>
+
+            <h3>Счет на оплату</h3>
+          </div>
+
+          <div class="">
+
+            <img class="picture" src="img/cart/st-4.jpg" alt="Счет на оплату">
+            <div class="cart__links">
+              <a class="link" href="#" download="">Скачать</a>
+              <a class="link" href="#">Распечатать</a>
+              <a class="link" href="#">Отправить на email</a>
+              <a href="index.html" class="link-button">Перейти на главную</a>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+      <section class="main-goods bl bl--bg">
+        <div class="wrapper slider-base">
+          <h2 class="title title--line">Рекомендуем также добавить</h2>
+          <div class="main-goods__wrapper slider-base__wrapper">
+            <div id="slider-main-goods" class="main-goods__list slider-base__slider">
+              <div class="main-goods__item">
+                @@include('_include/_product.html')
+              </div>
+              <div class="main-goods__item">
+                @@include('_include/_product.html')
+              </div>
+              <div class="main-goods__item">
+                @@include('_include/_product.html')
+              </div>
+              <div class="main-goods__item">
+                @@include('_include/_product.html')
+              </div>
+              <div class="main-goods__item">
+                @@include('_include/_product.html')
+              </div>
+
+
+            </div>
+            <a class="link-button link-button--orange" href="#">Смотреть все услуги</a>
+          </div>
+        </div>
+      </section>
+      <!-- контент -->
+    </div>
+
+    @@include('_include/_page-footer_br.html')
+  </div>
+
+  @@include('_include/_mobile.html')
+
+  <!-- @@include('_include/_popup.html') -->
+
+  @@include('_include/_script.html')
+
+</body>
+
+</html>
