@@ -40,4 +40,10 @@
     display: block;
     margin: auto;
   }
+  &__hidden-sm {
+    display: block;
+    @include respond-below(sm) {
+      display: none;
+    }
+  }
 }

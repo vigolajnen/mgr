@@ -162,6 +162,7 @@ gulp.task("vendor", function () {
       "source/js/libs/svg4everybody.min.js",
       "source/js/libs/jquery.viewportchecker.min.js",
       "source/js/libs/slick.min.js",
+      "source/js/libs/rangeslider.min.js",
       "source/js/libs/jquery.fancybox.min.js"
     ])
     .pipe(concat("vendor.min.js"))
@@ -183,6 +184,7 @@ gulp.task("jsmin", function () {
       "source/js/rating.js",
       "source/js/fancybox.js",
       "source/js/sort.js",
+      "source/js/rangeslider.js",
       "source/js/viewportChecker.js"
     ])
     .pipe(concat("main.min.js"))

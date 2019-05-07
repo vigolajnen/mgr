@@ -58,46 +58,69 @@
           </ul>
         </div>
 
-        <div class="cart__table cart-table">
-          <div class="cart-table__head">
-            <div class="cart-table__title">Фото</div>
-            <div class="cart-table__title">Услуга</div>
-            <div class="cart-table__title">Цена услуги</div>
-            <div class="cart-table__title">Убрать услугу</div>
-          </div>
-          <div class="cart-table__box">
-            <div class="cart-table__pic" data-name="Фото">
-              <img class="picture" src="img/product/product-1.jpg" alt="pic">
-            </div>
-            <div class="cart-table__info">
-              <a class="cart-table__title" data-name="Услуга">Лендинг за 48 часов. Шаблон «Лес 1».</a>
-              <div class="cart-table__price" data-name="Цена услуги">110. 000 руб.</div>
-            </div>
-            <div class="cart-table__brief-info" data-name="Заполните бриф">
-              <div class="cart-table__brief-bar"></div>
-              <div class="cart-table__num">100%</div>
-            </div>
-            <div class="cart-table__btn" data-name="1">
-              <button class="button">Посмотреть бриф</button>
-            </div>
-          </div>
-          <div class="cart-table__box">
-            <div class="cart-table__pic">
-              <img class="picture" src="img/product/product-1.jpg" alt="pic">
-            </div>
-            <div class="cart-table__info">
-              <a class="cart-table__title">Лендинг за 48 часов. Шаблон «Лес 1».</a>
-              <div class="cart-table__price">110. 000 руб.</div>
-            </div>
-            <div class="cart-table__brief-info">
-              <div class="cart-table__brief-bar"></div>
-              <div class="cart-table__num">20%</div>
-            </div>
-            <div class="cart-table__btn">
-              <button class="button link-button link-button--green">Заполнить бриф</button>
-              <button class="button">Не хочу заполнять</button>
-            </div>
-          </div>
+        <div class="cart__table cart-table--step-3">
+          <table class="cart-table">
+            <thead class="cart-table__head">
+              <tr class="cart-table__row">
+                <td class="cart-table__name">Фото</td>
+                <td class="cart-table__name">Услуга</td>
+                <td class="cart-table__name">Цена услуги</td>
+                <td class="cart-table__name">Заполнение брифа</td>
+              </tr>
+            </thead>
+            <tbody class="cart-table__body">
+              <tr class="cart-table__row">
+                <td class="cart-table__val">
+                  <img class="picture" src="img/product/pr-1.jpg" alt="pic">
+                </td>
+                <td class="cart-table__val">
+                  <div class="cart-table__text text">
+                    <a class="link" data-name="Услуга">Лендинг за 48 часов. Шаблон «Лес 1».</a>
+                  </div>
+                </td>
+                <td class="cart-table__val cart-table__val--price">
+                  <div class="cart-table__price" data-name="Цена услуги">110. 000 руб.</div>
+                </td>
+                <td class="cart-table__val">
+                  <div class="cart-table__range-btn">
+                    <div class="range">
+                      <input class="range__input" type="range" min="1" max="100" value="100" data-rangeslider>
+                      <output class="range__number"></output>
+                    </div>
+                    <div class="cart-table__btn">
+                      <button class="button link">Просмотреть бриф</button>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr class="cart-table__row">
+                <td class="cart-table__val">
+                  <img class="picture" src="img/product/pr-1.jpg" alt="pic">
+                </td>
+                <td class="cart-table__val">
+                  <div class="cart-table__text text">
+                    <a class="link" data-name="Услуга">Лендинг за 48 часов. Шаблон «Лес 1».</a>
+                  </div>
+                </td>
+                <td class="cart-table__val cart-table__val--price">
+                  <div class="cart-table__price" data-name="Цена услуги">110. 000 руб.</div>
+                </td>
+                <td class="cart-table__val">
+                  <div class="cart-table__range-btn">
+                    <div class="range">
+                      <input class="range__input" type="range" min="1" max="100" value="20" data-rangeslider>
+                      <output class="range__number"></output>
+                    </div>
+                    <div class="cart-table__btn">
+                      <button class="button link-button link-button--green">Заполнить бриф</button>
+                      <button class="button link">Не хочу заполнять</button>
+                    </div>
+
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
         </div>
 
         <a href="cart-4.html" class="link-button">Продолжить</a>

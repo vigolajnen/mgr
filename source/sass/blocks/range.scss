@@ -1,0 +1,33 @@
+.range {
+  position: relative;
+  @include rem(min-width, 90px);
+  @include rem(max-width, 100px);
+
+  &__number {
+    position: absolute;
+    top: 0;
+
+    @include rem(
+      (
+        right: -50px,
+        padding-right: 15px
+      )
+    );
+
+    font-weight: 600;
+    &::before {
+      position: absolute;
+      content: "%";
+      top: 0;
+      right: 0;
+    }
+  }
+  & .rangeslider__handle {
+    opacity: 0;
+    width: 1px;
+    height: 1px;
+  }
+  & .rangeslider__fill {
+    background-color: #a3b806;
+  }
+}
