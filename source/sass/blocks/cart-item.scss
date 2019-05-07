@@ -1,12 +1,15 @@
 .cart-table {
   width: 100%;
   border-collapse: collapse;
+  overflow: hidden;
   @include rem(margin-bottom, 40px);
 
   &--step-3 {
     & .cart-table__val {
-      &:not(:last-child) {
-        width: 20%;
+      @include respond-above(sm769) {
+        &:not(:last-child) {
+          width: 20%;
+        }
       }
     }
   }
@@ -48,6 +51,32 @@
       text-align: center;
     }
 
+    @include respond-below(sm769) {
+      &:nth-child(1) {
+        width: 30%;
+      }
+      &:nth-child(2) {
+        width: 60%;
+      }
+
+      &:nth-child(4) {
+        @include rem(margin-top, 20px);
+
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+      }
+      &--del {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 50px;
+      }
+      &--btn {
+        width: 100%;
+      }
+    }
+
     @include respond-above(sm769) {
       vertical-align: middle;
     }
@@ -55,8 +84,13 @@
     &--price {
       @include respond-below(sm769) {
         position: absolute;
-        left: 42%;
+        left: 31%;
         width: 50%;
+        margin-top: 10px;
+      }
+      @include respond-below(xs) {
+        position: absolute;
+        left: 33%;
       }
     }
   }
@@ -83,6 +117,12 @@
   }
   &__row {
     position: relative;
+
+    @include respond-below(sm769) {
+      display: flex;
+      flex-wrap: wrap;
+      @include rem(min-height, 125px);
+    }
   }
   &__text {
     @include rem(max-width, 400px);
@@ -109,6 +149,13 @@
       @include rem(padding, 15px);
     }
   }
+  & .range {
+    @include respond-below(sm769) {
+      position: absolute;
+      top: 20%;
+      right: 0;
+    }
+  }
 
   &__btn {
     width: 100%;
@@ -123,9 +170,15 @@
 
     & .button {
       width: 100%;
+      @include rem(margin-bottom, 20px);
+
+      @include respond-below(sm769) {
+        width: auto;
+      }
 
       @include respond-above(md1280) {
         width: 48%;
+        margin-bottom: 0;
       }
       @include ff(
         "font-size",

@@ -28,6 +28,38 @@ $(document).ready(function() {
       ]
     });
 
+    $("#js-slider-project-2").slick({
+      dots: true,
+      arrow: false,
+      centerPadding: "40px",
+      infinite: true,
+      slidesToShow: 3,
+      slidesToScroll: 1,
+      responsive: [
+        {
+          breakpoint: 1025,
+          settings: {
+            slidesToShow: 4,
+            slidesToScroll: 1
+          }
+        },
+        {
+          breakpoint: 769,
+          settings: {
+            slidesToShow: 3,
+            slidesToScroll: 1
+          }
+        },
+        {
+          breakpoint: 600,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 1
+          }
+        }
+      ]
+    });
+
     $("#js-slider-project").slick({
       dots: true,
       arrow: false,

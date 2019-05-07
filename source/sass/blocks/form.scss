@@ -37,6 +37,26 @@
   &__item {
     margin-bottom: 24px;
     width: 100%;
+
+    &--links {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      @include respond-above(xs) {
+        flex-direction: row;
+        justify-content: flex-start;
+      }
+
+      & .link {
+        @include rem(margin-top, 20px);
+        @include respond-above(xs) {
+          margin-top: 0;
+          @include rem(margin-left, 20px);
+        }
+      }
+    }
   }
 
   &__input {

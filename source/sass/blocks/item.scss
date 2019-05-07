@@ -50,10 +50,16 @@
   }
   &__video {
     width: 100%;
-    @include rem(max-height, 485px);
+
+    @include rem((
+      margin-bottom: 30px,
+      max-height: 485px,
+      min-height: 350px
+    ));
 
     @include respond-above(md1100) {
       width: 40%;
+      margin-bottom: auto;
     }
   }
 

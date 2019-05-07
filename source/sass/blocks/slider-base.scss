@@ -187,6 +187,7 @@
   height: 8px;
   background-color: rgba(0, 0, 0, 0.1);
   border-radius: 50%;
+  border: 2px solid #ccbcaa;
 }
 
 .slider-base .slick-dots li button:before {
@@ -195,6 +196,7 @@
 
 .slider-base .slick-dots li.slick-active button {
   background-color: #57b2db;
+  border-color: transparent;
 }
 
 .slider-base .slick-slide {

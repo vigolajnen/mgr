@@ -1,7 +1,11 @@
 .range {
   position: relative;
-  @include rem(min-width, 90px);
+
   @include rem(max-width, 100px);
+
+  @include respond-above(sm) {
+    @include rem(min-width, 90px);
+  }
 
   &__number {
     position: absolute;
@@ -21,6 +25,10 @@
       top: 0;
       right: 0;
     }
+
+    @include respond-below(sm769) {
+      right: 0;
+    }
   }
   & .rangeslider__handle {
     opacity: 0;
@@ -29,5 +37,16 @@
   }
   & .rangeslider__fill {
     background-color: #a3b806;
+
+    @include respond-below(sm769) {
+      // visibility: hidden;
+      // opacity: 0;
+    }
+  }
+  & .rangeslider {
+    @include respond-below(sm769) {
+      // visibility: hidden;
+      // opacity: 0;
+    }
   }
 }

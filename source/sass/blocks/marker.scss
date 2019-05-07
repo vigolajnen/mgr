@@ -1,5 +1,5 @@
 .marker {
-  @include rem(padding, 15px);
+  @include rem(padding, 8px 10px);
 
   font-family: $font-title;
 

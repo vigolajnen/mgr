@@ -68,3 +68,42 @@
     }
   }
 }
+
+
+#js-slider-project-2 {
+  & .main-goods__item {
+    @include respond-above(md) {
+      width: calc(100% / 4);
+      @include rem(padding-right, 25px);
+      &:nth-child(3n) {
+        @include rem(padding-right, 25px);
+      }
+      &:nth-child(4n) {
+        @include rem(padding-right, 25px);
+      }
+    }
+    @include respond-above(md1100) {
+      width: calc(100% / 4);
+      @include rem(padding-right, 25px);
+      &:nth-child(3n) {
+        @include rem(padding-right, 25px);
+      }
+      &:nth-child(4n) {
+        padding-right: 0;
+      }
+    }
+    @include respond-above(lg) {
+      width: calc(100% / 5);
+      @include rem(padding-right, 25px);
+      &:nth-child(3n) {
+        @include rem(padding-right, 25px);
+      }
+      &:nth-child(4n) {
+        @include rem(padding-right, 25px);
+      }
+      &:nth-child(5n) {
+        padding-right: 0;
+      }
+    }
+  }
+}

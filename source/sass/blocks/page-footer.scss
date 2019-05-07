@@ -8,7 +8,6 @@
       padding-bottom: 65px
     )
   );
-  background-color: $color-white;
 
   @include respond-above(sm) {
     display: flex;
@@ -17,6 +16,7 @@
 
   &--br {
     position: relative;
+    background-color: $color-white;
     &::before {
       content: "";
       position: absolute;
