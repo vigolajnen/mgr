@@ -4,7 +4,7 @@
   @include rem(
     (
       padding: 15px 15px 25px 15px,
-      margin-bottom: 40px
+      margin-bottom: 20px
     )
   );
 
@@ -25,6 +25,14 @@
     background-repeat: repeat-x;
     background-image: url("../img/header/header-border.png");
     @include rem(background-size, 30px);
+  }
+
+  @include respond-above(xxs) {
+    @include rem(
+      (
+        margin-bottom: 40px
+      )
+    );
   }
 
   @include respond-above(xs) {

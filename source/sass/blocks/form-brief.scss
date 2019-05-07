@@ -1,0 +1,131 @@
+.form-brief {
+  margin-top: 20px;
+  padding-bottom: 20px;
+  &__label {
+    position: relative;
+    @include ff(
+      "font-size",
+      (
+        375px: 16px,
+        750px: 20px
+      )
+    );
+    line-height: normal;
+
+    &::before {
+      position: absolute;
+      content: "*";
+      top: -2px;
+      right: -7px;
+      color: red;
+    }
+  }
+  &__text {
+    border-radius: 20px;
+    height: 100px;
+    width: 95%;
+    resize: none;
+    padding: 15px;
+    margin-top: 10px;
+  }
+  &__sublist {
+    @include listReset();
+    display: flex;
+    flex-wrap: wrap;
+  }
+  &__subitem {
+    &:not(:last-child) {
+      margin-right: 20px;
+    }
+
+    @include ff(
+      "font-size",
+      (
+        375px: 16px,
+        750px: 20px
+      )
+    );
+    font-weight: 600;
+    line-height: normal;
+  }
+  &__sublabel {
+    position: relative;
+    display: block;
+    padding-left: 40px;
+    cursor: pointer;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: -5px;
+      left: -1px;
+      width: 30px;
+      height: 30px;
+      margin: 0;
+      background: transparent;
+      border-radius: 50%;
+      border: 2px solid #97a0b2;
+    }
+
+    &:hover::after {
+      border-color: $color-blue;
+    }
+
+    &:focus::after {
+      border-color: #c7c7c7;
+    }
+  }
+
+  &__sublabel-check {
+    position: relative;
+    display: block;
+    padding-left: 40px;
+    cursor: pointer;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: -5px;
+      left: -1px;
+      width: 30px;
+      height: 30px;
+      margin: 0;
+      background: transparent;
+      border-radius: 5px;
+      border: 2px solid #97a0b2;
+    }
+
+    &:hover::after {
+      border-color: $color-blue;
+    }
+
+    &:focus::after {
+      border-color: #c7c7c7;
+    }
+  }
+}
+
+.form-brief__radio:checked + .form-brief__sublabel::before {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: 8px;
+  width: 13px;
+  height: 13px;
+  background: $color-blue;
+  border-radius: 50%;
+}
+
+.form-brief__checkbox:checked + .form-brief__sublabel-check::before {
+  content: "";
+  position: absolute;
+  top: -5px;
+  left: -1px;
+  width: 30px;
+  height: 30px;
+  background: url("../img/icons/icon-button_check_a.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  border-radius: 5px;
+  border-color: $color-blue;
+}
