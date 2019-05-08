@@ -5,6 +5,7 @@
       display: none;
     }
   }
+
   &--md {
     @include respond-above(md) {
       display: none;
