@@ -7,7 +7,7 @@
   }
 
   &__title {
-    margin-bottom: 55px;
+    @include rem(margin-bottom, 55px);
   }
 
   &__list {
@@ -20,7 +20,7 @@
 
   &__item {
     display: none;
-    margin-bottom: 40px;
+    @include rem(margin-bottom, 40px);
     width: calc(50% - 10px);
     margin-right: 15px;
       &:nth-child(2n) {

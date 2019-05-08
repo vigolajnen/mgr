@@ -1,10 +1,9 @@
 .project {
-  padding: 10px 5px;
+  @include rem(padding, 10px 5px);
   background-image: url("../img/projects/last-project-bg.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 50%;
-
 
   &__wrapper {
     background: #ffffff;
@@ -12,20 +11,24 @@
   &__link {
     position: relative;
     display: block;
-    margin-bottom: 10px;
+    @include rem(margin-bottom, 10px);
 
     overflow: hidden;
   }
   &__marker {
     position: absolute;
-    top: 10px;
-    left: 5px;
     z-index: 1;
 
     display: flex;
     align-items: center;
 
-    padding: 5px 15px 5px 5px;
+    @include rem(
+      (
+        top: 10px,
+        left: 5px,
+        padding: 5px 15px 5px 5px
+      )
+    );
 
     color: $color-white;
 
@@ -40,29 +43,19 @@
 
     background-color: rgba(0, 0, 0, 0.25);
 
-    border-radius: 20px;
-
-    // &::before {
-    //   content: "";
-    //   position: absolute;
-    //   top: 50%;
-    //   left: 5px;
-    //   display: block;
-
-    //   transform: translateY(-50%);
-
-    //   // иконка часов
-
-    //   @include sprite($icon-time);
-    // }
+    @include rem(border-radius, 20px);
   }
   &__svg {
-    margin-right: 10px;
+    @include rem(margin-right, 10px);
     fill: #ffffff;
   }
   &__text {
-    padding: 0 10px;
-    margin-bottom: 10px;
+    @include rem(
+      (
+        padding: 0 10px,
+        margin-bottom: 10px
+      )
+    );
     color: $text-color;
     font-weight: 700;
     line-height: normal;
@@ -78,7 +71,7 @@
     text-align: center;
 
     @include respond-above(md) {
-      padding: 0 20px;
+      @include rem(padding, 0 20px);
     }
   }
   &__company {
@@ -94,7 +87,8 @@
 
 .project__text-more {
   position: relative;
-  padding-bottom: 5px;
+
+  @include rem(padding-bottom, 5px);
   color: $color-white;
   text-transform: uppercase;
   font-weight: 700;
@@ -111,15 +105,15 @@
   &::before {
     position: absolute;
     content: "";
-    bottom: -7px;
+    @include rem(bottom, -7px);
     left: 50%;
     transform: translateX(-50%) rotate(180deg);
 
     width: 100%;
-    height: 6px;
+    @include rem(height, 6px);
     background-image: url("../img/projects/projects-more-link-border.png");
     background-repeat: repeat-x;
-    background-size: 115px;
+    @include rem(background-size, 115px);
   }
 }
 

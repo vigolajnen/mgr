@@ -6,40 +6,48 @@
   }
 
   &__item {
-    margin-bottom: 20px;
+    @include rem(margin-bottom, 20px);
   }
 
   &__field {
     width: 100%;
-    padding: 17px 20px;
+    @include rem(padding, 17px 20px);
     font-style: normal;
     font-weight: 600;
     line-height: normal;
 
     color: #38383d;
-    border-radius: 5px;
+    @include rem(border-radius, 5px);
     border: none;
     resize: none;
-    border: 1px solid transparent;
+    @include rem(border, 1px solid transparent);
     background: #ffffff;
 
-    @include ff("font-size",
-    (375px: 14px,
-      1440px: 16px));
+    @include ff(
+      "font-size",
+      (
+        375px: 14px,
+        1440px: 16px
+      )
+    );
 
     &--message {
-      min-height: 180px;
+      @include rem(min-height, 180px);
     }
 
     &:hover,
     &:focus {
-      border: 1px solid rgba(56, 56, 61, 0.66);
+      @include rem(border, 1px solid rgba(56, 56, 61, 0.66));
     }
   }
 
   &__button {
-    padding: 20px 40px;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    @include rem(
+      (
+        padding: 20px 40px,
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+      )
+    );
 
     transition: 0.5s;
 

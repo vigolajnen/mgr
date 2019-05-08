@@ -1,8 +1,8 @@
 .logo {
   display: block;
-  width: 150px;
+  @include rem(width, 150px);
   @include respond-above(md) {
-    width: 200px;
+    @include rem(width, 200px);
   }
 }
 
@@ -35,6 +35,10 @@
 }
 
 .logo--mobile img {
-  width: 134px;
-  height: 56px;
+  @include rem(
+    (
+      width: 134px,
+      height: 56px
+    )
+  );
 }

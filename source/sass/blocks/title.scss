@@ -108,7 +108,7 @@
     color: #333333;
   }
   &--hidden-sm {
-    @include respond-below(sm) {
+    @include respond-below(sm769) {
       display: none;
     }
   }

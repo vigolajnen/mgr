@@ -2,7 +2,6 @@
   position: relative;
   display: flex;
   align-items: center;
-  // padding-left: 35px;
   color: $text-color;
   line-height: normal;
 
@@ -16,18 +15,8 @@
 
   text-decoration: none;
 
-  // &::before {
-  //   position: absolute;
-  //   content: "";
-  //   top: -2px;
-  //   left: 0;
-  //   display: block;
-
-  //   @include sprite($icon-mail);
-  // }
-
   &__icon {
-    margin-right: 10px;
+    @include rem(margin-right, 10px);
     fill: #919aad;
   }
 }

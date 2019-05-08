@@ -11,10 +11,10 @@
     align-items: center;
   }
   & .title {
-    margin-bottom: 45px;
+    @include rem(margin-bottom, 45px);
 
     @include respond-above(sm) {
-      margin-bottom: 100px;
+       @include rem(margin-bottom, 100px);
     }
   }
   &__list {
@@ -24,7 +24,7 @@
     justify-content: space-between;
     flex-direction: column;
 
-    max-width: 800px;
+    @include rem(max-width, 800px);
     width: 100%;
     margin: 0 auto;
 

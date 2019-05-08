@@ -1,0 +1,11 @@
+.warning {
+  font-weight: 600;
+  color: red;
+
+  &--hidden-sm {
+    display: none;
+    @include respond-above(sm769) {
+      display: block;
+    }
+  }
+}

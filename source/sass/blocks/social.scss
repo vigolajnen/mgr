@@ -1,6 +1,6 @@
 .social {
   &__title {
-    margin-bottom: 20px;
+    @include rem(margin-bottom, 20px);
 
     color: $text-color;
     font-weight: 700;
@@ -21,12 +21,16 @@
     flex-wrap: wrap;
     justify-content: space-between;
 
-    margin-bottom: 30px;
+    @include rem(margin-bottom, 30px);
   }
   &__item {
-    width: 40px;
-    height: 40px;
-    margin-right: 17px;
+    @include rem(
+      (
+        width: 40px,
+        height: 40px,
+        margin-right: 17px
+      )
+    );
     &:last-child {
       margin-right: 0;
     }

@@ -9,7 +9,7 @@
   }
 
   @include respond-above(sm769) {
-    margin-bottom: 10px;
+    @include rem(margin-bottom, 10px);
     flex-direction: column;
   }
 
@@ -43,23 +43,27 @@
   &__button {
     position: relative;
     height: 100%;
-    width: 42px;
+    @include rem(width, 42px);
     min-height: 100%;
     padding: 0.87rem 0.5rem;
     background: #008dca;
 
-    border-radius: 0 40px 40px 0;
+    @include rem(border-radius, 0 40px 40px 0);
     overflow: hidden;
 
     @include respond-above(xs) {
-      width: 52px;
-      min-height: 43px;
-      margin-left: -1px;
+      @include rem(
+        (
+          width: 52px,
+          min-height: 43px,
+          margin-left: -1px
+        )
+      );
       padding: 0.5rem;
     }
 
     @include respond-above(sm769) {
-      width: 52px;
+      @include rem(width, 52px);
     }
   }
 
@@ -121,7 +125,7 @@
   padding: 0.8rem 1rem;
 
   width: 100%;
-  min-height: 39px;
+  @include rem(min-height, 39px);
 
   color: #1a1a1a;
   font-size: 15px;
@@ -144,8 +148,13 @@
 
   @include respond-above(xs) {
     border-radius: 0;
-    min-height: 43px;
-    margin-left: -1px;
+
+    @include rem(
+      (
+        min-height: 43px,
+        margin-left: -1px
+      )
+    );
     padding: 1rem;
   }
 
@@ -166,7 +175,7 @@
     content: "";
     top: 50%;
     right: 5%;
-    padding: 5px 33px 5px 0;
+    @include rem(padding, 5px 33px 5px 0);
     background: #fff;
 
     @include sprite($icon-arrow-close);
@@ -184,7 +193,7 @@
 
 .search-form .select__list {
   position: absolute;
-  top: 52px;
+  @include rem(top, 52px);
   left: 0;
   z-index: 5;
 
@@ -192,25 +201,29 @@
 
   @include listReset();
 
-  padding: 10px 0;
-  margin-top: -1px;
-  margin-left: -1px;
+  @include rem(
+    (
+      padding: 10px 0,
+      margin-top: -1px,
+      margin-left: -1px
+    )
+  );
 
   background: #ffffff;
   border: 1px solid #b3bbc9;
 
   @include respond-above(xs) {
-    top: 43px;
+    @include rem(top, 43px);
     left: 0;
   }
 
   @include respond-above(md) {
-    top: 43px;
+    @include rem(top, 43px);
   }
 }
 
 .search-form .select__item {
-  padding: 10px 10px;
+  @include rem(padding, 10px);
 
   color: #1a1a1a;
   font-size: 15px;

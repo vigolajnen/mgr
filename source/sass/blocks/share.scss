@@ -17,8 +17,12 @@
   }
 
   &__svg {
-    width: 25px;
-    height: 25px;
+    @include rem(
+      (
+        width: 25px,
+        height: 25px
+      )
+    );
     fill: #1281b8;
     &--vk {
       fill: #419cca;

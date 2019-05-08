@@ -1,21 +1,25 @@
 .login {
-  padding-top: 50px;
-  padding-bottom: 50px;
+  @include rem(
+    (
+      padding-top: 50px,
+      padding-bottom: 50px
+    )
+  );
+
   &__inner {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
-    max-width: 670px;
+    @include rem(max-width, 670px);
     margin: 0 auto;
 
     @include respond-above(xs) {
-     align-items: flex-start;
+      align-items: flex-start;
     }
 
     @include respond-above(sm769) {
-      max-width: 340px;
+      @include rem(max-width, 340px);
     }
   }
 
@@ -31,6 +35,6 @@
     }
   }
   & .form {
-    margin-top: 40px;
+    @include rem(margin-top, 40px);
   }
 }

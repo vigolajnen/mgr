@@ -75,6 +75,7 @@
   }
 
   &--gray {
+    cursor: not-allowed;
     background-color: #cccccc;
     @include rem(box-shadow, 0 8px 0px -1px #e6e8ed);
     // e6e8ed

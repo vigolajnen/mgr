@@ -18,13 +18,11 @@
     margin: 0 auto;
 
     @media (min-width: $tablet-width) {
-      margin: 0;
-      margin-right: 30px;
-      margin-left: 20px;
+      @include rem(margin, 0 30px 0 20px);
     }
 
     @media (min-width: $desktop-width) {
-      margin-right: 65px;
+      @include rem(margin-right, 65px);
     }
   }
 

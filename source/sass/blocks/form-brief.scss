@@ -28,23 +28,31 @@
     &::before {
       position: absolute;
       content: "*";
-      top: -2px;
-      right: -7px;
+
+      @include rem(
+        (
+          top: -2px,
+          right: -7px
+        )
+      );
       color: red;
     }
   }
   &__text {
-    border-radius: 20px;
-    height: 100px;
     width: 95%;
-    resize: none;
-    padding: 15px;
-    margin-top: 10px;
 
-    border: 1px solid #b3bbc9;
-    border-radius: 25px;
+    @include rem(
+      (
+        padding: 15px,
+        margin-top: 10px,
+        height: 100px,
+        border: 1px solid #b3bbc9,
+        border-radius: 25px
+      )
+    );
 
     transition: 0.6s;
+    resize: none;
 
     &::placeholder {
       color: #b3bbc9;
@@ -52,7 +60,7 @@
 
     &:hover,
     &:focus {
-      border: 1px solid #b3bbc9;
+      @include rem(border, 1px solid #b3bbc9);
     }
 
     &:focus::placeholder {
@@ -61,10 +69,10 @@
     }
 
     &--lg {
-      height: 150px;
+      @include rem(height, 150px);
     }
     &--sm {
-      height: 50px;
+      @include rem(height, 50px);
     }
   }
   &__sublist {
@@ -73,9 +81,9 @@
     flex-wrap: wrap;
   }
   &__subitem {
-    padding: 10px 0;
+    @include rem(padding, 10px 0);
     &:not(:last-child) {
-      margin-right: 20px;
+      @include rem(margin-right, 20px);
     }
 
     @include ff(
@@ -91,20 +99,26 @@
   &__sublabel {
     position: relative;
     display: block;
-    padding-left: 40px;
+    @include rem(padding-left, 40px);
     cursor: pointer;
 
     &::after {
       content: "";
       position: absolute;
-      top: -5px;
-      left: -1px;
-      width: 30px;
-      height: 30px;
+
+      @include rem(
+        (
+          top: -5px,
+          left: -1px,
+          width: 30px,
+          height: 30px
+        )
+      );
       margin: 0;
       background: transparent;
       border-radius: 50%;
-      border: 2px solid #97a0b2;
+
+      @include rem(border, 2px solid #97a0b2);
     }
 
     &:hover::after {
@@ -119,20 +133,27 @@
   &__sublabel-check {
     position: relative;
     display: block;
-    padding-left: 40px;
+
+    @include rem(padding-left, 40px);
     cursor: pointer;
 
     &::after {
       content: "";
       position: absolute;
-      top: -5px;
-      left: -1px;
-      width: 30px;
-      height: 30px;
-      margin: 0;
+
+      @include rem(
+        (
+          top: -5px,
+          left: -1px,
+          width: 30px,
+          height: 30px,
+          margin: 0,
+          border-radius: 5px,
+          border: 2px solid #97a0b2
+        )
+      );
+
       background: transparent;
-      border-radius: 5px;
-      border: 2px solid #97a0b2;
     }
 
     &:hover::after {
@@ -148,10 +169,15 @@
 .form-brief__radio:checked + .form-brief__sublabel::before {
   content: "";
   position: absolute;
-  top: 3px;
-  left: 8px;
-  width: 13px;
-  height: 13px;
+
+  @include rem(
+    (
+      top: 3px,
+      left: 8px,
+      width: 13px,
+      height: 13px
+    )
+  );
   background: $color-blue;
   border-radius: 50%;
 }
@@ -159,13 +185,19 @@
 .form-brief__checkbox:checked + .form-brief__sublabel-check::before {
   content: "";
   position: absolute;
-  top: -5px;
-  left: -1px;
-  width: 30px;
-  height: 30px;
+
+  @include rem(
+    (
+      top: -5px,
+      left: -1px,
+      width: 30px,
+      height: 30px,
+      border-radius: 5px
+    )
+  );
   background: url("../img/icons/icon-button_check_a.png");
   background-size: contain;
   background-repeat: no-repeat;
-  border-radius: 5px;
+
   border-color: $color-blue;
 }

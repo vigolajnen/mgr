@@ -5,26 +5,15 @@ $color-text: #008dca;
   align-items: center;
   &__inner {
     position: relative;
-    // padding-left: 60px;
 
     display: flex;
     flex-direction: column;
-
-    // &::before {
-    //   position: absolute;
-    //   content: "";
-    //   top: 50%;
-    //   left: 0;
-    //   transform: translateY(-50%);
-
-    //   @include sprite($icon-cabinet-user);
-    // }
   }
   &__login {
     color: $color-text;
 
     font-weight: 400;
-    //line-height: 33.33px;
+
     @include ff(
       "font-size",
       (
@@ -38,7 +27,7 @@ $color-text: #008dca;
     color: $color-text;
 
     font-weight: 400;
-    //line-height: 33.33px;
+
     @include ff(
       "font-size",
       (
@@ -49,7 +38,7 @@ $color-text: #008dca;
     text-decoration: none;
   }
   &__icon {
-    margin-right: 10px;
+    @include rem(margin-right, 10px);
     fill: $color-blue;
   }
 }

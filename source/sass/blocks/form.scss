@@ -12,7 +12,6 @@
     align-items: center;
 
     width: 100%;
-    // height: 100%;
     margin: 0 auto;
   }
 
@@ -24,8 +23,7 @@
   }
 
   & .title {
-    margin: 0;
-    margin-bottom: 50px;
+    @include rem(margin, 0 50px 0 0);
   }
 
   &__list {
@@ -35,7 +33,7 @@
   }
 
   &__item {
-    margin-bottom: 24px;
+    @include rem(margin-bottom, 24px);
     width: 100%;
 
     &--links {
@@ -61,11 +59,14 @@
 
   &__input {
     width: 100%;
-    padding: 15px;
 
-    padding: 10px 20px;
-    border: 1px solid #b3bbc9;
-    border-radius: 25px;
+    @include rem(
+      (
+        padding: 10px 20px,
+        border: 1px solid #b3bbc9,
+        border-radius: 25px
+      )
+    );
 
     transition: 0.6s;
 
@@ -86,12 +87,20 @@
 
   &__textarea {
     width: 100%;
-    padding: 15px;
+
+    @include rem(
+      (
+        padding: 15px,
+        line-height: 25px,
+        font-size: 16px
+      )
+    );
+
+    color: #60749d;
+
     border-radius: 0;
     border: 1px solid #c9d0dc;
-    line-height: 25px;
-    font-size: 16px;
-    color: #60749d;
+
     resize: none;
 
     &:hover,
@@ -101,21 +110,27 @@
   }
 
   & .button {
-    padding: 5px 30px 15px;
+    @include rem(padding, 5px 30px 15px);
   }
 
   & .select__gap {
     position: relative;
-    padding: 10px 20px;
-    border: 1px solid #eaebee;
-    border-radius: 25px;
+
+    @include rem(
+      (
+        padding: 10px 20px,
+        border: 1px solid #eaebee,
+        border-radius: 25px
+      )
+    );
+
     cursor: pointer;
 
     &::after {
       position: absolute;
       content: "";
       top: 50%;
-      right: 20px;
+      @include rem(right, 20px);
       transform: rotate(180deg) translateY(50%);
 
       @include sprite($icon-arrow-close);
@@ -134,8 +149,12 @@
   }
 
   &__policy {
-    margin-bottom: 20px;
-    font-size: 14px;
+    @include rem(
+      (
+        margin-bottom: 20px,
+        font-size: 14px
+      )
+    );
 
     & a {
       color: $color-blue;

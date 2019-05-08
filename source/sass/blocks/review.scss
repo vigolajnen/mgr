@@ -8,13 +8,13 @@
     flex-wrap: wrap;
     align-items: center;
     width: 100%;
-    margin-bottom: 30px;
+    @include rem(margin-bottom, 30px);
   }
   &__icon {
-    margin-right: 20px;
+    @include rem(margin-right, 20px);
   }
   &__name {
-    margin-right: 20px;
+    @include rem(margin-right, 20px);
     color: $text-color;
     font-weight: 700;
     line-height: normal;
@@ -46,7 +46,7 @@
   }
   &__text {
     width: 100%;
-    margin-bottom: 30px;
+    @include rem(margin-bottom, 30px);
 
     color: $text-color;
     font-weight: 400;

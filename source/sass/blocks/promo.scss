@@ -19,7 +19,7 @@
     width: 100%;
 
     @include respond-above(md) {
-      max-height: 560px;
+      @include rem(max-height, 560px);
     }
   }
 
@@ -27,14 +27,14 @@
     width: 100%;
 
     margin: auto;
-    margin-bottom: 40px;
+    @include rem(margin-bottom, 40px);
 
     color: #1a1a1a;
     font-family: $font-title;
 
     font-weight: 400;
     line-height: normal;
-    //line-height: 175px;
+
     text-align: center;
 
     @include ff(
@@ -48,19 +48,22 @@
 
     @include respond-above(md) {
       text-align: right;
-      max-width: 430px;
+      @include rem(max-width, 430px);
       margin-right: 0;
     }
     @include respond-above(lg) {
-      max-width: 410px;
+      @include rem(max-width, 410px);
     }
   }
 
   &__sale-text {
-    padding-left: 142px;
-    margin-bottom: 60px;
-
-    min-height: 122px;
+    @include rem(
+      (
+        padding-left: 142px,
+        margin-bottom: 60px,
+        min-height: 122px
+      )
+    );
 
     color: #1a1a1a;
 
@@ -104,7 +107,7 @@
 .promo__nav {
   order: 1;
   width: 100%;
-  padding-top: 60px;
+  @include rem(padding-top, 60px);
 
   @include respond-above(md) {
     order: 0;
@@ -121,8 +124,12 @@
   flex-direction: column;
 
   @include respond-above(xs) {
-    min-height: 500px;
-    padding-left: 20px;
+    @include rem(
+      (
+        min-height: 500px,
+        padding-left: 20px
+      )
+    );
 
     &::before {
       position: absolute;
@@ -160,7 +167,7 @@
 .promo__text {
   position: relative;
   width: 100%;
-  max-width: 400px;
+  @include rem(max-width, 400px);
   margin: auto;
   margin-right: 0;
 
