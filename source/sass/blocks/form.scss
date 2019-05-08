@@ -55,6 +55,9 @@
         }
       }
     }
+    & .button.button--blue {
+      @include rem(padding, 0 10px);
+    }
   }
 
   &__input {

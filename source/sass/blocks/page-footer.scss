@@ -9,7 +9,7 @@
     )
   );
 
-  @include respond-above(sm) {
+  @include respond-above(sm769) {
     display: flex;
     flex-direction: column;
   }

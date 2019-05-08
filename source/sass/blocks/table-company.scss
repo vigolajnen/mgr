@@ -3,7 +3,8 @@
   & .table__val {
     @include respond-below(md) {
       @include rem(padding, 5px 10px);
-      padding-left: 25%;
+      text-align: right;
+      display: block;
 
       &::before {
         top: 5px;
@@ -12,10 +13,6 @@
       &:last-child {
         display: none;
       }
-    }
-
-    @include respond-below(xxs) {
-      padding-left: 53%;
     }
   }
 }

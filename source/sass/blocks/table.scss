@@ -1,5 +1,6 @@
 .table {
   width: 100%;
+  max-width: 100%;
   border-collapse: collapse;
 
   &__title {
@@ -43,6 +44,7 @@
   }
 
   &__row {
+    max-width: 100%;
     @include respond-below(md) {
       position: relative;
       display: flex;

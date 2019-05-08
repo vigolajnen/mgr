@@ -50,6 +50,7 @@
   &__title {
     max-width: 70%;
     font-weight: 600;
+    line-height: normal;
     @include ff(
       "font-size",
       (

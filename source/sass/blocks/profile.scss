@@ -2,9 +2,16 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  &--hidden-lg {
+    display: block;
+    @include respond-above(sm769) {
+      display: none;
+    }
+  }
 
   &__pic {
     width: 100%;
+    @include rem(margin-bottom, 20px);
     text-align: center;
     @include respond-above(sm) {
       width: 40%;

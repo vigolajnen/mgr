@@ -1,6 +1,7 @@
 .popup {
   display: flex;
   height: 100%;
+  @include rem(padding-bottom, 70px);
   &__wrapper {
     position: relative;
 
@@ -24,6 +25,14 @@
     height: 100%;
     overflow-y: scroll;
     overflow-x: hidden;
+  }
+  &__body {
+    @include respond-below(sm769) {
+      @include rem(padding, 0 25px);
+    }
+    @include respond-below(xs) {
+      @include rem(padding, 0 15px);
+    }
   }
 
   &__inner {

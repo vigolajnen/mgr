@@ -1,0 +1,18 @@
+.hidden {
+  display: inline-flex;
+  &--sm {
+    @include respond-above(sm769) {
+      display: none;
+    }
+  }
+  &--md {
+    @include respond-above(md) {
+      display: none;
+    }
+  }
+  &--lg {
+    @include respond-above(lg) {
+      display: none;
+    }
+  }
+}
