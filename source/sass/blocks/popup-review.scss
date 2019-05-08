@@ -1,0 +1,7 @@
+.popup-review {
+  & .scroll-wrapper > .scroll-content {
+    @include respond-above(sm769) {
+      @include rem(padding, 30px 20px);
+    }
+  }
+}

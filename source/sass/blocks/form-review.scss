@@ -1,4 +1,12 @@
 .form-review {
+  overflow: hidden;
+  // @include rem(padding-bottom, 50px);
+  @include respond-below(sm769) {
+    @include rem(padding, 0 25px 40px);
+  }
+  @include respond-below(xs) {
+    @include rem(padding, 0 15px 30px);
+  }
   &__item {
     display: flex;
     flex-wrap: wrap;
@@ -32,6 +40,24 @@
     }
     & input {
       margin-left: 55px;
+    }
+
+    & .fileinput-name {
+      position: absolute;
+      top: 0;
+      right: 0;
+      @include rem(max-width, 100px);
+      @include respond-above(xxs) {
+        @include rem(max-width, 200px);
+      }
+      @include respond-above(sm769) {
+        @include rem(max-width, 140px);
+      }
+    }
+    & .fileinput-name .close {
+      background: transparent;
+      border: none;
+      box-shadow: none;
     }
   }
   &__textarea {

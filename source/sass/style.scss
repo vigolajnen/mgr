@@ -9,6 +9,7 @@
 @import "libs/fancybox.scss";
 @import "libs/rangeslider.scss";
 @import "libs/jquery.scrollbar.scss";
+@import "libs/fileinput.scss";
 
 // @import "libs/jquery-ui.scss";
 
@@ -59,6 +60,7 @@
 // @import "blocks/form-contact.scss";
 @import "blocks/popup.scss";
 @import "blocks/popup-order.scss";
+@import "blocks/popup-review.scss";
 @import "blocks/form.scss";
 
 @import "blocks/email.scss";
@@ -139,7 +141,7 @@
 
 @import "blocks/requisites.scss";
 @import "blocks/steps.scss";
-@import "blocks/cart-item.scss";
+@import "blocks/cart-table.scss";
 @import "blocks/cart.scss";
 @import "blocks/manager-free.scss";
 

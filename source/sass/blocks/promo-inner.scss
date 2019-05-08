@@ -2,26 +2,18 @@
   position: relative;
   display: flex;
   justify-content: space-between;
-  padding-bottom: 40px;
-  margin-bottom: 40px;
 
-  &--wave {
-    position: relative;
-    &::before {
-      content: "";
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      height: 20px;
-      background-repeat: repeat-x;
-      background-size: 5%;
-      background-image: url("../img/projects/projects-title-border-2.png");
-    }
-  }
+  width: 100%;
+
+  @include rem(
+    (
+      padding-bottom: 40px,
+      margin-bottom: 40px
+    )
+  );
 
   &__header {
-    margin-bottom: 40px;
+    @include rem(margin-bottom, 40px);
     @include respond-below(md) {
       display: none;
     }
@@ -43,12 +35,12 @@
   }
 
   &__title {
-    margin-bottom: 30px;
+    @include rem(margin-bottom, 30px);
   }
 
   &__warning {
     margin: 0;
-    margin-bottom: 25px;
+    @include rem(margin-bottom, 25px);
 
     @include ff(
       "font-size",
@@ -65,7 +57,7 @@
 .promo-inner__info {
   & p {
     margin: 0;
-    margin-bottom: 30px;
+    @include rem(margin-bottom, 30px);
     color: $text-color;
   }
 }

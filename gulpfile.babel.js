@@ -164,7 +164,8 @@ gulp.task("vendor", function () {
       "source/js/libs/slick.min.js",
       "source/js/libs/rangeslider.min.js",
       "source/js/libs/jquery.scrollbar.min.js",
-      "source/js/libs/jquery.fancybox.min.js"
+      "source/js/libs/jquery.fancybox.min.js",
+      "source/js/libs/fileinput.min.js"
     ])
     .pipe(concat("vendor.min.js"))
     .pipe(gulp.dest("build/js"));
@@ -187,6 +188,7 @@ gulp.task("jsmin", function () {
       "source/js/fancybox.js",
       "source/js/sort.js",
       "source/js/scrollbar.js",
+      "source/js/fileinput.js",
       "source/js/viewportChecker.js"
     ])
     .pipe(concat("main.min.js"))
