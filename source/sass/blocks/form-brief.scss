@@ -1,6 +1,20 @@
 .form-brief {
-  margin-top: 20px;
-  padding-bottom: 20px;
+  @include rem(
+    (
+      margin-top: 20px,
+      margin-bottom: 40px,
+      padding: 0 25px 20px
+    )
+  );
+
+  @include respond-below(xs) {
+    padding: 0 15px;
+  }
+
+  @include respond-above(sm769) {
+    padding-left: 0;
+    padding-right: 0;
+  }
   &__label {
     position: relative;
     @include ff(
@@ -34,6 +48,7 @@
     flex-wrap: wrap;
   }
   &__subitem {
+    padding: 10px 0;
     &:not(:last-child) {
       margin-right: 20px;
     }

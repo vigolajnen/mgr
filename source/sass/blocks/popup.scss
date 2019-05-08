@@ -1,4 +1,5 @@
 .popup {
+  display: flex;
   &__wrapper {
     position: relative;
 
@@ -11,7 +12,8 @@
     @include respond-above(sm769) {
       max-width: 400px;
       height: 90%;
-      margin-top: 5%;
+      // margin-top: 5%;
+      margin: auto;
       border-radius: 2em;
       padding: 2em 1.5em 1em;
     }
@@ -27,7 +29,10 @@
     padding: 0 1em 2em;
   }
   &__title {
-    @include respond-below(sm) {
+    @include respond-below(sm769) {
+      padding: 0 25px;
+    }
+    @include respond-below(xs) {
       padding: 0 15px;
     }
   }
@@ -94,4 +99,25 @@
 
 .popup-show {
   display: block;
+}
+
+.popup__wrapper {
+  &.scroll-wrapper {
+    max-width: 770px;
+  }
+  &.scrollbar-inner > .scroll-element.scroll-y {
+    height: 95%;
+    right: 5px;
+    top: 15px;
+    width: 6px;
+    @include respond-above(sm769) {
+      right: 15px;
+      top: 15px;
+    }
+  }
+  &.scroll-wrapper > .scroll-content {
+    @include respond-above(sm769) {
+      @include rem(padding, 25px);
+    }
+  }
 }

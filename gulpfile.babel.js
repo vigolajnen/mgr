@@ -163,6 +163,7 @@ gulp.task("vendor", function () {
       "source/js/libs/jquery.viewportchecker.min.js",
       "source/js/libs/slick.min.js",
       "source/js/libs/rangeslider.min.js",
+      "source/js/libs/jquery.scrollbar.min.js",
       "source/js/libs/jquery.fancybox.min.js"
     ])
     .pipe(concat("vendor.min.js"))
@@ -172,6 +173,7 @@ gulp.task("vendor", function () {
 gulp.task("jsmin", function () {
   gulp
     .src([
+      "source/js/rangeslider.js",
       "source/js/preloader.js",
       "source/js/mobile.js",
       "source/js/header.js ",
@@ -184,7 +186,7 @@ gulp.task("jsmin", function () {
       "source/js/rating.js",
       "source/js/fancybox.js",
       "source/js/sort.js",
-      "source/js/rangeslider.js",
+      "source/js/scrollbar.js",
       "source/js/viewportChecker.js"
     ])
     .pipe(concat("main.min.js"))
@@ -233,7 +235,7 @@ gulp.task("serve", function () {
   });
 
   gulp.watch("source/sass/**/*.{scss,sass}", ["style"]);
-  gulp.watch("source/js/**/*.js", ["jsmin"]["js-timer"]);
+  gulp.watch("source/js/**/*.js", ["jsmin"], ["js-timer"]);
   gulp.watch("source/**/*.html", ["html"]).on("change", server.reload);
 });
 
