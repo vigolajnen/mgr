@@ -156,6 +156,11 @@
       right: 0;
     }
   }
+  & .rangeslider--horizontal {
+    @include respond-below(sm769) {
+      opacity: 0;
+    }
+  }
 
   &__btn {
     width: 100%;

@@ -11,7 +11,8 @@
 
     @include respond-above(sm769) {
       max-width: 400px;
-      height: 90%;
+      max-height: 90%;
+      height: auto;
       // margin-top: 5%;
       margin: auto;
       border-radius: 2em;
@@ -29,6 +30,12 @@
     padding: 0 1em 2em;
   }
   &__title {
+    margin-bottom: 20px;
+    &--hidden-sm {
+      @include respond-below(sm769) {
+        display: none;
+      }
+    }
     @include respond-below(sm769) {
       padding: 0 25px;
     }
@@ -48,6 +55,7 @@
     padding: 0;
     margin: 0 auto;
     list-style-type: none;
+    width: 100%;
   }
 
   &__item {
@@ -66,6 +74,7 @@
   &__bottom {
     display: flex;
     text-align: center;
+    @include rem(padding-bottom, 20px);
 
     @media (min-width: $tablet-width) {
       justify-content: flex-start;
@@ -102,22 +111,35 @@
 }
 
 .popup__wrapper {
+  &--md {
+    @include rem(
+      (
+        max-width: 770px,
+        max-height: 700px
+      )
+    );
+  }
   &.scroll-wrapper {
-    max-width: 770px;
   }
   &.scrollbar-inner > .scroll-element.scroll-y {
     height: 95%;
     right: 5px;
     top: 15px;
     width: 6px;
+    opacity: 0;
     @include respond-above(sm769) {
+      opacity: 1;
+      height: 85%;
       right: 15px;
-      top: 15px;
+      top: 85px;
     }
   }
   &.scroll-wrapper > .scroll-content {
     @include respond-above(sm769) {
-      @include rem(padding, 25px);
+      @include rem(padding, 35px 40px);
     }
+  }
+  &.scrollbar-inner > .scroll-element .scroll-element_track {
+    background-color: transparent;
   }
 }
