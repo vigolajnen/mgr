@@ -80,7 +80,7 @@
     @include rem(
       (
         padding: 10px 20px,
-        border-radius: 25px
+        border-radius: 25px,
       )
     );
     border: 1px solid #eaebee;
@@ -88,7 +88,7 @@
 
     &::after {
       position: absolute;
-      content: "";
+      content: '';
       top: 50%;
       @include rem(right, 20px);
       transform: rotate(180deg) translateY(50%);
@@ -149,9 +149,12 @@
     @include rem(
       (
         max-width: 770px,
-        max-height: 700px
+        max-height: 700px,
       )
     );
+    @include respond-above(md) {
+      margin: 5vh auto 0;
+    }
   }
 
   &.scrollbar-inner > .scroll-element.scroll-y {
@@ -159,7 +162,7 @@
     right: 5px;
     top: 15px;
     width: 6px;
-    opacity: 0;
+    opacity: 0.5;
     @include respond-above(sm769) {
       opacity: 1;
       height: 85%;
