@@ -1,5 +1,6 @@
 .hidden {
   display: inline-flex;
+  flex-wrap: wrap;
   &--sm {
     @include respond-above(sm769) {
       display: none;

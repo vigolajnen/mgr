@@ -2,10 +2,28 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  &--hidden-lg {
-    display: block;
-    @include respond-above(sm769) {
+  &__sidebar {
+    width: 100%;
+    @include respond-above(sm) {
+      width: 30%;
+    }
+    @include respond-above(md) {
+      width: 25%;
+    }
+  }
+  &__content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    @include respond-above(sm) {
+      width: 70%;
+    }
+    &--hidden-lg {
       display: none;
+      @include respond-above(sm) {
+        display: flex;
+      }
     }
   }
 
@@ -30,7 +48,10 @@
 
   &__company {
     width: 100%;
-    margin-top: 70px;
+    @include rem((
+      margin-top: 70px,
+      padding-bottom: 70px
+    ));
   }
 
   &__title {
@@ -109,8 +130,6 @@
   &__table {
     width: 100%;
     margin-bottom: 30px;
-
-
   }
 
   & .button {
