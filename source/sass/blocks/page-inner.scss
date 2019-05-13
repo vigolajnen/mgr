@@ -1,26 +1,3 @@
-// .page-inner {
-//   display: flex;
-//   flex-direction: column;
-//   justify-content: center;
-//   align-items: center;
-//   padding: 0 5%;
-
-//   @include respond-above(sm) {
-//     flex-direction: row;
-//     justify-content: space-between;
-//     align-items: center;
-//     flex-wrap: nowrap;
-
-//     margin: 0 auto 100px;
-//     padding: 0;
-//   }
-//   & .page-title {
-//     @include respond-above(sm769) {
-//       display: none;
-//     }
-//   }
-// }
-
 .page-inner {
   position: relative;
   display: flex;
@@ -28,12 +5,22 @@
 
   width: 100%;
 
+
   @include rem(
     (
       padding-bottom: 40px,
-      margin-bottom: 40px
+      margin-bottom: 40px,
+      margin-top: 0
     )
   );
+
+  @include respond-above(xs) {
+    @include rem(margin-top, 40px);
+  }
+
+  @include respond-above(sm769) {
+    margin-top: 0;
+  }
 
   &__header {
     @include rem(margin-bottom, 40px);
@@ -43,15 +30,21 @@
   }
 
   &__nav {
-    display: none;
+    width: 100%;
+
+    @include respond-above(xs) {
+      width: 30%;
+    }
 
     @include respond-above(md) {
       width: 25%;
-      display: block;
     }
   }
   &__info {
     width: 100%;
+    @include respond-above(xs) {
+      width: 70%;
+    }
     @include respond-above(md) {
       width: 70%;
     }
