@@ -129,3 +129,10 @@
     color: $text-color;
   }
 }
+
+.table-company .table__val[data-name] {
+  padding-left: 20%;
+  @include respond-above(sm) {
+    padding-left: 0;
+  }
+}

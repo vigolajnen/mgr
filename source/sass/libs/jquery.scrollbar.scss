@@ -2,7 +2,7 @@
 
 .scroll-wrapper {
     overflow: hidden !important;
-    padding: 0 !important;
+    // padding: 0 !important;
     position: relative;
 }
 
@@ -782,10 +782,3 @@
 
 .scrollbar-chrome > .scroll-element.scroll-x.scroll-scrolly_visible .scroll-element_track { left: -19px; }
 .scrollbar-chrome > .scroll-element.scroll-y.scroll-scrollx_visible .scroll-element_track { top: -19px; }
-
-
-
-
-
-
-
