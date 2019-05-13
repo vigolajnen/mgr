@@ -28,7 +28,7 @@
         1280px: 17px
       )
     );
-    @include respond-above(sm) {
+    @include respond-above(sm769) {
       display: none;
     }
   }
@@ -110,7 +110,7 @@
 }
 
 .navigation-profile__item:last-child .navigation-profile__link {
-  @include respond-below(sm) {
+  @include respond-below(sm769) {
     &::after {
       content: "";
       position: absolute;
@@ -131,7 +131,7 @@
   &:last-child {
     order: 0;
 
-    @include respond-above(sm) {
+    @include respond-above(sm769) {
       order: 1;
     }
   }
@@ -143,13 +143,13 @@
   & .navigation-profile__link--icon-4,
   & .navigation-profile__link--icon-5 {
     display: flex;
-    @include respond-above(sm) {
+    @include respond-above(sm769) {
       display: none;
     }
   }
   & .navigation-profile__link--icon-1 {
     display: none;
-    @include respond-above(sm) {
+    @include respond-above(sm769) {
       display: flex;
     }
   }

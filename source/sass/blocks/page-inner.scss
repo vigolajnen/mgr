@@ -1,22 +1,86 @@
+// .page-inner {
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: center;
+//   align-items: center;
+//   padding: 0 5%;
+
+//   @include respond-above(sm) {
+//     flex-direction: row;
+//     justify-content: space-between;
+//     align-items: center;
+//     flex-wrap: nowrap;
+
+//     margin: 0 auto 100px;
+//     padding: 0;
+//   }
+//   & .page-title {
+//     @include respond-above(sm769) {
+//       display: none;
+//     }
+//   }
+// }
+
 .page-inner {
+  position: relative;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 0 5%;
+  justify-content: space-between;
 
-  @include respond-above(sm) {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: nowrap;
+  width: 100%;
 
-    margin: 0 auto 100px;
-    padding: 0;
-  }
-  & .page-title {
-    @include respond-above(sm769) {
+  @include rem(
+    (
+      padding-bottom: 40px,
+      margin-bottom: 40px
+    )
+  );
+
+  &__header {
+    @include rem(margin-bottom, 40px);
+    @include respond-below(md) {
       display: none;
     }
+  }
+
+  &__nav {
+    display: none;
+
+    @include respond-above(md) {
+      width: 25%;
+      display: block;
+    }
+  }
+  &__info {
+    width: 100%;
+    @include respond-above(md) {
+      width: 70%;
+    }
+  }
+
+  &__title {
+    @include rem(margin-bottom, 30px);
+  }
+
+  &__warning {
+    margin: 0;
+    @include rem(margin-bottom, 25px);
+
+    @include ff(
+      "font-size",
+      (
+        375px: 20px,
+        1280px: 25px
+      )
+    );
+    font-weight: 600;
+    color: #000000;
+  }
+}
+
+.page-inner__info {
+  & p {
+    margin: 0;
+    @include rem(margin-bottom, 30px);
+    color: $text-color;
   }
 }

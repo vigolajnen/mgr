@@ -1,5 +1,6 @@
 .table-company {
   overflow: hidden;
+  @include rem(margin-bottom, 20px);
   & .table__val {
     @include respond-below(md) {
       @include rem(padding, 5px 10px);

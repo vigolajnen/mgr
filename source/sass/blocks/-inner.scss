@@ -1,4 +1,4 @@
-.promo-inner {
+.page-inner {
   position: relative;
   display: flex;
   justify-content: space-between;
@@ -54,7 +54,7 @@
   }
 }
 
-.promo-inner__info {
+.page-inner__info {
   & p {
     margin: 0;
     @include rem(margin-bottom, 30px);

@@ -18,13 +18,13 @@
 
       <header class="mobile-header">
         <div class="mobile-header__inner">
-          <a class="mobile-header__link" href="index.html">
+          <a class="mobile-header__link" href="cabinet.html">
             <svg class="mobile-header__icon" width="20" height="20">
               <use xlink:href="img/sprite.svg#icon-023-arrow-point-to-right"></use>
             </svg>
             <span class="visually-hidden">ссылка назад</span>
           </a>
-          <div class="mobile-header__title">Профиль</div>
+          <div class="mobile-header__title">Информация о пользователе</div>
         </div>
       </header>
 
@@ -73,7 +73,7 @@
 
       <div class="wrapper">
         <div class="profile">
-          <aside class="profile__sidebar">
+          <aside class="profile__sidebar profile__sidebar--hidden-sm">
             <nav class="profile__nav navigation-profile">
               <div class="navigation-profile__caption">Личный кабинет</div>
               <ul class="navigation-profile__list">
@@ -102,7 +102,7 @@
                   </a>
                 </li>
                 <li class="navigation-profile__item">
-                  <a class="navigation-profile__link navigation-profile__link--icon-4" href="company.html">
+                  <a class="navigation-profile__link navigation-profile__link--icon-4" href="cabinet.1.html">
                     <svg class="navigation-profile__icon navigation-profile__icon--blue-3" width="20" height="20">
                       <use xlink:href="img/sprite.svg#icon-briefcase"></use>
                     </svg>
@@ -146,7 +146,7 @@
               </div>
             </nav>
           </aside>
-          <div class="profile__content profile__content--hidden-lg">
+          <div class="profile__content">
             <div class="profile__pic">
               <img class="profile__img" src="img/profile/user.png" alt="pic">
               <!-- <input class="profile__foto" type="file" placeholder="Загрузить фото"> -->
@@ -173,72 +173,6 @@
                 </li>
               </ul>
               <a class="profile__link" href="profile-edit.html">Редактировать профиль</a>
-            </div>
-            <div class="profile__company">
-              <h3 class="profile__title-2">Мои компании</h3>
-              <table class="profile__table table table-company">
-                <thead class="table__head">
-                  <tr class="table__row">
-                    <td class="table__title">Компания, Бернд</td>
-                    <td class="table__title">Юр. название компании</td>
-                    <td class="table__title">Сайт</td>
-                    <td class="table__title">Адрес</td>
-                    <td class="table__title">Телефон</td>
-                    <td class="table__title">Действия</td>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr class="table__row">
-                    <td class="table__val" data-name="Компания, Бернд:">ООО Авалон</td>
-                    <td class="table__val" data-name="Юр. название компании:">
-                      <a class="table__link" href="#">ИП Островский</a>
-                    </td>
-                    <td class="table__val" data-name="Сайт:">
-                      <a class="table__link" href="www.avalon.spb.ru" target="_blank">www.avalon.spb.ru</a>
-                    </td>
-                    <td class="table__val" data-name="Адрес:">Санкт-Петербург, ул. Красновская, 23</td>
-                    <td class="table__val table__val--tel" data-name="Телефон:">+7 (495) 2308900</td>
-                    <td class="table__val" data-name="Действия:">
-                      <button class="button" type="button" aria-label="Редактировать компанию"
-                        data-id="js-popup-btn-mob">
-                        <svg class="button__icon" width="20" height="20">
-                          <use xlink:href="img/sprite.svg#icon-018-pencil-edit-button"></use>
-                        </svg>
-                      </button>
-                      <button class="button" type="button" aria-label="Удалить компанию">
-                        <svg class="button__icon" width="20" height="20">
-                          <use xlink:href="img/sprite.svg#icon-019-garbage"></use>
-                        </svg>
-                      </button>
-                    </td>
-                  </tr>
-                  <tr class="table__row">
-                    <td class="table__val" data-name="Компания, Бернд:">ООО Авалон</td>
-                    <td class="table__val" data-name="Юр. название компании:">
-                      <a class="table__link" href="#">ИП Островский</a>
-                    </td>
-                    <td class="table__val" data-name="Сайт:">
-                      <a class="table__link" href="www.avalon.spb.ru" target="_blank">www.avalon.spb.ru</a>
-                    </td>
-                    <td class="table__val" data-name="Адрес:">Санкт-Петербург, ул. Красновская, 23</td>
-                    <td class="table__val table__val--tel" data-name="Телефон:">+7 (495) 2308900</td>
-                    <td class="table__val" data-name="Действия:">
-                      <button class="button" type="button" aria-label="Редактировать компанию"
-                        data-id="js-popup-btn-mob">
-                        <svg class="button__icon" width="20" height="20">
-                          <use xlink:href="img/sprite.svg#icon-018-pencil-edit-button"></use>
-                        </svg>
-                      </button>
-                      <button class="button" type="button" aria-label="Удалить компанию">
-                        <svg class="button__icon" width="20" height="20">
-                          <use xlink:href="img/sprite.svg#icon-019-garbage"></use>
-                        </svg>
-                      </button>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
-              <a class="link-button" href="add-company.html">Добавить компанию</a>
             </div>
           </div>
         </div>
