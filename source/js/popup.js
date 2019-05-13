@@ -15,7 +15,10 @@
       i.addEventListener("click", function(evt) {
         evt.preventDefault();
         popupOverlay.classList.remove("popup-show");
-        popupOverlayAkt.classList.remove("popup-show");
+        if (popupOverlayAkt) {
+          popupOverlayAkt.classList.remove("popup-show");
+        }
+
         document.querySelector("body").classList.remove("overlay");
       });
     });
