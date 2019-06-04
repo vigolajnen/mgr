@@ -81,7 +81,7 @@ $(document).ready(function() {
 
   window.addEventListener("resize", function() {
     if (window.outerWidth < 992) {
-      $("#slider-main-goods").slick({
+      $("#slider-main-goods").not('.slick-initialized').slick({
         dots: true,
         arrow: false,
         centerPadding: "40px",
@@ -99,7 +99,7 @@ $(document).ready(function() {
         ]
       });
 
-      $("#js-slider-project").slick({
+      $("#js-slider-project").not('.slick-initialized').slick({
         dots: true,
         arrow: false,
         centerPadding: "40px",
@@ -119,8 +119,6 @@ $(document).ready(function() {
     }
   });
 });
-
-
 
 
  $(".slider__for").slick({

@@ -59,13 +59,21 @@
 
       color: #ffffff;
 
-      @include respond-above(xxxs) {
-        right: 140%;
+      @media (min-width: 375px) {
+        right: 135%;
+      }
+
+      @media (min-width: 425px) {
+        right: 155%;
       }
 
       @include respond-above(sm) {
-        right: 150%;
-        top: 8px;
+        right: 165%;
+        top: 0;
+      }
+
+      @media (min-width: 990px) {
+        right: 140%;
       }
     }
 
