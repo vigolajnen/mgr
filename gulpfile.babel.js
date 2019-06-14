@@ -188,6 +188,7 @@ gulp.task("jsmin", function () {
       "source/js/rating.js",
       "source/js/fancybox.js",
       "source/js/sort.js",
+      "source/js/sizeText.js",
       "source/js/scrollbar.js",
       "source/js/fileinput.js",
       "source/js/viewportChecker.js"
