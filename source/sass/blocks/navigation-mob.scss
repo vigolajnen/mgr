@@ -61,11 +61,13 @@
 
   &__icon {
     fill: #919aad;
+    stroke: #ffffff;
+    stroke-width: 10px;
 
     @include rem(
       (
-        width: 25px,
-        height: 25px
+        width: 35px,
+        height: 35px
       )
     );
 

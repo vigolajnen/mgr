@@ -5,6 +5,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    max-width: 100%;
   }
   &__nav {
     display: none;
@@ -42,14 +43,14 @@
   }
   & .product {
     @include rem(
-        (
-          width: calc(50% - 10px),
-          margin-right: 20px
-        )
-      );
-      &:nth-child(2n) {
-        margin-right: 0;
-      }
+      (
+        width: calc(50% - 10px),
+        margin-right: 20px
+      )
+    );
+    &:nth-child(2n) {
+      margin-right: 0;
+    }
 
     @include respond-above(xxs) {
       @include rem(
@@ -96,6 +97,12 @@
       &:nth-child(5n) {
         margin-right: 0;
       }
+    }
+  }
+  & .product__wrapper {
+    @include rem(min-height, 360px);
+    @include respond-above(md) {
+      @include rem(min-height, 460px);
     }
   }
   &__text {

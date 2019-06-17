@@ -172,3 +172,115 @@
     }
   }
 }
+
+.feedBackForm {
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  overflow: hidden;
+
+  &__wrap {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  &__block {
+    @include rem(margin-bottom, 24px);
+    width: 100%;
+  }
+
+  &__field {
+    width: 100%;
+
+    & .button.button--blue {
+      @include rem(padding, 0 10px);
+    }
+  }
+
+  & textarea {
+    width: 100%;
+    margin: 0;
+    padding: 1.25rem;
+    height: 6.25rem;
+    border-radius: 1.25rem;
+
+    color: #60749d;
+
+    border: 1px solid #c9d0dc;
+
+    resize: none;
+
+    &:hover,
+    &:focus {
+      border: 1px solid #5993ff;
+    }
+  }
+
+  & input[type="submit"] {
+    @include rem(padding, 15px 25px 20px);
+
+    color: $color-white;
+    font-family: $font-title;
+
+    @include ff(
+      "font-size",
+      (
+        375px: 24px,
+        1280px: 29px
+      )
+    );
+
+    background-color: $color-blue;
+
+    @include rem(
+      (
+        border-radius: 40px,
+        box-shadow: (
+          0 8px 0px -1px $color-blue-light
+        )
+      )
+    );
+
+    text-decoration: none;
+
+    transition: 1s;
+  }
+}
+
+.mainForm__field__input {
+  width: 100%;
+
+  @include rem(
+    (
+      padding: 10px 20px,
+      border: 1px solid #b3bbc9,
+      border-radius: 25px
+    )
+  );
+
+  &:hover,
+  &:focus {
+    border: 1px solid #5993ff;
+  }
+}
+
+.feedBackForm__dataProcessing {
+  @include rem(
+    (
+      margin-top: 20px,
+      margin-bottom: 20px,
+      font-size: 14px
+    )
+  );
+
+  & a {
+    color: $color-blue;
+    text-decoration: none;
+  }
+}

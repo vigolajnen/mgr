@@ -157,6 +157,7 @@ gulp.task("html-2", function () {
 gulp.task("vendor", function () {
   gulp
     .src([
+
       "source/js/libs/jquery-3.3.1.js",
       "source/js/libs/picturefill.min.js",
       "source/js/libs/svg4everybody.min.js",
@@ -175,6 +176,7 @@ gulp.task("vendor", function () {
 gulp.task("jsmin", function () {
   gulp
     .src([
+      "source/js/foreach-polyfill.js",
       "source/js/rangeslider.js",
       "source/js/preloader.js",
       "source/js/mobile.js",
@@ -215,18 +217,6 @@ gulp.task("js-timer", function() {
     )
     .pipe(gulp.dest("build/js"));
 });
-
-// gulp.task("js-sort", function() {
-//   gulp
-//     .src(["source/js/sort.js"])
-//     .pipe(concat("sort.min.js"))
-//     .pipe(
-//       uglify({
-//         mangle: false
-//       })
-//     )
-//     .pipe(gulp.dest("build/js"));
-// });
 
 
 gulp.task("serve", function () {
