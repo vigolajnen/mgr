@@ -25,6 +25,8 @@
   }
 
   &__item {
+    display: flex;
+    flex-direction: column;
     @include respond-above(md) {
       width: calc(100% / 4);
       @include rem(padding-right, 25px);

@@ -482,6 +482,9 @@
     padding-left: 0 !important;
     padding-right: 0 !important;
   }
+  & .slider__wrap {
+    max-width: 100%;
+  }
   & .slick-prev {
     display: none !important;
     left: 0;
@@ -493,9 +496,9 @@
   }
 
   & .slick-next {
-    right: 18px;
+    right: 20px;
 
-    top: 55px;
+    top: 45px;
     width: 40px;
     height: 30px;
 
@@ -540,25 +543,39 @@
   }
   & .slider__pic {
     overflow: hidden;
+    @include rem(height, 400px);
     @include respond-above(sm) {
-      @include rem(max-height, 500px);
+      @include rem(height, 400px);
     }
     @include respond-above(md) {
-      @include rem(max-height, 500px);
+      @include rem(height, 500px);
+
     }
 
     @include respond-above(lg) {
-      @include rem(max-height, 540px);
+      @include rem(height, 540px);
     }
 
 
   }
   & .slider__item {
-    max-height: 600px;
     @include rem(padding, 25px);
+
+    @include rem(max-height, 600px);
+    height: 100%;
+
     background-image: url("../img/item/slide-bg.png");
     background-repeat: no-repeat;
     background-size: 100% 100%;
+
+    @include respond-above(md) {
+      @include rem(max-width, 500px);
+      @include rem(height, 550px);
+    }
+
+    @include respond-above(lg) {
+      @include rem(height, 600px);
+    }
   }
   & .slider__marker {
     position: absolute;

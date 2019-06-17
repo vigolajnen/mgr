@@ -8,8 +8,8 @@
 
     @include rem(
       (
-        width: 24px,
-        height: 24px
+        width: 20px,
+        height: 20px
       )
     );
 
@@ -17,12 +17,31 @@
 
     cursor: pointer;
 
+    @include respond-above(sm) {
+      @include rem(
+        (
+          width: 15px,
+          height: 15px
+        )
+      );
+    }
+
+    @include respond-above(lg) {
+      @include rem(
+        (
+          width: 24px,
+          height: 24px
+        )
+      );
+    }
+
     &.rating__item--active,
     &.rating__item--active ~ *,
     &:hover,
     &:hover ~ * {
       & svg {
         fill: #f3931a;
+        width: 100%;
       }
     }
   }
