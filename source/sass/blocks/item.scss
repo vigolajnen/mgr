@@ -51,6 +51,11 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+
+    @include respond-above(md1100) {
+      flex-wrap: nowrap;
+    }
+
   }
   &__video {
     width: 100%;
@@ -64,8 +69,9 @@
     );
 
     @include respond-above(md1100) {
-      width: 40%;
+      // width: 40%;
       margin-bottom: auto;
+      @include rem(margin-right, 45px);
     }
   }
 
@@ -73,6 +79,7 @@
   & .tabs__content {
     width: 100%;
     color: $text-color;
+    @include rem(padding-right, 10px);
 
     @include ff(
       "font-size",
@@ -85,6 +92,7 @@
     @include respond-above(md1100) {
       width: 60%;
       @include rem(padding-left, 45px);
+      @include rem(padding-right, 15px);
     }
 
     & h3,
@@ -150,10 +158,11 @@
           content: counter(li);
 
           display: inline-block;
-          width: 1.5em;
+          width: 1.7em;
+          height: 1.7em;
           margin-left: -2em;
           margin-right: 10px;
-          padding: 0 0.5em;
+          padding: 0.2em 0.5em;
 
           color: #ffffff;
           background: #0fb9bc;
@@ -161,6 +170,13 @@
           border-radius: 50%;
         }
       }
+    }
+  }
+
+  &__text {
+    @include respond-above(md1100) {
+      width: 100%;
+      padding: 0;
     }
   }
 
@@ -367,6 +383,7 @@
     }
   }
   &__rating {
+    position: relative;
     width: 100%;
     display: flex;
     align-items: center;
@@ -549,14 +566,11 @@
     }
     @include respond-above(md) {
       @include rem(height, 500px);
-
     }
 
     @include respond-above(lg) {
       @include rem(height, 540px);
     }
-
-
   }
   & .slider__item {
     @include rem(padding, 25px);

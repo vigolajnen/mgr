@@ -46,3 +46,28 @@
     }
   }
 }
+
+.star1 {
+  fill: #e6e6e6;
+  &:hover,
+  &:hover ~ * {
+    & svg {
+      fill: #f3931a;
+      width: 100%;
+    }
+  }
+}
+
+.star1a,
+.star1b {
+  & svg {
+    fill: #f3931a;
+    width: 100%;
+  }
+}
+
+.starres {
+    position: absolute;
+    bottom: -20px;
+    text-transform: lowercase;
+}

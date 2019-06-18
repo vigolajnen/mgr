@@ -13,6 +13,7 @@
 
     width: 100%;
     margin: 0 auto;
+    @include rem(padding-bottom, 20px);
   }
 
   &__form {
@@ -54,6 +55,10 @@
           @include rem(margin-left, 20px);
         }
       }
+    }
+    &--vert {
+      display: flex;
+      flex-direction: column;
     }
     & .button.button--blue {
       @include rem(padding, 0 10px);
@@ -267,6 +272,11 @@
   &:hover,
   &:focus {
     border: 1px solid #5993ff;
+  }
+
+  &:focus::placeholder {
+    opacity: 0;
+    transition: 0.6s;
   }
 }
 

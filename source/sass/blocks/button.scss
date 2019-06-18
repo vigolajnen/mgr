@@ -14,6 +14,9 @@
   &--blue {
     color: $color-blue;
   }
+  &--start {
+    align-self: flex-start;
+  }
 
   &__icon {
     fill: #c9cdd4;

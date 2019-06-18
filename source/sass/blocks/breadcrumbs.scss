@@ -1,6 +1,7 @@
 .breadcrumbs {
   display: none;
   width: 100%;
+  color: #808080;
 
   @include respond-above(md) {
     display: flex;
@@ -15,20 +16,14 @@
     font-size: 15px;
     font-weight: 400;
 
-    &:not(:last-child) {
-      @include rem(padding-right, 20px);
-      font-weight: 600;
-    }
+    @include rem(padding-right, 20px);
+    font-weight: 600;
 
-    &:not(:last-child)::before {
+    &::before {
       content: "/";
       position: absolute;
       top: 0;
       right: 5px;
-    }
-
-    &:last-child {
-      color: #808080;
     }
   }
 }

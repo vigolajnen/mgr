@@ -1,0 +1,27 @@
+.pagination {
+  display: flex;
+  flex-wrap: wrap;
+  &__title {
+    @include rem(margin-right, 10px);
+    font-weight: bold;
+    text-transform: lowercase;
+  }
+  &__item {
+    @include rem(margin-right, 5px);
+  }
+  &__link {
+    @include rem(padding, 5px 12px);
+    font-weight: bold;
+    background-color: #008dca;
+    color: #ffffff;
+    border-radius: 50%;
+    text-decoration: none;
+    &:focus,
+    &:hover {
+      background-color: #03709e;
+    }
+    &:active {
+      background-color: #03709e;
+    }
+  }
+}
