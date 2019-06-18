@@ -1,4 +1,7 @@
-(function() {
+(function () {
+  
+
+
   var popup = document.querySelector(".popup");
   var popupOverlay = document.querySelector(".popup-overlay");
   var popupOverlayAkt = document.querySelector(".popup-overlay.popup-js-akt");
@@ -30,6 +33,11 @@
         popupOverlay.classList.add("popup-show");
         document.querySelector("body").classList.add("overlay");
         //inputName.focus();
+
+        var targetElement = i;
+        bodyScrollLock.disableBodyScroll(targetElement);
+        bodyScrollLock.enableBodyScroll(targetElement);
+        bodyScrollLock.clearAllBodyScrollLocks();
       });
     });
   }
@@ -54,4 +62,5 @@
         .prev()
         .text("Прикрепить файл (jpg)");
   });
+
 })();
