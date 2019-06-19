@@ -46,6 +46,10 @@
   &__inner {
     display: flex;
     align-items: center;
+    justify-content: space-between;
+  }
+  &__logo.logo {
+    width: 30%;
   }
   &__title {
     max-width: 70%;

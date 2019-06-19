@@ -73,6 +73,7 @@
     );
 
     text-align: center;
+    word-break: break-word;
 
     @include respond-above(md) {
       @include rem(padding, 0 20px);
