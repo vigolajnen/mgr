@@ -35,6 +35,7 @@
   }
 
   &__wrapper {
+    width: 100%;
     @include respond-above(sm) {
       display: flex;
       flex-wrap: wrap;
@@ -48,6 +49,7 @@
 
     display: flex;
     flex-wrap: wrap;
+    flex-grow: 1;
 
     @include respond-above(xs) {
       width: 50%;
@@ -63,9 +65,9 @@
       }
     }
 
-    @include respond-above(lg) {
+    @include respond-above(md) {
       &:first-child {
-        width: 16%;
+        width: 20%;
       }
 
       &:nth-child(2) {
@@ -75,7 +77,12 @@
       }
 
       &:last-child {
-        width: 28%;
+        width: 20%;
+      }
+      &:last-child > div {
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
       }
     }
   }
