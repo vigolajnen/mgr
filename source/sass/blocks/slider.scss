@@ -4,11 +4,15 @@
     height: 100%;
 
     @include respond-above(md1100) {
-      width: 75%;
+      // width: 75%;
+      height: calc(100% - 140px);
 
       position: absolute;
       top: 0;
       right: 0;
+      left: 0;
+      bottom: auto;
+      margin: auto;
     }
 
     & .slick-list {
@@ -27,14 +31,16 @@
       display: block;
       position: absolute;
       z-index: 1;
-      @include rem(top, -33px);
+      top: auto;
+      bottom: 0;
       left: auto;
-      right: 80%;
-      height: 100%;
+      right: 0;
+      height: 140px;
       width: 100%;
 
       margin: 0;
-
+    }
+    & img {
       transform: rotate(90deg);
     }
   }

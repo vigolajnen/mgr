@@ -1,8 +1,12 @@
 .form {
   width: 100%;
   height: auto;
-  min-height: 0;
+  // min-height: 100vh;
   // overflow: hidden;
+
+  @media (min-width: $tablet-width) {
+      height: 100%;
+    }
 
   &__wrapper {
     position: relative;

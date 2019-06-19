@@ -1,7 +1,7 @@
 .rating {
   @include listReset();
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
 
   &__item {
     position: relative;
@@ -47,6 +47,7 @@
   }
 }
 
+
 .star1 {
   fill: #e6e6e6;
   &:hover,
@@ -60,6 +61,7 @@
 
 .star1a,
 .star1b {
+  display: inline;
   & svg {
     fill: #f3931a;
     width: 100%;
@@ -67,7 +69,7 @@
 }
 
 .starres {
-    position: absolute;
-    bottom: -20px;
-    text-transform: lowercase;
+  position: absolute;
+  bottom: -20px;
+  text-transform: lowercase;
 }

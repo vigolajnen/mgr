@@ -45,6 +45,12 @@
       }
     }
   }
+  & .slick-list, .slick-slider, .slick-track {
+    display: flex;
+  }
+  & .slider-base .slick-dots {
+    @include rem(bottom, 10px);
+  }
 }
 
 
