@@ -162,14 +162,13 @@ gulp.task("vendor", function () {
       "source/js/libs/picturefill.min.js",
       "source/js/libs/svg4everybody.min.js",
       "source/js/libs/jquery.viewportchecker.min.js",
-      
+
 
       "source/js/libs/rangeslider.min.js",
       "source/js/libs/jquery.scrollbar.min.js",
       "source/js/libs/jquery.fancybox.min.js",
       "source/js/libs/fileinput.min.js",
-      "source/js/libs/slick.min.js",
-      "source/js/libs/bodyScrollLock.js"
+      "source/js/libs/slick.min.js"
     ])
     .pipe(concat("vendor.min.js"))
     .pipe(gulp.dest("build/js"));
@@ -178,7 +177,7 @@ gulp.task("vendor", function () {
 gulp.task("jsmin", function () {
   gulp
     .src([
-      
+
       "source/js/foreach-polyfill.js",
       "source/js/rangeslider.js",
       "source/js/preloader.js",

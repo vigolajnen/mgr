@@ -4,7 +4,7 @@
     hour = minute * 60,
     day = hour * 24;
 
-  var countDown = new Date("Jun 17, 2019 17:02:00").getTime(),
+  var countDown = new Date("Jun 20, 2019 17:54:00").getTime(),
     x = setInterval(function() {
       var now = new Date().getTime(),
         distance = countDown - now;
@@ -23,8 +23,7 @@
         ));
 
       //do something later when date is reached
-      if (distance < 0) {
-        countDown = countDown + 3;
+      if (distance == 0) {
        clearInterval(x);
       }
     }, second);
