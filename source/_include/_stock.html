@@ -9,7 +9,7 @@
         </div>
         <div class="stock__timer">
           <p class="stock__timer-text">Предложение ограничено. До конца акции осталось:</p>
-          <div class="timer">
+          <!-- <div class="timer">
             <div class="timer__inner container">
               <ul class="timer__list">
                 <li class="timer__item"><span id="days"></span>дней</li>
@@ -18,7 +18,28 @@
                 <li class="timer__item timer__item--hidden"><span id="seconds"></span>секунд</li>
               </ul>
             </div>
+          </div> -->
+          <div class="timer">
+            <div class="timer__inner">
+              <ul id="countdown" class="countdown timer__list">
+                <li class="countdown-number timer__item">
+                  <span class="days countdown-time timer__item-time"></span>
+                  <span class="countdown-text timer__text">дней</span>
+                </li>
+                <li class="countdown-number timer__item">
+                  <span class="hours countdown-time timer__item-time"></span>
+                  <span class="countdown-text timer__text">часов</span>
+                </li>
+                <li class="countdown-number timer__item">
+                  <span class="minutes countdown-time timer__item-time"></span>
+                  <span class="countdown-text timer__text">минут</span>
+                </li>
+              </ul>
+            </div>
+
           </div>
+
+
         </div>
       </div>
     </div>

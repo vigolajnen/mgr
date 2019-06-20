@@ -17,6 +17,9 @@
   &__item {
     position: relative;
 
+    display: flex;
+    flex-direction: column;
+
     padding: 0;
 
     font-weight: 600;
@@ -77,64 +80,137 @@
       }
     }
 
-    & span {
-      position: relative;
-      display: block;
-      z-index: 2;
+    // & span {
+    //   position: relative;
+    //   display: block;
+    //   z-index: 2;
 
-      @include rem(
-        (
-          margin-bottom: 20px,
-          height: 40px
-        )
-      );
+    //   @include rem(
+    //     (
+    //       margin-bottom: 20px,
+    //       height: 40px
+    //     )
+    //   );
 
-      font-family: $font-title;
+    //   font-family: $font-title;
 
-      color: #ffffff;
+    //   color: #ffffff;
 
-      @include ff(
-        "font-size",
-        (
-          375px: 40px,
-          750px: 60px,
-          1280px: 70px
-        )
-      );
+    //   @include ff(
+    //     "font-size",
+    //     (
+    //       375px: 40px,
+    //       750px: 60px,
+    //       1280px: 70px
+    //     )
+    //   );
 
-      &::before {
-        position: absolute;
-        content: "";
-        z-index: -1;
-        top: -20px;
-        left: 0;
-        width: 75px;
-        height: 80px;
-        background-image: url("../img/timer/timer-item.png");
-        background-repeat: no-repeat;
-        background-size: contain;
+    //   &::before {
+    //     position: absolute;
+    //     content: "";
+    //     z-index: -1;
+    //     top: -20px;
+    //     left: 0;
+    //     width: 75px;
+    //     height: 80px;
+    //     background-image: url("../img/timer/timer-item.png");
+    //     background-repeat: no-repeat;
+    //     background-size: contain;
 
-        @include respond-above(sm) {
-          top: -36px;
-          left: -2px;
-          width: 75px;
-          height: 99px;
-        }
+    //     @include respond-above(sm) {
+    //       top: -36px;
+    //       left: -2px;
+    //       width: 75px;
+    //       height: 99px;
+    //     }
 
-        @include respond-above(md) {
-          width: 90px;
-          height: 112px;
-        }
-      }
+    //     @include respond-above(md) {
+    //       width: 90px;
+    //       height: 112px;
+    //     }
+    //   }
+
+    //   @include respond-above(sm) {
+    //     @include rem(
+    //       (
+    //         margin-bottom: 40px,
+    //         height: 60px
+    //       )
+    //     );
+    //   }
+    // }
+  }
+  &__item-time {
+    position: relative;
+    display: block;
+    z-index: 2;
+
+    @include rem(
+      (
+        margin-bottom: 20px,
+        padding-left: 10px,
+        height: 40px
+      )
+    );
+
+    font-family: $font-title;
+
+    color: #ffffff;
+
+    @include ff(
+      "font-size",
+      (
+        375px: 40px,
+        750px: 60px,
+        1280px: 70px
+      )
+    );
+
+    &::before {
+      position: absolute;
+      content: "";
+      z-index: -1;
+      top: -20px;
+      left: 0;
+      width: 75px;
+      height: 80px;
+      background-image: url("../img/timer/timer-item.png");
+      background-repeat: no-repeat;
+      background-size: contain;
 
       @include respond-above(sm) {
-        @include rem(
-          (
-            margin-bottom: 40px,
-            height: 60px
-          )
-        );
+        top: -36px;
+        left: -2px;
+        width: 75px;
+        height: 99px;
+      }
+
+      @include respond-above(md) {
+        width: 90px;
+        height: 112px;
       }
     }
+
+    @include respond-above(sm) {
+      @include rem(
+        (
+          margin-bottom: 40px,
+          height: 60px
+        )
+      );
+    }
+  }
+  &__text {
+    font-weight: 600;
+    color: #ffffff;
+
+    @include ff(
+      "font-size",
+      (
+        375px: 12px,
+        750px: 14px,
+        1280px: 16px
+      )
+    );
   }
 }

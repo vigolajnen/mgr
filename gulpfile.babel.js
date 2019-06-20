@@ -209,7 +209,7 @@ gulp.task("jsmin", function () {
 gulp.task("js-timer", function() {
   gulp
     .src([
-      "source/js/timer.js",
+      "source/js/timer-2.js",
     ])
     .pipe(concat("timer.min.js"))
     .pipe(
